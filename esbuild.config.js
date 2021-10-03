@@ -2,7 +2,7 @@ const esbuild = require('esbuild');
 
 esbuild.buildSync({
     entryPoints: ['src/index.js'],
-    outfile: 'index.js',
+    outfile: 'dist/index.js',
     bundle: true,
     format: 'esm',
     minify: true

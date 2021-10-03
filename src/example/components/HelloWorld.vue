@@ -1,5 +1,5 @@
 <script setup>
-import { getNodePath, arrayToTree, treeToArray } from '../../../dist/index.js';
+import { getNodePath, arrayToTree, treeToArray, arrayDeWeight } from '../../../dist/index.js';
 const arr = [
     {'id': 1, 'name': '一级1', 'pid': -1},
     {'id': 121, 'name': '二级1', 'pid': 1},
@@ -42,6 +42,13 @@ console.log(resultByIndex);
 console.log(arrayToTree(arr, -1));
 console.log(JSON.stringify(arrayToTree(arr, -1)));
 console.log(JSON.stringify(treeToArray(tree)));
+
+const arr2 = [
+    {id: '1', name: '1'},
+    {id: '1', name: '2'},
+    {id: '3', name: '3'},
+];
+console.log(arrayDeWeight(arr2, 'id'));
 
 
 defineProps({

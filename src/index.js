@@ -1,3 +1,4 @@
+import arrayDeWeight from './utils/arrayDeWeight';
 import arrayToTree from './utils/arrayToTree';
 import copyToBoard from './utils/copyToBoard';
 import cutRadixPoint from './utils/cutRadixPoint';
@@ -11,6 +12,7 @@ import treeToArray from './utils/treeToArray';
 import uuid from './utils/uuid';
 
 export {
+    arrayDeWeight,
     arrayToTree,
     copyToBoard,
     cutRadixPoint,
