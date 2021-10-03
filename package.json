@@ -1,0 +1,31 @@
+{
+  "name": "js-func-tools",
+  "version": "0.0.1",
+  "description": "js常用工具函数 tools utils",
+  "main": "dist/index.js",
+  "author": "xiongshuang",
+  "email": "xsmails@163.com",
+  "license": "MIT",
+  "private": false,
+  "scripts": {
+    "dev": "vite",
+    "vite:build": "vite build",
+    "serve": "vite preview",
+    "build": "node esbuild.config.js"
+  },
+  "files": [
+    "dist/*"
+  ],
+  "dependencies": {
+    "vue": "^3.2.16"
+  },
+  "devDependencies": {
+    "babel-eslint": "^10.1.0",
+    "esbuild": "^0.13.3",
+    "eslint": "^7.32.0",
+    "eslint-plugin-babel": "^5.3.1",
+    "eslint-plugin-import": "^2.24.2",
+    "@vitejs/plugin-vue": "^1.9.2",
+    "vite": "^2.6.0"
+  }
+}
