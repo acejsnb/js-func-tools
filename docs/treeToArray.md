@@ -1,7 +1,7 @@
 # 数组转树形结构
 
 ```js
-import { treeToArray } from 'x-utils';
+import { treeToArray } from 'js-func-tools';
 
 const tree = [
     {

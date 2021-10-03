@@ -1,7 +1,7 @@
 # 删除树中的空children
 
 ```js
-import { removeEmptyChildren } from 'x-utils';
+import { removeEmptyChildren } from 'js-func-tools';
 
 const tree = [
     {

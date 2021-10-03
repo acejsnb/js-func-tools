@@ -1,7 +1,7 @@
 # 根据条件筛选出符合条件的树形结构数据
 
 ```js
-import { filterTreeByFunc } from 'x-utils';
+import { filterTreeByFunc } from 'js-func-tools';
 
 const tree = [
     {

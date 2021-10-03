@@ -1,7 +1,7 @@
 # 根据参数删除树的属性
 
 ```js
-import { removeAttrByParam } from 'x-utils';
+import { removeAttrByParam } from 'js-func-tools';
 
 const tree = [
     {

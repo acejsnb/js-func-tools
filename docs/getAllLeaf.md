@@ -1,7 +1,7 @@
 # 获取所有叶子节点
 
 ```js
-import { getAllLeaf } from 'x-utils';
+import { getAllLeaf } from 'js-func-tools';
 
 const tree = [
     {

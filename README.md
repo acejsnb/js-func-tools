@@ -1,7 +1,7 @@
 # js常用工具函数 tools utils
 
 ```js
-import { cutRadixPoint } from 'x-utils';
+import { cutRadixPoint } from 'js-func-tools';
 ```
 
 ### demo data

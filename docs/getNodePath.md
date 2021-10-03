@@ -1,7 +1,7 @@
 # 查找某一节点在树中路径
 
 ```js
-import { getNodePath } from 'x-utils';
+import { getNodePath } from 'js-func-tools';
 
 const tree = [
     {
