@@ -5,10 +5,13 @@
  */
 const removeEmptyChildren = (tree) => {
     tree.forEach((item) => {
-        if (item.children && item.children.length ===0) {
-            delete item.children;
-        } else if (item.children && item.children.length > 0) {
-            removeEmptyChildren(item.children);
+        if (item.children) {
+            const len = item.children.length;
+            if (len) {
+                removeEmptyChildren(item.children);
+            } else {
+                delete item.children;
+            }
         }
     });
     return tree;

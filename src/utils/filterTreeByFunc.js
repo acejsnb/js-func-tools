@@ -1,7 +1,7 @@
 /**
  * 根据条件筛选出符合条件的树形结构数据
  * @param tree
- * @param func
+ * @param func 筛选条件
  * @returns {*[]|*}
  */
 const filterTreeByFunc = (tree, func) => {

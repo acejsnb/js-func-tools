@@ -4,16 +4,16 @@
  * @returns {boolean}
  */
 const copyToBoard = (value) => {
-    const element = document.createElement('textarea');
-    document.body.appendChild(element);
-    element.value = value;
-    element.select();
+    const ele = document.createElement('textarea');
+    document.body.appendChild(ele);
+    ele.value = value;
+    ele.select();
     if (document.execCommand('copy')) {
         document.execCommand('copy');
-        document.body.removeChild(element);
+        document.body.removeChild(ele);
         return true;
     }
-    document.body.removeChild(element);
+    document.body.removeChild(ele);
     return false;
 };
 

@@ -5,24 +5,24 @@ import { filterTreeByFunc } from 'x-utils';
 
 const tree = [
     {
-        "name": "小明",
-        "id": 1,
-        "pid": -1,
-        "children": [
+        'name': '一级1',
+        'id': 1,
+        'pid': -1,
+        'children': [
             {
-                "name": "小花",
-                "id": 11,
-                "pid": 1,
-                "children": [{"name": "小华", "id": 111, "pid": 11}, {"name": "小李", "id": 112, "pid": 11}]
+                'name': '二级1',
+                'id': 121,
+                'pid': 1,
+                'children': [{'name': '三级1', 'id': 1211, 'pid': 121}, {'name': '三级2', 'id': 1212, 'pid': 121}]
             },
-            {"name": "小红", "id": 12, "pid": 1}
+            {'name': '二级2', 'id': 122, 'pid': 1}
         ]
     },
     {
-        "name": "小王",
-        "id": 2,
-        "pid": -1,
-        "children": [{"name": "小林", "id": 21, "pid": 2}, {"name": "小李", "id": 22, "pid": 2}]
+        'name': '一级2',
+        'id': 2,
+        'pid': -1,
+        'children': [{'name': '二级21', 'id': 221, 'pid': 2}, {'name': '二级22', 'id': 222, 'pid': 2}]
     }
 ];
 

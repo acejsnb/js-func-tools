@@ -4,9 +4,6 @@
  * @param length
  * @returns {number}
  */
-const cutRadixPoint = (number, length = 2) => {
-    const num = typeof number === 'number' ?number:Number(number);
-    return Number(num.toFixed(length));
-};
+const cutRadixPoint = (number, length = 2) => Number((typeof number === 'number' ?number:Number(number)).toFixed(length));
 
 export default cutRadixPoint;

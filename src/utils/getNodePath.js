@@ -7,7 +7,6 @@
  */
 const getNodePath = (tree, id, byIndex = false) => {
     if (!Array.isArray(tree) || !tree.length) return [];
-
     const path = [];
     const treeFindPath = (data, id, path) => {
         const len = tree.length;

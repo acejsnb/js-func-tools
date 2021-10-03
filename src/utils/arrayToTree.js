@@ -9,9 +9,7 @@ const arrayToTree = (arr, pid) => {
     arr.forEach(item => {
         if (item.pid === pid) {
             const itemChildren = arrayToTree(arr, item.id);
-            if (itemChildren.length) {
-                item.children = itemChildren;
-            }
+            if (itemChildren.length) item.children = itemChildren;
             res.push(item);
         }
     });
