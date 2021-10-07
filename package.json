@@ -16,9 +16,6 @@
   "files": [
     "dist/*"
   ],
-  "dependencies": {
-    "vue": "^3.2.16"
-  },
   "devDependencies": {
     "babel-eslint": "^10.1.0",
     "esbuild": "^0.13.3",
@@ -26,6 +23,7 @@
     "eslint-plugin-babel": "^5.3.1",
     "eslint-plugin-import": "^2.24.2",
     "@vitejs/plugin-vue": "^1.9.2",
-    "vite": "^2.6.0"
+    "vite": "^2.6.0",
+    "vue": "^3.2.16"
   }
 }
