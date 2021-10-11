@@ -18,6 +18,13 @@ import removeEmptyChildren from './utils/removeEmptyChildren';
 import round from './utils/round';
 import treeToArray from './utils/treeToArray';
 import uuid from './utils/uuid';
+import checkColor16 from './utils/checkColor16';
+import checkEmail from './utils/checkEmail';
+import checkIDCard from './utils/checkIDCard';
+import checkPhoneNumber from './utils/checkPhoneNumber';
+import checkPlateNumber from './utils/checkPlateNumber';
+import checkPostcode from './utils/checkPostcode';
+import checkUrl from './utils/checkUrl';
 
 export {
     addZero,
@@ -39,5 +46,12 @@ export {
     removeEmptyChildren,
     round,
     treeToArray,
-    uuid
+    uuid,
+    checkColor16,
+    checkEmail,
+    checkIDCard,
+    checkPhoneNumber,
+    checkPlateNumber,
+    checkPostcode,
+    checkUrl
 };

@@ -149,3 +149,39 @@ const arr = [
 ];
 const result = arrayDeWeight(arr, 'id')
 ```
+
+### 21.checkColor16 验证16进制颜色
+```js
+const result = checkColor16('#fff')
+const result2 = checkColor16('#ffffff')
+```
+
+### 22.checkEmail 验证邮箱
+```js
+const result = checkEmail('xxx@163.xom')
+```
+
+### 23.checkIDCard 验证身份证
+```js
+const result = checkIDCard('身份证号')
+```
+
+### 24.checkPhoneNumber 验证手机号
+```js
+const result = checkPhoneNumber('13880808080')
+```
+
+### 25.checkPlateNumber 验证车牌
+```js
+const result = checkPlateNumber('川A8686B')
+```
+
+### 26.checkPostcode 验证邮政编码
+```js
+const result = checkPostcode('610000')
+```
+
+### 27.checkUrl 验证url
+```js
+const result = checkUrl('https://www.xxx.com')
+```
