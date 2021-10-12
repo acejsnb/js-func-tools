@@ -185,3 +185,13 @@ const result = checkPostcode('610000')
 ```js
 const result = checkUrl('https://www.xxx.com')
 ```
+
+### 28.cloneDeep 深拷贝
+```js
+const result = cloneDeep(tree)
+```
+
+### 29.cloneDeepComplex 复杂数据深拷贝
+```js
+const result = cloneDeepComplex(tree)
+```

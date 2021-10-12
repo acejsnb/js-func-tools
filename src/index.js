@@ -25,6 +25,7 @@ import checkPhoneNumber from './utils/checkPhoneNumber';
 import checkPlateNumber from './utils/checkPlateNumber';
 import checkPostcode from './utils/checkPostcode';
 import checkUrl from './utils/checkUrl';
+import cloneDeep, { cloneDeepComplex } from './utils/cloneDeep';
 
 export {
     addZero,
@@ -53,5 +54,7 @@ export {
     checkPhoneNumber,
     checkPlateNumber,
     checkPostcode,
-    checkUrl
+    checkUrl,
+    cloneDeep,
+    cloneDeepComplex
 };
