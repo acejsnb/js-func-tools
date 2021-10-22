@@ -1,6 +1,6 @@
 // 表单验证
-import checkEmail from './checkEmail';
 import checkPhoneNumber from './checkPhoneNumber';
+import checkEmail from './checkEmail';
 import { checkPassword, checkPasswordBetter, checkPasswordBest } from './checkPassword';
 
 const ValidateStrategy = {
@@ -12,6 +12,7 @@ const ValidateStrategy = {
 };
 
 // 表单验证
+// check: required phoneNumber email password passwordBetter passwordBest
 const checkRule = ({
     rule,
     value,
@@ -44,7 +45,10 @@ const checkRule = ({
         fail?.(value, message);
         return false;
     }
-    if (ValidateStrategy[`Check${check}`]?.(value)) {
+    const arr = check.split('');
+    arr[0] = arr[0].toUpperCase();
+    const str = arr.join('');
+    if (ValidateStrategy[`check${str}`]?.(value)) {
         success?.(value);
         return true;
     }
