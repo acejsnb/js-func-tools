@@ -205,3 +205,15 @@ const better = checkPasswordBetter('asd123')
 // 强：字母+数字+特殊字符
 const best = checkPasswordBest('asd123@#zdfcerty')
 ```
+
+### 31.formValidate 验证表单
+```js
+// rules 规则
+// value 验证的值
+// success 验证成功回调
+// fail 验证失败回调
+// confirmValue 与其他值得对比
+const status = formValidate({
+    rules, value, success, fail, confirmValue
+});
+```
