@@ -9,6 +9,7 @@ import copyToBoard from './utils/copyToBoard';
 import cutRadixPoint from './utils/cutRadixPoint';
 import dayOfYear from './utils/dayOfYear';
 import filterTreeByFunc from './utils/filterTreeByFunc';
+import formValidate from './utils/formValidate';
 import getAllLeaf from './utils/getAllLeaf';
 import getFormData from './utils/getFormData';
 import getNodePath from './utils/getNodePath';
@@ -21,6 +22,7 @@ import uuid from './utils/uuid';
 import checkColor16 from './utils/checkColor16';
 import checkEmail from './utils/checkEmail';
 import checkIDCard from './utils/checkIDCard';
+import { checkPassword, checkPasswordBetter, checkPasswordBest } from './utils/checkPassword';
 import checkPhoneNumber from './utils/checkPhoneNumber';
 import checkPlateNumber from './utils/checkPlateNumber';
 import checkPostcode from './utils/checkPostcode';
@@ -39,6 +41,7 @@ export {
     cutRadixPoint,
     dayOfYear,
     filterTreeByFunc,
+    formValidate,
     getAllLeaf,
     getFormData,
     getNodePath,
@@ -51,6 +54,9 @@ export {
     checkColor16,
     checkEmail,
     checkIDCard,
+    checkPassword,
+    checkPasswordBetter,
+    checkPasswordBest,
     checkPhoneNumber,
     checkPlateNumber,
     checkPostcode,

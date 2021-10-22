@@ -195,3 +195,13 @@ const result = cloneDeep(tree)
 ```js
 const result = cloneDeepComplex(tree)
 ```
+
+### 30.checkPassword 验证密吗
+```js
+// 弱：纯数字，纯字母，纯特殊字符
+const good = checkPassword('qweasd')
+// 中：字母+数字，字母+特殊字符，数字+特殊字符
+const better = checkPasswordBetter('asd123')
+// 强：字母+数字+特殊字符
+const best = checkPasswordBest('asd123@#zdfcerty')
+```
