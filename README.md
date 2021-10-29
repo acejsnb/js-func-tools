@@ -196,7 +196,7 @@ const result = cloneDeep(tree)
 const result = cloneDeepComplex(tree)
 ```
 
-### 30.checkPassword 验证密吗
+### 30.checkPassword 验证密码
 ```js
 // 弱：纯数字，纯字母，纯特殊字符
 const good = checkPassword('qweasd')
@@ -212,7 +212,7 @@ const best = checkPasswordBest('asd123@#zdfcerty')
 // value 验证的值
 // success 验证成功回调
 // fail 验证失败回调
-// confirmValue 与其他值得对比
+// confirmValue 与其他值的对比
 const status = formValidate({
     rules, value, success, fail, confirmValue
 });
