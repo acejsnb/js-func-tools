@@ -217,3 +217,8 @@ const status = formValidate({
     rules, value, success, fail, confirmValue
 });
 ```
+
+### 32.findTarget 通过当前Element查找需要的Element
+```js
+const target = findTarget([target], [tagName]);
+```

@@ -9,6 +9,7 @@ import copyToBoard from './utils/copyToBoard';
 import cutRadixPoint from './utils/cutRadixPoint';
 import dayOfYear from './utils/dayOfYear';
 import filterTreeByFunc from './utils/filterTreeByFunc';
+import findTarget from './utils/findTarget';
 import formValidate from './utils/formValidate';
 import getAllLeaf from './utils/getAllLeaf';
 import getFormData from './utils/getFormData';
@@ -41,6 +42,7 @@ export {
     cutRadixPoint,
     dayOfYear,
     filterTreeByFunc,
+    findTarget,
     formValidate,
     getAllLeaf,
     getFormData,
