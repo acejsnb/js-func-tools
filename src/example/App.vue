@@ -3,7 +3,7 @@ import HelloWorld from './components/HelloWorld.vue'
 </script>
 
 <template>
-  <HelloWorld msg="Hello x-utils" />
+  <HelloWorld msg="Hello js-func-tools" />
 </template>
 
 <style>

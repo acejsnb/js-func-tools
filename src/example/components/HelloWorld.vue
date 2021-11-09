@@ -34,21 +34,21 @@ const tree = [
 ];
 
 const result = getNodePath(tree, 1212);
-console.log(result);
+// console.log(result);
 // 根据索引查找
 const resultByIndex = getNodePath(tree, 1212, true);
-console.log(resultByIndex);
+// console.log(resultByIndex);
 
-console.log(arrayToTree(arr, -1));
-console.log(JSON.stringify(arrayToTree(arr, -1)));
-console.log(JSON.stringify(treeToArray(tree)));
+// console.log(arrayToTree(arr, -1));
+// console.log(JSON.stringify(arrayToTree(arr, -1)));
+console.log(treeToArray(tree));
 
 const arr2 = [
     {id: '1', name: '1'},
     {id: '1', name: '2'},
     {id: '3', name: '3'},
 ];
-console.log(arrayDeWeight(arr2, 'id'));
+// console.log(arrayDeWeight(arr2, 'id'));
 
 
 defineProps({

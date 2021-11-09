@@ -4,11 +4,12 @@
  * @param parentId 根父级id
  * @returns {*[]}
  */
-const arrayToTree = (arr, parentId) => {
+const arrayToTree = (arr, parentId = -1) => {
+    const data = JSON.parse(JSON.stringify(arr));
     const res = [];
-    arr.forEach(item => {
+    data.forEach(item => {
         if (item.parentId === parentId) {
-            const itemChildren = arrayToTree(arr, item.id);
+            const itemChildren = arrayToTree(data, item.id);
             if (itemChildren.length) item.children = itemChildren;
             res.push(item);
         }
