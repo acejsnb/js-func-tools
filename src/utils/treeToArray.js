@@ -7,9 +7,9 @@ const treeToArray = (tree) => {
     const queue = tree,
         result = [];
     while (queue.length !== 0) {
-        const {id, name, pid, children, ...other} = queue.shift();
+        const {id, name, parentId, children, ...other} = queue.shift();
         result.push({
-            id, name, pid, ...other
+            id, name, parentId, ...other
         });
         if (children) {
             const len = children.length;

@@ -1,13 +1,13 @@
 /**
  * 数组转树形结构
  * @param arr
- * @param pid 根父级id
+ * @param parentId 根父级id
  * @returns {*[]}
  */
-const arrayToTree = (arr, pid) => {
+const arrayToTree = (arr, parentId) => {
     const res = [];
     arr.forEach(item => {
-        if (item.pid === pid) {
+        if (item.parentId === parentId) {
             const itemChildren = arrayToTree(arr, item.id);
             if (itemChildren.length) item.children = itemChildren;
             res.push(item);
