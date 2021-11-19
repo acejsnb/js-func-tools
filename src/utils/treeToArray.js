@@ -1,12 +1,13 @@
 /**
  * 树形结构平铺
  * @param tree
+ * @param parentId 根父级id
  * @returns {*[]}
  */
-const treeToArray = (tree) => {
+const treeToArray = (tree, parentId = -1) => {
     const queue = JSON.parse(JSON.stringify(tree)),
         result = [];
-    let pid = -1;
+    let pid = parentId;
     while (queue.length !== 0) {
         const { id, name, children, ...other } = queue.shift();
         result.push({ id, name, parentId: pid, ...other });
