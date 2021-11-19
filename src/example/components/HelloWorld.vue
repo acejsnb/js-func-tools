@@ -1,5 +1,5 @@
 <script setup>
-import { getNodePath, arrayToTree, treeToArray, arrayDeWeight } from '../../../dist/index.js';
+import { getNodePath, arrayToTree, treeToArray, arrayDeWeight, cloneDeep, cloneDeepComplex } from '../../../dist/index.js';
 const arr = [
     {'id': 1, 'name': '一级1', 'parentId': -1},
     {'id': 121, 'name': '二级1', 'parentId': 1},
@@ -41,14 +41,15 @@ const resultByIndex = getNodePath(tree, 1212, true);
 
 // console.log(arrayToTree(arr, -1));
 // console.log(JSON.stringify(arrayToTree(arr, -1)));
-console.log(treeToArray(tree));
+// console.log(treeToArray(tree));
 
 const arr2 = [
-    {id: '1', name: '1'},
+    {id: '1', name: '1', func: () => {console.log(123)}},
     {id: '1', name: '2'},
     {id: '3', name: '3'},
 ];
 // console.log(arrayDeWeight(arr2, 'id'));
+console.log('cloneDeep==', cloneDeepComplex(arr2));
 
 
 defineProps({
