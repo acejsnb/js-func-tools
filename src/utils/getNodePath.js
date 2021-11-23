@@ -6,15 +6,15 @@
  * @returns {*[]|*|[]}
  */
 const getNodePath = (tree, id, byIndex = false) => {
-    if (!Array.isArray(tree) || !tree.length) return [];
+    if (!Array.isArray(tree) || !tree?.length) return [];
     const path = [];
     const treeFindPath = (data, id, path) => {
-        const len = tree.length;
+        const len = data.length;
         for (let i = 0; i < len; i++) {
-            const { id: itemId, children } = data[i];
+            const { id: itemId, children = [] } = data[i] ?? {};
             path.push(byIndex ? i : itemId);
             if (itemId === id) return path;
-            if (children) {
+            if (children?.length) {
                 const findChildren = treeFindPath(children, id, path);
                 if (findChildren.length) return findChildren;
             }

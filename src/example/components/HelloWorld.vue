@@ -32,11 +32,33 @@ const tree = [
         'children': [{'name': '二级21', 'id': 221, 'parentId': 2}, {'name': '二级22', 'id': 222, 'parentId': 2}]
     }
 ];
+const tree2 = [
+    {
+        'name': '一级1',
+        'id': '1',
+        'parentId': '0',
+        'children': [
+            {
+                'name': '二级1',
+                'id': '121',
+                'parentId': '1',
+                'children': [{'name': '三级1', 'id': '1211', 'parentId': '121', 'children': []}, {'name': '三级2', 'id': '1212', 'parentId': '121', 'children': []}]
+            },
+            {'name': '二级2', 'id': '122', 'parentId': '1', 'children': []}
+        ]
+    },
+    {
+        'name': '一级2',
+        'id': '2',
+        'parentId': '0',
+        'children': [{'name': '二级21', 'id': '221', 'parentId': '2', 'children': []}, {'name': '二级22', 'id': '222', 'parentId': '2', 'children': []}]
+    }
+];
 
-const result = getNodePath(tree, 1212);
-// console.log(result);
+const result = getNodePath(tree2, '1461271980233678849', true);
+console.log('getNodePath===', result);
 // 根据索引查找
-const resultByIndex = getNodePath(tree, 1212, true);
+// const resultByIndex = getNodePath(tree2, '1212', true);
 // console.log(resultByIndex);
 
 // console.log(arrayToTree(arr, -1));
@@ -49,7 +71,7 @@ const arr2 = [
     {id: '3', name: '3'},
 ];
 // console.log(arrayDeWeight(arr2, 'id'));
-console.log('cloneDeep==', cloneDeepComplex(arr2));
+// console.log('cloneDeep==', cloneDeepComplex(arr2));
 
 
 defineProps({
