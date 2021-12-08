@@ -5,7 +5,7 @@ const TimeFn = require('./get_time');
 // 输出文件添加注释
 const banner = `/**
 * @${name} v${version}
-* (c) 2019-2021 ${author}
+* (c) 2021-2022 ${author}
 * Released under the ${license} License.
 * ${TimeFn()}
 */`;

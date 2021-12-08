@@ -11,12 +11,14 @@ const treeToArray = (tree, parentId = -1) => {
     while (queue.length !== 0) {
         const { id, name, children, ...other } = queue.shift();
         result.push({ id, name, parentId: pid, ...other });
-        pid = id;
-        if (children) {
+        if (children?.length) {
+            pid = id;
             const len = children.length;
             for (let i = len - 1; i >= 0; i--) {
                 queue.unshift(children[i]);
             }
+        } else {
+            pid = parentId;
         }
     }
     return result;
