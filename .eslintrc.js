@@ -1,19 +1,32 @@
 module.exports = {
     root: true,
-    parser: 'babel-eslint',
     env: {
         'browser': true,
         'commonjs': true,
         'es6': true,
         'node': true
     },
+    settings: {
+        polyfills: ['Promise', 'URL'],
+        'import/extensions': ['.js', '.jsx', '.ts', '.tsx'],
+        'import/parsers': {
+            '@typescript-eslint/parser': ['.ts', '.tsx']
+        },
+        'import/resolver': {
+            node: {
+                extensions: ['.js', '.jsx', '.ts', '.tsx']
+            }
+        }
+    },
     plugins: [
         'babel',
+        '@typescript-eslint',
         'import'
     ],
     extends: [
         'eslint:recommended'
     ],
+    parser: '@typescript-eslint/parser',
     parserOptions: {
         ecmaVersion: 8,
         sourceType: 'module'
@@ -35,7 +48,7 @@ module.exports = {
         'no-shadow': 0,
         'comma-dangle': [2, 'never'],
         'no-use-before-define': 'off',
-        'import/extensions': ['error', 'always', { js: 'never' }],
+        'import/extensions': ['error', { ts: 'never' }],
         quotes: [1, 'single'],
         'eol-last': 2,
         'no-else-return': 2,

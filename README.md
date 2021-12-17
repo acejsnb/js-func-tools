@@ -48,7 +48,8 @@ const str = addZero(3);
 
 ### 2.arrayToTree 数组转树形结构
 ```js
-const tree = arrayToTree(arr, -1);
+// parentId = -1 顶级默认父级id为-1
+const tree = arrayToTree(arr);
 ```
 
 ### 3.average 平均数
@@ -81,7 +82,7 @@ const status = copyToBoard('这是复制的内容');
 const num = cutRadixPoint(807.34691);
 ```
 
-### 9.dayOfYear 获取当前时间是当年的di多少天
+### 9.dayOfYear 获取当前时间是当年的第多少天
 ```js
 const num = dayOfYear('2021.10.07');
 ```
@@ -127,11 +128,13 @@ const result = removeEmptyChildren(tree, 'id');
 
 ### 17.round 四舍五入到制定位数
 ```js
+// dec = 2 保留位数，默认2
 const result = round(1.345);
 ```
 
 ### 18.treeToArray 数组转树形结构
 ```js
+// parentId = -1 顶级默认父级id为-1
 const arr = treeToArray(tree);
 ```
 
@@ -173,7 +176,7 @@ const result = checkPhoneNumber('13880808080')
 
 ### 25.checkPlateNumber 验证车牌
 ```js
-const result = checkPlateNumber('川A8686B')
+const result = checkPlateNumber('川A66666')
 ```
 
 ### 26.checkPostcode 验证邮政编码
@@ -209,9 +212,19 @@ const best = checkPasswordBest('asd123@#zdfcerty')
 ### 31.formValidate 验证表单
 ```js
 // rules 规则
+/**
+    type TValidate = (value: string, confirmValue: string) => boolean
+    interface Rule {
+        message: string
+        check?: string
+        validate?: TValidate
+    }
+ */
 // value 验证的值
 // success 验证成功回调
+    /** type TSuccess = (value: string) => boolean **/
 // fail 验证失败回调
+    /** type TFail = (value: string, message: string) => boolean **/
 // confirmValue 与其他值的对比
 const status = formValidate({
     rules, value, success, fail, confirmValue
@@ -221,4 +234,26 @@ const status = formValidate({
 ### 32.findTarget 通过当前Element查找需要的Element
 ```js
 const target = findTarget([target], [tagName]);
+```
+
+### 33.checkCreditCode 验证统一社会信用代码
+```js
+const result = checkCreditCode('xxxxxxx');
+```
+
+### 34.sensitiveEscape 敏感符号转义 (预防xss攻击)
+```js
+const result = sensitiveEscape('xxx"xxx<x>x&x');
+```
+
+### 35.getUrlParam 获取url参数
+```js
+// type Fn = (name: string, origin: string | null) => string | null
+const result = getUrlParam(name);
+```
+
+### 36.formatMoney 金钱格式化，三位加逗号
+```js
+// type Fn = (name: string, origin: string | null) => string | null
+const result = formatMoney(1234567);
 ```

@@ -1,6 +1,6 @@
 {
   "name": "js-func-tools",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "js常用工具函数 tools utils",
   "main": "dist/index.js",
   "author": "xiongshuang",
@@ -12,18 +12,26 @@
     "dev": "vite",
     "vite:build": "vite build",
     "serve": "vite preview",
-    "build": "node esbuild.config.js"
+    "declaration": "node config/copy.declaration.js",
+    "build": "node config/esbuild.config.js && npm run declaration",
+    "prod:writeHtml": "node config/prod.write.html.js",
+    "prod": "node config/esbuild.prod.js && npm run prod:writeHtml"
   },
   "files": [
     "dist/*"
   ],
   "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.7.0",
+    "@typescript-eslint/parser": "^5.7.0",
     "@vitejs/plugin-vue": "^1.9.2",
+    "@vue/compiler-sfc": "^3.2.26",
     "babel-eslint": "^10.1.0",
-    "esbuild": "^0.13.3",
+    "esbuild": "^0.14.5",
+    "esbuild-plugin-vue-next": "^0.1.2",
     "eslint": "^7.32.0",
     "eslint-plugin-babel": "^5.3.1",
     "eslint-plugin-import": "^2.24.2",
+    "typescript": "^4.5.4",
     "vite": "^2.6.0",
     "vue": "^3.2.16"
   }

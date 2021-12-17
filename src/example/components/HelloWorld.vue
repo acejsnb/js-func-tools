@@ -1,5 +1,5 @@
 <script setup>
-import { getNodePath, arrayToTree, treeToArray, arrayDeWeight, cloneDeep, cloneDeepComplex } from '../../../dist/index.js';
+import { getNodePath, arrayToTree, treeToArray, arrayDeWeight, cloneDeep, cloneDeepComplex, formatMoney } from '../../../dist/index.js';
 const arr = [
     {'id': 1, 'name': '一级1', 'parentId': -1},
     {'id': 121, 'name': '二级1', 'parentId': 1},
@@ -55,7 +55,7 @@ const tree2 = [
     }
 ];
 
-const result = getNodePath(tree2, '1461271980233678849', true);
+const result = getNodePath(tree2, '122', true);
 console.log('getNodePath===', result);
 // 根据索引查找
 // const resultByIndex = getNodePath(tree2, '1212', true);
@@ -72,6 +72,8 @@ const arr2 = [
 ];
 // console.log(arrayDeWeight(arr2, 'id'));
 // console.log('cloneDeep==', cloneDeepComplex(arr2));
+
+console.log('formatMoney==', formatMoney('1234567'));
 
 
 defineProps({
