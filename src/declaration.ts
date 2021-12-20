@@ -1,16 +1,15 @@
-interface Anytype {
+interface AnyType {
     [key: string]: any
 }
-interface ITree {
+interface ITree extends AnyType {
     id?: string | number
     name?: string
     children?: ITree[]
-    [key: string]: any
 }
 
 declare module 'js-func-tools' {
     export function addZero(n: string | number, len?: number): string
-    export function arrayDeWeight(arr: Anytype[], by: string): Anytype[]
+    export function arrayDeWeight(arr: AnyType[], by: string): AnyType[]
     export function arrayToTree(arr: ITree[], parentId?: string | number): ITree[]
     export function average(arr: number[]): number
     export function bottomVisible(): void
@@ -49,7 +48,7 @@ declare module 'js-func-tools' {
         confirmValue?: string
     }): boolean
     export function getAllLeaf(tree: ITree[], first?: boolean): ITree[]
-    export function getFormData(object: Anytype): FormData
+    export function getFormData(object: AnyType): FormData
     export function getNodePath(tree: ITree[], id: string | number, byIndex?: boolean): Array<string | number>
     export function getUrlParam(name: string, origin?: string | null): string | null
     export function removeAttrByParam(tree: ITree[], param: string): ITree[]

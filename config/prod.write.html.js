@@ -24,14 +24,13 @@ const copyFile = (url) => {
             const arrJs = [];
             data.forEach(item => {
                 if (item.endsWith('.css')) arrCss.push(`<link rel="stylesheet" href="./${item}">`);
-                else if (item.endsWith('.js')) arrJs.push(`<script src="./${item}"></script>`);
+                else if (item.endsWith('.js')) arrJs.push(`<script type="text/javascript" src="./${item}"></script>`);
             });
             htmlTemplate = htmlTemplate
                 .replace('</head>', `${arrCss.join('')}</head>`)
                 .replace('</body>', `${arrJs.join('')}</body>`)
                 .replaceAll('\n', '')
                 .replaceAll('    ', '');
-            console.log(htmlTemplate);
 
             fs.writeFile(resolve(__dirname, `${url}/index.html`), htmlTemplate, err => {
                 if (err) {
