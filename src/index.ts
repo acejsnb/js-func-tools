@@ -15,6 +15,7 @@ import getAllLeaf from './utils/getAllLeaf';
 import getFormData from './utils/getFormData';
 import getNodePath from './utils/getNodePath';
 import isNullObj from './utils/isNullObj';
+import matchesByValue from './utils/matchesByValue';
 import removeAttrByParam from './utils/removeAttrByParam';
 import removeEmptyChildren from './utils/removeEmptyChildren';
 import round from './utils/round';
@@ -53,6 +54,7 @@ export {
     getFormData,
     getNodePath,
     isNullObj,
+    matchesByValue,
     removeAttrByParam,
     removeEmptyChildren,
     round,

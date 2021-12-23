@@ -257,3 +257,13 @@ const result = getUrlParam(name);
 // type Fn = (name: string, origin: string | null) => string | null
 const result = formatMoney(1234567);
 ```
+
+### 37.matchesByValue 根据value匹配字符串（搜索字符串并替换，做高亮使用）
+```js
+const result = matchesByValue(
+    '今天是一个A好日a子',
+    'A',
+    '--',
+    '=='
+);
+```

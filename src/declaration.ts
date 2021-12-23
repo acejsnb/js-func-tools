@@ -51,6 +51,8 @@ declare module 'js-func-tools' {
     export function getFormData(object: AnyType): FormData
     export function getNodePath(tree: ITree[], id: string | number, byIndex?: boolean): Array<string | number>
     export function getUrlParam(name: string, origin?: string | null): string | null
+    export function isNullObj(obj: AnyType): boolean
+    export function matchesByValue(value: string, search: string, jointStart: string, jointEnd: string): string
     export function removeAttrByParam(tree: ITree[], param: string): ITree[]
     export function removeEmptyChildren(tree: ITree[]): ITree[]
     export function round(n: string | number, dec?: number): string
