@@ -7,7 +7,7 @@ import byteSize from './utils/byteSize';
 import capitalise from './utils/capitalise';
 import copyToBoard from './utils/copyToBoard';
 import cutRadixPoint from './utils/cutRadixPoint';
-import dayOfYear from './utils/dayOfYear';
+import dayOfYear, { dayOfWeek, weekOfYear } from './utils/dayOfYear';
 import filterTreeByFunc from './utils/filterTreeByFunc';
 import findTarget from './utils/findTarget';
 import formValidate from './utils/formValidate';
@@ -46,7 +46,7 @@ export {
     capitalise,
     copyToBoard,
     cutRadixPoint,
-    dayOfYear,
+    dayOfYear, dayOfWeek, weekOfYear,
     filterTreeByFunc,
     findTarget,
     formValidate,

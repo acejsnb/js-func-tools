@@ -1,5 +1,5 @@
 <script setup>
-import { getNodePath, arrayToTree, treeToArray, arrayDeWeight, cloneDeep, cloneDeepComplex, formatMoney } from '../../../dist/index.js';
+import { getNodePath, arrayToTree, treeToArray, arrayDeWeight, cloneDeep, cloneDeepComplex, formatMoney, dayOfWeek, weekOfYear } from '../../../dist/index.js';
 const arr = [
     {'id': 1, 'name': '一级1', 'parentId': -1},
     {'id': 121, 'name': '二级1', 'parentId': 1},
@@ -73,7 +73,10 @@ const arr2 = [
 // console.log(arrayDeWeight(arr2, 'id'));
 // console.log('cloneDeep==', cloneDeepComplex(arr2));
 
-console.log('formatMoney==', formatMoney('1234567'));
+// console.log('formatMoney==', formatMoney('1234567'));
+const str = '2021.12.24';
+console.log('dayOfWeek==', dayOfWeek(str));
+console.log('weekOfYear==', weekOfYear(str));
 
 
 defineProps({
