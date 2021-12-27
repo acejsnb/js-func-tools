@@ -7,8 +7,9 @@ import byteSize from './utils/byteSize';
 import capitalise from './utils/capitalise';
 import copyToBoard from './utils/copyToBoard';
 import cutRadixPoint from './utils/cutRadixPoint';
-import dayOfYear, { dayOfWeek, weekOfYear, formatDate } from './utils/dayOfYear';
+import { dayOfYear, dayOfWeek, weekOfYear, formatDate } from './utils/dateHandle';
 import filterTreeByFunc from './utils/filterTreeByFunc';
+import downloadByUrl from './utils/downloadByUrl';
 import findTarget from './utils/findTarget';
 import formValidate from './utils/formValidate';
 import getAllLeaf from './utils/getAllLeaf';
@@ -18,6 +19,7 @@ import isNullObj from './utils/isNullObj';
 import matchesByValue from './utils/matchesByValue';
 import removeAttrByParam from './utils/removeAttrByParam';
 import removeEmptyChildren from './utils/removeEmptyChildren';
+import removeHtmlTag from './utils/removeHtmlTag';
 import round from './utils/round';
 import treeToArray from './utils/treeToArray';
 import uuid from './utils/uuid';
@@ -29,6 +31,7 @@ import checkPhoneNumber from './utils/checkPhoneNumber';
 import checkPlateNumber from './utils/checkPlateNumber';
 import checkPostcode from './utils/checkPostcode';
 import checkUrl from './utils/checkUrl';
+import { hasClassName, addClassName, removeClassName } from './utils/classNameHandle';
 import cloneDeep, { cloneDeepComplex } from './utils/cloneDeep';
 import checkCreditCode from './utils/checkCreditCode';
 import sensitiveEscape from './utils/sensitiveEscape';
@@ -47,6 +50,7 @@ export {
     copyToBoard,
     cutRadixPoint,
     dayOfYear, dayOfWeek, weekOfYear, formatDate,
+    downloadByUrl,
     filterTreeByFunc,
     findTarget,
     formValidate,
@@ -57,6 +61,7 @@ export {
     matchesByValue,
     removeAttrByParam,
     removeEmptyChildren,
+    removeHtmlTag,
     round,
     treeToArray,
     uuid,
@@ -70,6 +75,7 @@ export {
     checkPlateNumber,
     checkPostcode,
     checkUrl,
+    hasClassName, addClassName, removeClassName,
     cloneDeep,
     cloneDeepComplex,
     checkCreditCode,

@@ -1,22 +1,18 @@
-/**
- * 获取当前时间是当年的第多少天
- * @param date
- * @returns {number}
- */
-type Fn = (str: string) => number
-const dayOfYear: Fn = str => {
-    const date: Date | number | bigint = str ? new Date(str) : new Date();
+type Fn = (dateStr: string) => number
+// 获取当前时间是当年的第多少天
+const dayOfYear: Fn = dateStr => {
+    const date: Date | number | bigint = dateStr ? new Date(dateStr) : new Date();
     return Math.floor((date.getTime() - new Date(date.getFullYear(), 0, 0).getTime()) / 1000 / 60 / 60 / 24);
 };
 
 // 获取当前时间是星期几
-const dayOfWeek: Fn = (str) => {
-    const date: Date | number | bigint = str ? new Date(str) : new Date();
+const dayOfWeek: Fn = (dateStr) => {
+    const date: Date | number | bigint = dateStr ? new Date(dateStr) : new Date();
     return new Date(date).getDay();
 };
 
 // 当前时间是本年的第几周
-const weekOfYear: Fn = (str) => Math.ceil((dayOfYear(str) + dayOfWeek(str) - 1) / 7);
+const weekOfYear: Fn = (dateStr) => Math.ceil((dayOfYear(dateStr) + dayOfWeek(dateStr) - 1) / 7);
 
 // 格式化时间 str yyyy-mm-dd hh:MM:ss.S
 interface O {
@@ -28,9 +24,9 @@ interface O {
     'q+': number
     'S': number
 }
-const formatDate = (str: string): string => {
-    const date = new Date();
-    let fmt = str;
+const formatDate = (fmt: string, dateStr?: string): string => {
+    const date = dateStr ? new Date(dateStr) : new Date();
+    // let fmt = str;
     const o: O = {
         'm+': date.getMonth() + 1, //月份
         'd+': date.getDate(), //日
@@ -43,10 +39,10 @@ const formatDate = (str: string): string => {
     if (/(y+)/.test(fmt)) fmt = fmt.replace(RegExp.$1, (`${date.getFullYear()}`).substring(4 - RegExp.$1.length));
     for (let k in o) {
         if (new RegExp(`(${k})`).test(fmt)) {
+            const $1 = RegExp.$1;
             fmt = fmt.replace(
-                RegExp.$1,
-                // @ts-ignore
-                RegExp.$1.length === 1 ? o[k] : ((`00${o[k]}`).substring((`${o[k]}`).length))
+                $1,
+                $1.length === 1 ? `${o[k as keyof O]}` : ((`00${o[k as keyof O]}`).substring((`${o[k as keyof O]}`).length))
             );
         }
     }
@@ -54,9 +50,8 @@ const formatDate = (str: string): string => {
     return fmt;
 };
 
-export default dayOfYear;
-
 export {
+    dayOfYear,
     dayOfWeek,
     weekOfYear,
     formatDate

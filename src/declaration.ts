@@ -1,4 +1,5 @@
 interface AnyType {
+    // @ts-ignore
     [key: string]: any
 }
 interface ITree extends AnyType {
@@ -26,11 +27,18 @@ declare module 'js-func-tools' {
     export function checkPlateNumber(str: string): boolean
     export function checkPostcode(str: string): boolean
     export function checkUrl(str: string): boolean
+    export function hasClassName(el: HTMLElement, className: string): boolean
+    export function addClassName(el: HTMLElement, className: string): void
+    export function removeClassName(el: HTMLElement, className: string): void
     export function cloneDeep(arr: ITree[]): ITree[]
     export function cloneDeepComplex(arr: ITree[]): ITree[]
     export function copyToBoard(str: string): boolean
     export function cutRadixPoint(number: string | number, length?: number): number
-    export function dayOfYear(date: string): number
+    export function downloadByUrl(url: string): boolean
+    export function dayOfYear(dateStr: string): number
+    export function dayOfWeek(dateStr: string): number
+    export function weekOfYear(dateStr: string): number
+    export function formatDate(fmt: string, dateStr?: string): string
     export function filterTreeByFunc(tree: ITree[], func: (item: ITree) => boolean): ITree[]
     export function findTarget(target: HTMLElement, tagList: string[]): HTMLElement
     export namespace formatMoney {
@@ -55,6 +63,7 @@ declare module 'js-func-tools' {
     export function matchesByValue(value: string, search: string, jointStart: string, jointEnd: string): string
     export function removeAttrByParam(tree: ITree[], param: string): ITree[]
     export function removeEmptyChildren(tree: ITree[]): ITree[]
+    export function removeHtmlTag(str: string): string
     export function round(n: string | number, dec?: number): string
     export function scrollToTop(): void
     export function sensitiveEscape(s: string): string

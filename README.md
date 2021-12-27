@@ -83,8 +83,9 @@ const num = cutRadixPoint(807.34691);
 ```
 
 ### 9.dayOfYear 获取当前时间是当年的第多少天
+
 ```js
-const num = dayOfYear('2021.10.07');
+const num = dateHandle('2021.10.07');
 ```
 
 ### 10.filterTreeByFunc 根据条件筛选出符合条件的树形结构数据
@@ -266,4 +267,34 @@ const result = matchesByValue(
     '--',
     '=='
 );
+```
+
+### 38.hasClassName el是否包含某个class
+```js
+// el: HTMLElement, className: string
+const result = hasClassName(el, className);
+```
+
+### 39.addClassName el添加某个class
+```js
+// el: HTMLElement, className: string
+addClassName(el, className);
+```
+
+### 40.removeClassName el去除某个class
+```js
+// el: HTMLElement, className: string
+removeClassName(el, className);
+```
+
+### 41.downloadByUrl 根据url地址下载
+```js
+// url: string
+const result = downloadByUrl(url);
+```
+
+### 42.removeHtmlTag 去除html标签
+```js
+// str: string
+const result = removeHtmlTag(str);
 ```

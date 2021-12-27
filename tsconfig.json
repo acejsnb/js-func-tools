@@ -12,7 +12,8 @@
     "removeComments": true,
     "strict": true,
     "skipLibCheck": false,
-    "noEmit": false
+    "noEmit": false,
+    "declaration": false,
   },
   "exclude": ["node_modules", "dist"]
 }
