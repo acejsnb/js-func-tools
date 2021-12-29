@@ -9,11 +9,12 @@
   "private": false,
   "repository": "https://github.com/xiongshuang/js-func-tools.git",
   "scripts": {
+    "clean": "rimraf ./dist",
     "dev": "vite",
     "vite:build": "vite build",
     "serve": "vite preview",
     "declaration": "node config/copy.declaration.js",
-    "build": "node config/esbuild.config.js && npm run declaration",
+    "build": "npm run clean && node config/esbuild.config.js && npm run declaration",
     "prod:writeHtml": "node config/prod.write.html.js",
     "prod": "node config/esbuild.prod.js && npm run prod:writeHtml"
   },

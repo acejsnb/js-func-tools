@@ -41,110 +41,12 @@ const tree = [
 ];
 ```
 
-### 1.addZero 数字前面补0
+- ### addZero 数字前面补0
 ```js
 const str = addZero(3);
 ```
 
-### 2.arrayToTree 数组转树形结构
-```js
-// parentId = -1 顶级默认父级id为-1
-const tree = arrayToTree(arr);
-```
-
-### 3.average 平均数
-```js
-const num = average([1, 2, 3, 4]);
-```
-
-### 4.bottomVisible 判断是否滚动到底部
-```js
-const status = bottomVisible();
-```
-
-### 5.byteSize 获取字符串的字节长度
-```js
-const status = byteSize('hello');
-```
-
-### 6.capitalise 首字母大写
-```js
-const str = capitalise('hello');
-```
-
-### 7.copyToBoard 复制内容到剪贴板
-```js
-const status = copyToBoard('这是复制的内容');
-```
-
-### 8.cutRadixPoint 保留到小数点以后n位
-```js
-const num = cutRadixPoint(807.34691);
-```
-
-### 9.dayOfYear 获取当前时间是当年的第多少天
-
-```js
-const num = dateHandle('2021.10.07');
-```
-
-### 10.filterTreeByFunc 根据条件筛选出符合条件的树形结构数据
-```js
-const filterFunc = (item) => item.id === 11;
-const result = filterTreeByFunc(tree, filterFunc);
-```
-
-### 11.getAllLeaf 获取所有叶子节点
-```js
-const result = getAllLeaf(tree);
-```
-
-### 12.getFormData 对象转化为FormData对象
-```js
-const obj = {id: 1, name: 'xs'};
-const result = getFormData(obj);
-```
-
-### 13.getNodePath 查找某一节点在树中路径
-```js
-const result = getNodePath(tree, 12);
-// 根据索引查找
-const resultByIndex = getNodePath(tree, 12, true);
-```
-
-### 14.isNullObj 判断是否是空对象
-```js
-const result = isNullObj(obj);
-```
-
-### 15.removeAttrByParam 根据参数删除树的属性
-```js
-const result = removeAttrByParam(tree, 'id');
-```
-
-### 16.removeEmptyChildren 删除树中的空children
-```js
-const result = removeEmptyChildren(tree, 'id');
-```
-
-### 17.round 四舍五入到制定位数
-```js
-// dec = 2 保留位数，默认2
-const result = round(1.345);
-```
-
-### 18.treeToArray 数组转树形结构
-```js
-// parentId = -1 顶级默认父级id为-1
-const arr = treeToArray(tree);
-```
-
-### 19.uuid 随机生成n位字符串
-```js
-const str = uuid(5);
-```
-
-### 20.arrayDeWeight 数组去重
+- ### arrayDeWeight 数组去重
 ```js
 const arr = [
     {id: '1', name: '1'},
@@ -154,53 +56,54 @@ const arr = [
 const result = arrayDeWeight(arr, 'id')
 ```
 
-### 21.checkColor16 验证16进制颜色
+- ### arrayToTree 数组转树形结构
+```js
+// parentId = -1 顶级默认父级id为-1
+const tree = arrayToTree(arr);
+```
+
+- ### average 平均数
+```js
+const num = average([1, 2, 3, 4]);
+```
+
+- ### bottomVisible 判断是否滚动到底部
+```js
+const status = bottomVisible();
+```
+
+- ### byteSize 获取字符串的字节长度
+```js
+const status = byteSize('hello');
+```
+
+- ### capitalise 首字母大写
+```js
+const str = capitalise('hello');
+```
+
+- ### checkColor16 验证16进制颜色
 ```js
 const result = checkColor16('#fff')
 const result2 = checkColor16('#ffffff')
 ```
 
-### 22.checkEmail 验证邮箱
+- ### checkCreditCode 验证统一社会信用代码
+```js
+const result = checkCreditCode('xxxxxxx');
+```
+
+- ### checkEmail 验证邮箱
 ```js
 const result = checkEmail('xxx@163.xom')
 ```
 
-### 23.checkIDCard 验证身份证
+- ### checkIDCard 验证身份证
 ```js
 const result = checkIDCard('身份证号')
 ```
 
-### 24.checkPhoneNumber 验证手机号
-```js
-const result = checkPhoneNumber('13880808080')
-```
-
-### 25.checkPlateNumber 验证车牌
-```js
-const result = checkPlateNumber('川A66666')
-```
-
-### 26.checkPostcode 验证邮政编码
-```js
-const result = checkPostcode('610000')
-```
-
-### 27.checkUrl 验证url
-```js
-const result = checkUrl('https://www.xxx.com')
-```
-
-### 28.cloneDeep 深拷贝
-```js
-const result = cloneDeep(tree)
-```
-
-### 29.cloneDeepComplex 复杂数据深拷贝
-```js
-const result = cloneDeepComplex(tree)
-```
-
-### 30.checkPassword 验证密码
+- ### checkPassword 验证密码
 ```js
 // 弱：纯数字，纯字母，纯特殊字符
 const good = checkPassword('qweasd')
@@ -210,7 +113,110 @@ const better = checkPasswordBetter('asd123')
 const best = checkPasswordBest('asd123@#zdfcerty')
 ```
 
-### 31.formValidate 验证表单
+- ### checkPhoneNumber 验证手机号
+```js
+const result = checkPhoneNumber('13880808080')
+```
+
+- ### checkPlateNumber 验证车牌
+```js
+const result = checkPlateNumber('川A66666')
+```
+
+- ### checkPostcode 验证邮政编码
+```js
+const result = checkPostcode('610000')
+```
+
+- ### checkUrl 验证url
+```js
+const result = checkUrl('https://www.xxx.com')
+```
+
+- ### hasClassName el是否包含某个class
+```js
+// el: HTMLElement, className: string
+const result = hasClassName(el, className);
+```
+
+- ### addClassName el添加某个class
+```js
+// el: HTMLElement, className: string
+addClassName(el, className);
+```
+
+- ### removeClassName el去除某个class
+```js
+// el: HTMLElement, className: string
+removeClassName(el, className);
+```
+
+- ### cloneDeep 深拷贝
+```js
+const result = cloneDeep(tree)
+```
+
+- ### cloneDeepComplex 复杂数据深拷贝
+```js
+const result = cloneDeepComplex(tree)
+```
+
+- ### copyToBoard 复制内容到剪贴板
+```js
+const status = copyToBoard('这是复制的内容');
+```
+
+- ### cutRadixPoint 保留到小数点以后n位
+```js
+const num = cutRadixPoint(807.34691);
+```
+
+- ### dayOfYear 获取当前时间是当年的第多少天
+```js
+const num = dayOfYear('2021.10.30');
+```
+
+- ### dayOfWeek 获取当前时间是星期几
+```js
+const num = dayOfWeek('2021.10.30');
+```
+
+- ### weekOfYear 当前时间是本年的第几周
+```js
+const num = weekOfYear('2021.10.30');
+```
+
+- ### formatDate 格式化时间
+```js
+// fmt: string, dateStr?: string
+// fmt yyyy-mm-dd hh:MM:ss.S
+const num = formatDate('yyyy-mm-dd');
+```
+
+- ### downloadByUrl 根据url地址下载
+```js
+// url: string
+const result = downloadByUrl(url);
+```
+
+- ### filterTreeByFunc 根据条件筛选出符合条件的树形结构数据
+```js
+const filterFunc = (item) => item.id === 11;
+const result = filterTreeByFunc(tree, filterFunc);
+```
+
+- ### findTarget 通过当前Element查找需要的Element
+```js
+const target = findTarget([target], [tagName]);
+```
+
+- ### formatMoney 金钱格式化，三位加逗号
+```js
+// type Fn = (name: string, origin: string | null) => string | null
+const result = formatMoney(1234567);
+```
+
+- ### formValidate 验证表单
 ```js
 // rules 规则
 /**
@@ -232,34 +238,36 @@ const status = formValidate({
 });
 ```
 
-### 32.findTarget 通过当前Element查找需要的Element
+- ### getAllLeaf 获取所有叶子节点
 ```js
-const target = findTarget([target], [tagName]);
+const result = getAllLeaf(tree);
 ```
 
-### 33.checkCreditCode 验证统一社会信用代码
+- ### getFormData 对象转化为FormData对象
 ```js
-const result = checkCreditCode('xxxxxxx');
+const obj = {id: 1, name: 'xs'};
+const result = getFormData(obj);
 ```
 
-### 34.sensitiveEscape 敏感符号转义 (预防xss攻击)
+- ### getNodePath 查找某一节点在树中路径
 ```js
-const result = sensitiveEscape('xxx"xxx<x>x&x');
+const result = getNodePath(tree, 12);
+// 根据索引查找
+const resultByIndex = getNodePath(tree, 12, true);
 ```
 
-### 35.getUrlParam 获取url参数
+- ### getUrlParam 获取url参数
 ```js
 // type Fn = (name: string, origin: string | null) => string | null
 const result = getUrlParam(name);
 ```
 
-### 36.formatMoney 金钱格式化，三位加逗号
+- ### isNullObj 判断是否是空对象
 ```js
-// type Fn = (name: string, origin: string | null) => string | null
-const result = formatMoney(1234567);
+const result = isNullObj(obj);
 ```
 
-### 37.matchesByValue 根据value匹配字符串（搜索字符串并替换，做高亮使用）
+- ### matchesByValue 根据value匹配字符串（搜索字符串并替换，做高亮使用）
 ```js
 const result = matchesByValue(
     '今天是一个A好日a子',
@@ -269,32 +277,45 @@ const result = matchesByValue(
 );
 ```
 
-### 38.hasClassName el是否包含某个class
+- ### removeAttrByParam 根据参数删除树的属性
 ```js
-// el: HTMLElement, className: string
-const result = hasClassName(el, className);
+const result = removeAttrByParam(tree, 'id');
 ```
 
-### 39.addClassName el添加某个class
+- ### removeEmptyChildren 删除树中的空children
 ```js
-// el: HTMLElement, className: string
-addClassName(el, className);
+const result = removeEmptyChildren(tree, 'id');
 ```
 
-### 40.removeClassName el去除某个class
-```js
-// el: HTMLElement, className: string
-removeClassName(el, className);
-```
-
-### 41.downloadByUrl 根据url地址下载
-```js
-// url: string
-const result = downloadByUrl(url);
-```
-
-### 42.removeHtmlTag 去除html标签
+- ### removeHtmlTag 去除html标签
 ```js
 // str: string
 const result = removeHtmlTag(str);
+```
+
+- ### round 四舍五入到制定位数
+```js
+// dec = 2 保留位数，默认2
+const result = round(1.345);
+```
+
+- ### scrollToTop 平滑滚动到页面顶部
+```js
+scrollToTop();
+```
+
+- ### sensitiveEscape 敏感符号转义 (预防xss攻击)
+```js
+const result = sensitiveEscape(str);
+```
+
+- ### treeToArray 数组转树形结构
+```js
+// parentId = -1 顶级默认父级id为-1
+const arr = treeToArray(tree);
+```
+
+- ### uuid 随机生成n位字符串
+```js
+const str = uuid(5);
 ```
