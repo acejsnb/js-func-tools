@@ -7,7 +7,7 @@ import byteSize from './utils/byteSize';
 import capitalise from './utils/capitalise';
 import copyToBoard from './utils/copyToBoard';
 import cutRadixPoint from './utils/cutRadixPoint';
-import { dayOfYear, dayOfWeek, weekOfYear, formatDate } from './utils/dateHandle';
+import { dayOfYear, dayOfWeek, weekOfYear, formatDate, getTime } from './utils/dateHandle';
 import filterTreeByFunc from './utils/filterTreeByFunc';
 import downloadByUrl from './utils/downloadByUrl';
 import findTarget from './utils/findTarget';
@@ -16,6 +16,7 @@ import getAllLeaf from './utils/getAllLeaf';
 import getFormData from './utils/getFormData';
 import getNodePath from './utils/getNodePath';
 import isNullObj from './utils/isNullObj';
+import isWeekday from './utils/isWeekday';
 import matchesByValue from './utils/matchesByValue';
 import removeAttrByParam from './utils/removeAttrByParam';
 import removeEmptyChildren from './utils/removeEmptyChildren';
@@ -49,7 +50,7 @@ export {
     capitalise,
     copyToBoard,
     cutRadixPoint,
-    dayOfYear, dayOfWeek, weekOfYear, formatDate,
+    dayOfYear, dayOfWeek, weekOfYear, formatDate, getTime,
     downloadByUrl,
     filterTreeByFunc,
     findTarget,
@@ -58,6 +59,7 @@ export {
     getFormData,
     getNodePath,
     isNullObj,
+    isWeekday,
     matchesByValue,
     removeAttrByParam,
     removeEmptyChildren,

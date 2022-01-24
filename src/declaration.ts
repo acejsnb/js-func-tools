@@ -39,6 +39,7 @@ declare module 'js-func-tools' {
     export function dayOfWeek(dateStr: string): number
     export function weekOfYear(dateStr: string): number
     export function formatDate(fmt: string, dateStr?: string): string
+    export function getTime(date: string | Date, fmt: 'h' | 'hm' | 'hms'): string
     export function filterTreeByFunc(tree: ITree[], func: (item: ITree) => boolean): ITree[]
     export function findTarget(target: HTMLElement, tagList: string[]): HTMLElement
     export namespace formatMoney {
@@ -60,6 +61,7 @@ declare module 'js-func-tools' {
     export function getNodePath(tree: ITree[], id: string | number, byIndex?: boolean): Array<string | number>
     export function getUrlParam(name: string, origin?: string | null): string | null
     export function isNullObj(obj: AnyType): boolean
+    export function isWeekday(date: string | Date): boolean
     export function matchesByValue(value: string, search: string, jointStart: string, jointEnd: string): string
     export function removeAttrByParam(tree: ITree[], param: string): ITree[]
     export function removeEmptyChildren(tree: ITree[]): ITree[]

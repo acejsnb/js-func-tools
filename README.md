@@ -173,24 +173,29 @@ const num = cutRadixPoint(807.34691);
 
 - ### dayOfYear 获取当前时间是当年的第多少天
 ```js
-const num = dayOfYear('2021.10.30');
+const result = dayOfYear('2021.10.30');
 ```
 
 - ### dayOfWeek 获取当前时间是星期几
 ```js
-const num = dayOfWeek('2021.10.30');
+const result = dayOfWeek('2021.10.30');
 ```
 
 - ### weekOfYear 当前时间是本年的第几周
 ```js
-const num = weekOfYear('2021.10.30');
+const result = weekOfYear('2021.10.30');
 ```
 
 - ### formatDate 格式化时间
 ```js
 // fmt: string, dateStr?: string
 // fmt yyyy-mm-dd hh:MM:ss.S
-const num = formatDate('yyyy-mm-dd');
+const result = formatDate('yyyy-mm-dd');
+```
+
+- ### getTime 获取当前时间的时分秒
+```js
+const result = getTime('2022.01.24', 'hms');
 ```
 
 - ### downloadByUrl 根据url地址下载
@@ -265,6 +270,11 @@ const result = getUrlParam(name);
 - ### isNullObj 判断是否是空对象
 ```js
 const result = isNullObj(obj);
+```
+
+- ### isWeekday 判断给定的日期是否是工作日
+```js
+const result = isWeekday('2021.1.24');
 ```
 
 - ### matchesByValue 根据value匹配字符串（搜索字符串并替换，做高亮使用）

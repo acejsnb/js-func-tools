@@ -50,9 +50,18 @@ const formatDate = (fmt: string, dateStr?: string): string => {
     return fmt;
 };
 
+/**
+ * 获取当前时间的时分秒
+ * @param date
+ * @param format
+ */
+type GetTimeFn = (date: string | Date, fmt: 'h' | 'hm' | 'hms') => string
+const getTime: GetTimeFn = (date, fmt = 'hm') => (date instanceof Date ? date : new Date(date)).toTimeString().slice(0, ({h: 2, hm: 5, hms: 8})[fmt]);
+
 export {
     dayOfYear,
     dayOfWeek,
     weekOfYear,
-    formatDate
+    formatDate,
+    getTime
 };
