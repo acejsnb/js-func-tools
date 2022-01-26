@@ -59,6 +59,7 @@ declare module 'js-func-tools' {
     export function getAllLeaf(tree: ITree[], first?: boolean): ITree[]
     export function getFormData(object: AnyType): FormData
     export function getNodePath(tree: ITree[], id: string | number, byIndex?: boolean): Array<string | number>
+    export function getPlaceByTrigger(options: { trigger: HTMLElement, dom: HTMLElement, offset?: number, isRight?: boolean }): { left: number, top: number, isDown: boolean }
     export function getUrlParam(name: string, origin?: string | null): string | null
     export function isNullObj(obj: AnyType): boolean
     export function isWeekday(date: string | Date): boolean

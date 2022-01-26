@@ -1,88 +1,53 @@
-import addZero from './utils/addZero';
-import arrayDeWeight from './utils/arrayDeWeight';
-import arrayToTree from './utils/arrayToTree';
-import average from './utils/average';
-import bottomVisible from './utils/bottomVisvibile';
-import byteSize from './utils/byteSize';
-import capitalise from './utils/capitalise';
-import copyToBoard from './utils/copyToBoard';
-import cutRadixPoint from './utils/cutRadixPoint';
+export { default as addZero } from './utils/addZero';
+export { default as arrayDeWeight } from './utils/arrayDeWeight';
+export { default as arrayToTree } from './utils/arrayToTree';
+export { default as average } from './utils/average';
+export { default as bottomVisible } from './utils/bottomVisvibile';
+export { default as byteSize } from './utils/byteSize';
+export { default as capitalise } from './utils/capitalise';
+export { default as copyToBoard } from './utils/copyToBoard';
+export { default as cutRadixPoint } from './utils/cutRadixPoint';
+
 import { dayOfYear, dayOfWeek, weekOfYear, formatDate, getTime } from './utils/dateHandle';
-import filterTreeByFunc from './utils/filterTreeByFunc';
-import downloadByUrl from './utils/downloadByUrl';
-import findTarget from './utils/findTarget';
-import formValidate from './utils/formValidate';
-import getAllLeaf from './utils/getAllLeaf';
-import getFormData from './utils/getFormData';
-import getNodePath from './utils/getNodePath';
-import isNullObj from './utils/isNullObj';
-import isWeekday from './utils/isWeekday';
-import matchesByValue from './utils/matchesByValue';
-import removeAttrByParam from './utils/removeAttrByParam';
-import removeEmptyChildren from './utils/removeEmptyChildren';
-import removeHtmlTag from './utils/removeHtmlTag';
-import round from './utils/round';
-import treeToArray from './utils/treeToArray';
-import uuid from './utils/uuid';
-import checkColor16 from './utils/checkColor16';
-import checkEmail from './utils/checkEmail';
-import checkIDCard from './utils/checkIDCard';
-import { checkPassword, checkPasswordBetter, checkPasswordBest } from './utils/checkPassword';
-import checkPhoneNumber from './utils/checkPhoneNumber';
-import checkPlateNumber from './utils/checkPlateNumber';
-import checkPostcode from './utils/checkPostcode';
-import checkUrl from './utils/checkUrl';
+
+export { default as filterTreeByFunc } from './utils/filterTreeByFunc';
+export { default as downloadByUrl } from './utils/downloadByUrl';
+export { default as findTarget } from './utils/findTarget';
+export { default as formValidate } from './utils/formValidate';
+export { default as getAllLeaf } from './utils/getAllLeaf';
+export { default as getFormData } from './utils/getFormData';
+export { default as getNodePath } from './utils/getNodePath';
+export { default as getPlaceByTrigger } from './utils/getPlaceByTrigger';
+export { default as isNullObj } from './utils/isNullObj';
+export { default as isWeekday } from './utils/isWeekday';
+export { default as matchesByValue } from './utils/matchesByValue';
+export { default as removeAttrByParam } from './utils/removeAttrByParam';
+export { default as removeEmptyChildren } from './utils/removeEmptyChildren';
+export { default as removeHtmlTag } from './utils/removeHtmlTag';
+export { default as round } from './utils/round';
+export { default as treeToArray } from './utils/treeToArray';
+export { default as uuid } from './utils/uuid';
+export { default as checkColor16 } from './utils/checkColor16';
+export { default as checkEmail } from './utils/checkEmail';
+export { default as checkIDCard } from './utils/checkIDCard';
+export { checkPassword, checkPasswordBetter, checkPasswordBest } from './utils/checkPassword';
+export { default as checkPhoneNumber } from './utils/checkPhoneNumber';
+export { default as checkPlateNumber } from './utils/checkPlateNumber';
+export { default as checkPostcode } from './utils/checkPostcode';
+export { default as checkUrl } from './utils/checkUrl';
+
 import { hasClassName, addClassName, removeClassName } from './utils/classNameHandle';
 import cloneDeep, { cloneDeepComplex } from './utils/cloneDeep';
-import checkCreditCode from './utils/checkCreditCode';
-import sensitiveEscape from './utils/sensitiveEscape';
-import getUrlParam from './utils/getUrlParam';
-import scrollToTop from './utils/scrollToTop';
-import formatMoney from './utils/formatMoney';
+
+export { default as checkCreditCode } from './utils/checkCreditCode';
+export { default as sensitiveEscape } from './utils/sensitiveEscape';
+export { default as getUrlParam } from './utils/getUrlParam';
+export { default as scrollToTop } from './utils/scrollToTop';
+export { default as formatMoney } from './utils/formatMoney';
 
 export {
-    addZero,
-    arrayDeWeight,
-    arrayToTree,
-    average,
-    bottomVisible,
-    byteSize,
-    capitalise,
-    copyToBoard,
-    cutRadixPoint,
     dayOfYear, dayOfWeek, weekOfYear, formatDate, getTime,
-    downloadByUrl,
-    filterTreeByFunc,
-    findTarget,
-    formValidate,
-    getAllLeaf,
-    getFormData,
-    getNodePath,
-    isNullObj,
-    isWeekday,
-    matchesByValue,
-    removeAttrByParam,
-    removeEmptyChildren,
-    removeHtmlTag,
-    round,
-    treeToArray,
-    uuid,
-    checkColor16,
-    checkEmail,
-    checkIDCard,
-    checkPassword,
-    checkPasswordBetter,
-    checkPasswordBest,
-    checkPhoneNumber,
-    checkPlateNumber,
-    checkPostcode,
-    checkUrl,
     hasClassName, addClassName, removeClassName,
     cloneDeep,
-    cloneDeepComplex,
-    checkCreditCode,
-    sensitiveEscape,
-    getUrlParam,
-    scrollToTop,
-    formatMoney
+    cloneDeepComplex
 };

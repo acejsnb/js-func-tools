@@ -261,6 +261,12 @@ const result = getNodePath(tree, 12);
 const resultByIndex = getNodePath(tree, 12, true);
 ```
 
+- ### getPlaceByTrigger 根据触发器获取dom定位位置
+```js
+// type Fn = (params: { trigger: HTMLElement, dom: HTMLElement, offset?: number, isRight?: boolean }) => { left: number, top: number, isDown: boolean }
+const { left, top, isDown } = getPlaceByTrigger({ trigger: target, dom: div, isRight: false });
+```
+
 - ### getUrlParam 获取url参数
 ```js
 // type Fn = (name: string, origin: string | null) => string | null

@@ -1,5 +1,5 @@
 <script setup>
-import { getNodePath, arrayToTree, treeToArray, arrayDeWeight, cloneDeep, cloneDeepComplex, formatMoney, dayOfWeek, weekOfYear } from '../../../dist/index.js';
+import { addZero, getNodePath, arrayToTree, treeToArray, arrayDeWeight, cloneDeep, cloneDeepComplex, formatMoney, dayOfWeek, weekOfYear } from '../../../dist/index.js';
 const arr = [
     {'id': 1, 'name': '一级1', 'parentId': -1},
     {'id': 121, 'name': '二级1', 'parentId': 1},
@@ -55,6 +55,8 @@ const tree2 = [
     }
 ];
 
+console.log('addZero==', addZero(2));
+
 const result = getNodePath(tree2, '122', true);
 console.log('getNodePath===', result);
 // 根据索引查找
@@ -85,7 +87,7 @@ defineProps({
 </script>
 
 <template>
-    <h1>{{ msg }}</h1>
+<!--    <h1>{{ msg }}</h1>-->
 </template>
 
 <style scoped>
