@@ -278,6 +278,11 @@ const result = getUrlParam(name);
 const result = isNullObj(obj);
 ```
 
+- ### hex2Rgb hex转rgb颜色
+```js
+const result = hex2Rgb('#f0f0f0');
+```
+
 - ### isWeekday 判断给定的日期是否是工作日
 ```js
 const result = isWeekday('2021.1.24');
@@ -307,6 +312,11 @@ const result = removeEmptyChildren(tree, 'id');
 ```js
 // str: string
 const result = removeHtmlTag(str);
+```
+
+- ### rgb2Hex rgb转16进制颜色
+```js
+const result = rgb2Hex('rgb(255, 255, 255)');
 ```
 
 - ### round 四舍五入到制定位数

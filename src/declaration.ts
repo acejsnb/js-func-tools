@@ -61,12 +61,14 @@ declare module 'js-func-tools' {
     export function getNodePath(tree: ITree[], id: string | number, byIndex?: boolean): Array<string | number>
     export function getPlaceByTrigger(options: { trigger: HTMLElement, dom: HTMLElement, offset?: number, isRight?: boolean }): { left: number, top: number, isDown: boolean }
     export function getUrlParam(name: string, origin?: string | null): string | null
+    export function hex2Rgb(hex: string): string
     export function isNullObj(obj: AnyType): boolean
     export function isWeekday(date: string | Date): boolean
     export function matchesByValue(value: string, search: string, jointStart: string, jointEnd: string): string
     export function removeAttrByParam(tree: ITree[], param: string): ITree[]
     export function removeEmptyChildren(tree: ITree[]): ITree[]
     export function removeHtmlTag(str: string): string
+    export function rgb2Hex(str: string): string
     export function round(n: string | number, dec?: number): string
     export function scrollToTop(): void
     export function sensitiveEscape(s: string): string
