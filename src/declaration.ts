@@ -20,6 +20,7 @@ declare module 'js-func-tools' {
     export function checkCreditCode(str: string): boolean
     export function checkEmail(str: string): boolean
     export function checkIDCard(str: string): boolean
+    export function checkObjType(obj: any, type: string): boolean
     export function checkPassword(str: string): boolean
     export function checkPasswordBetter(str: string): boolean
     export function checkPasswordBest(str: string): boolean
@@ -59,6 +60,7 @@ declare module 'js-func-tools' {
     export function getAllLeaf(tree: ITree[], first?: boolean): ITree[]
     export function getFormData(object: AnyType): FormData
     export function getNodePath(tree: ITree[], id: string | number, byIndex?: boolean): Array<string | number>
+    export function getObjType(obj: any): string
     export function getPlaceByTrigger(options: { trigger: HTMLElement, dom: HTMLElement, offset?: number, isRight?: boolean }): { left: number, top: number, isDown: boolean }
     export function getUrlParam(name: string, origin?: string | null): string | null
     export function hex2Rgb(hex: string): string

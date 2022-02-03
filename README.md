@@ -103,6 +103,11 @@ const result = checkEmail('xxx@163.xom')
 const result = checkIDCard('身份证号')
 ```
 
+- ### checkObjType 检查数据类型
+```js
+const result = checkObjType('abc', 'string')
+```
+
 - ### checkPassword 验证密码
 ```js
 // 弱：纯数字，纯字母，纯特殊字符
@@ -259,6 +264,12 @@ const result = getFormData(obj);
 const result = getNodePath(tree, 12);
 // 根据索引查找
 const resultByIndex = getNodePath(tree, 12, true);
+```
+
+- ### getObjType 获取一个对象的类型
+```js
+// obj: any
+const result = getObjType(obj);
 ```
 
 - ### getPlaceByTrigger 根据触发器获取dom定位位置
