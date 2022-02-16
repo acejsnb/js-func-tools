@@ -17,6 +17,7 @@ const getPlaceByTrigger: Fn = ({ trigger, dom, offset = 8, isRight = false }) =>
     domModal.style.position = 'absolute';
     domModal.style.left = '0';
     domModal.style.top = '0';
+    domModal.style.display = 'inline-block';
     body.appendChild(domModal);
     // dom宽高
     const { width: dw, height: dh } = domModal.getBoundingClientRect();

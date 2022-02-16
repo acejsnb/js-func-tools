@@ -6,9 +6,8 @@ const click = (e) => {
     const { target } = e;
     const div = document.createElement('div');
     div.className = 'modal-div';
-    div.innerHTML = `
-    <br><br><br><br><br><br><br><br><br><br><br>
-    `;
+
+    div.innerHTML = `${'啊'.repeat(Math.random() * 10)}`;
     const { left = 0, top = 0 } = getPlaceByTrigger({ trigger: target, dom: div, isRight: false });
     div.style.left = `${left}px`;
     div.style.top = `${top}px`;
@@ -47,12 +46,12 @@ const click = (e) => {
 <style>
 .box {
     padding: 50px;
-    width: 600px;
+    /*width: 600px;*/
 }
 .modal-div {
     position: absolute;
     background-color: #42b983;
-    width: 200px;
+    /*width: 200px;*/
     font-size: 14px;
     opacity: .4;
 }
