@@ -1,6 +1,11 @@
 <script setup>
 // import { getPlaceByTrigger } from '../../../dist/index.js';
 import { getPlaceByTrigger } from '../../index';
+import getYMDByYear from '../../utils/getYMDByYear'
+import { formatDate } from '../../utils/dateHandle'
+
+console.log(getYMDByYear());
+console.log(formatDate('yyyy-mm-dd', '2022.01.01 08:00'));
 
 const click = (e) => {
     const { target } = e;

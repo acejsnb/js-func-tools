@@ -57,11 +57,22 @@ const formatDate = (fmt: string, dateStr?: string): string => {
  */
 type GetTimeFn = (date: string | Date, fmt: 'h' | 'hm' | 'hms') => string
 const getTime: GetTimeFn = (date, fmt = 'hm') => (date instanceof Date ? date : new Date(date)).toTimeString().slice(0, ({h: 2, hm: 5, hms: 8})[fmt]);
+/**
+ * 获取当月有多少天
+ * @param year
+ * @param month
+ */
+type GetDaysFn = (year?: string | number, month?: string | number) => number
+const getDays: GetDaysFn = (year, month) => {
+    let yyyy = Number(year ?? new Date().getFullYear()), mm = Number(month ?? new Date().getMonth() + 1);
+    return new Date(yyyy, mm, 0).getDate();
+};
 
 export {
     dayOfYear,
     dayOfWeek,
     weekOfYear,
     formatDate,
-    getTime
+    getTime,
+    getDays
 };

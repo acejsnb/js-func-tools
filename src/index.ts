@@ -8,8 +8,9 @@ export { default as capitalise } from './utils/capitalise';
 export { default as copyToBoard } from './utils/copyToBoard';
 export { default as cutRadixPoint } from './utils/cutRadixPoint';
 
-import { dayOfYear, dayOfWeek, weekOfYear, formatDate, getTime } from './utils/dateHandle';
+import { dayOfYear, dayOfWeek, weekOfYear, formatDate, getTime, getDays } from './utils/dateHandle';
 
+export { default as getYMDByYear } from './utils/getYMDByYear';
 export { default as filterTreeByFunc } from './utils/filterTreeByFunc';
 export { default as downloadByUrl } from './utils/downloadByUrl';
 export { default as findTarget } from './utils/findTarget';
@@ -50,7 +51,7 @@ export { default as scrollToTop } from './utils/scrollToTop';
 export { default as formatMoney } from './utils/formatMoney';
 
 export {
-    dayOfYear, dayOfWeek, weekOfYear, formatDate, getTime,
+    dayOfYear, dayOfWeek, weekOfYear, formatDate, getTime, getDays,
     hasClassName, addClassName, removeClassName,
     cloneDeep,
     cloneDeepComplex

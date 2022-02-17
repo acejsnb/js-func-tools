@@ -203,6 +203,16 @@ const result = formatDate('yyyy-mm-dd');
 const result = getTime('2022.01.24', 'hms');
 ```
 
+- ### getDays 获取当月有多少天
+```js
+const result = getDays(2022, 2);
+```
+
+- ### getYMDByYear 根据年获取当前所有年月日
+```js
+const result = getYMDByYear();
+```
+
 - ### downloadByUrl 根据url地址下载
 ```js
 // url: string

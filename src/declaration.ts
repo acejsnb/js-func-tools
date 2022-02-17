@@ -41,6 +41,8 @@ declare module 'js-func-tools' {
     export function weekOfYear(dateStr: string): number
     export function formatDate(fmt: string, dateStr?: string): string
     export function getTime(date: string | Date, fmt: 'h' | 'hm' | 'hms'): string
+    export function getDays(year?: string | number, month?: string | number): number
+    export function getYMDByYear(options: { year?: string | number, month?: string | number }): string[] | { month: string, children: string[] }[]
     export function filterTreeByFunc(tree: ITree[], func: (item: ITree) => boolean): ITree[]
     export function findTarget(target: HTMLElement, tagList: string[]): HTMLElement
     export namespace formatMoney {
