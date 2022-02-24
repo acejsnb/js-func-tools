@@ -1,11 +1,17 @@
 <script setup>
-// import { getPlaceByTrigger } from '../../../dist/index.js';
-import { getPlaceByTrigger } from '../../index';
+// import { getPlaceByTrigger, getCurrentMonth, getPrevMonth, getNextMonth } from '../../../dist/index.js';
+// import { getPlaceByTrigger } from '../../index';
 import getYMDByYear from '../../utils/getYMDByYear'
-import { formatDate } from '../../utils/dateHandle'
+import { formatDate, getCurrentWeek, getPrevWeek, getNextWeek, getCurrentMonth, getPrevMonth, getNextMonth } from '../../utils/dateHandle'
 
-console.log(getYMDByYear());
-console.log(formatDate('yyyy-mm-dd', '2022.01.01 08:00'));
+// console.log(getYMDByYear());
+// console.log(formatDate('yyyy-mm-dd', '2022.01.01 08:00'));
+// console.log(getCurrentWeek(1));
+// console.log(getPrevWeek(1));
+// console.log(getNextWeek(1));
+console.log(getCurrentMonth());
+// console.log(getPrevMonth());
+// console.log(getNextMonth());
 
 const click = (e) => {
     const { target } = e;

@@ -8,7 +8,7 @@ export { default as capitalise } from './utils/capitalise';
 export { default as copyToBoard } from './utils/copyToBoard';
 export { default as cutRadixPoint } from './utils/cutRadixPoint';
 
-import { dayOfYear, dayOfWeek, weekOfYear, formatDate, getTime, getDays } from './utils/dateHandle';
+import { dayOfYear, dayOfWeek, weekOfYear, formatDate, getTime, getDays, getCurrentWeek, getPrevWeek, getNextWeek, getCurrentMonth, getPrevMonth, getNextMonth } from './utils/dateHandle';
 
 export { default as getYMDByYear } from './utils/getYMDByYear';
 export { default as filterTreeByFunc } from './utils/filterTreeByFunc';
@@ -51,7 +51,7 @@ export { default as scrollToTop } from './utils/scrollToTop';
 export { default as formatMoney } from './utils/formatMoney';
 
 export {
-    dayOfYear, dayOfWeek, weekOfYear, formatDate, getTime, getDays,
+    dayOfYear, dayOfWeek, weekOfYear, formatDate, getTime, getDays, getCurrentWeek, getPrevWeek, getNextWeek, getCurrentMonth, getPrevMonth, getNextMonth,
     hasClassName, addClassName, removeClassName,
     cloneDeep,
     cloneDeepComplex

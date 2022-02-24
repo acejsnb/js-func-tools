@@ -42,6 +42,12 @@ declare module 'js-func-tools' {
     export function formatDate(fmt: string, dateStr?: string): string
     export function getTime(date: string | Date, fmt: 'h' | 'hm' | 'hms'): string
     export function getDays(year?: string | number, month?: string | number): number
+    export function getCurrentWeek(type?: 0 | 1, date?: string): string[]
+    export function getPrevWeek(type?: 0 | 1, date?: string): string[]
+    export function getNextWeek(type?: 0 | 1, date?: string): string[]
+    export function getCurrentMonth(date?: string): string[]
+    export function getPrevMonth(date?: string): string[]
+    export function getNextMonth(date?: string): string[]
     export function getYMDByYear(options: { year?: string | number, month?: string | number }): string[] | { month: string, children: string[] }[]
     export function filterTreeByFunc(tree: ITree[], func: (item: ITree) => boolean): ITree[]
     export function findTarget(target: HTMLElement, tagList: string[]): HTMLElement

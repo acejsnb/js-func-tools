@@ -1,3 +1,5 @@
+import addZero from './addZero';
+
 type Fn = (dateStr: string) => number
 // 获取当前时间是当年的第多少天
 const dayOfYear: Fn = dateStr => {
@@ -68,11 +70,69 @@ const getDays: GetDaysFn = (year, month) => {
     return new Date(yyyy, mm, 0).getDate();
 };
 
+/**
+ * 获取周
+ * @param type 0从周日开始算， 1从周一开始算
+ * @param date Date
+ */
+type GetWeekFn = (type?: 0 | 1, date?: string) => string[];
+// 获取当前周
+const getCurrentWeek: GetWeekFn = (type = 0, date) => {
+    const curDate = date ? new Date(date) : new Date(),
+        today = curDate.getDay() || 7,
+        format = (DATE: Date) => `${DATE.getFullYear()}.${addZero(DATE.getMonth() + 1)}.${addZero(DATE.getDate())}`;
+    return Array.from(new Array(7), (val, index) => format(new Date(curDate.getTime() - (today - index - type) * 24 * 3600* 1000)));
+};
+// 获取上一周
+const getPrevWeek: GetWeekFn = (type = 0, date) => {
+    const curDate = date ? new Date(date) : new Date(),
+        weekDate = new Date(curDate.getTime() - 7 * 24 * 3600 * 1000);
+    return getCurrentWeek(type, weekDate.toDateString());
+};
+// 获取下一周
+const getNextWeek: GetWeekFn = (type = 0, date) => {
+    const curDate = date ? new Date(date) : new Date(),
+        weekDate = new Date(curDate.getTime() + 7 * 24 * 3600 * 1000);
+    return getCurrentWeek(type, weekDate.toDateString());
+};
+
+type GetMonthFn = (date?: string) => string[];
+// 获取当前月
+const getCurrentMonth: GetMonthFn = (date) => {
+    const curDate = date ? new Date(date) : new Date(),
+        year = curDate.getFullYear(),
+        month = addZero(curDate.getMonth() + 1),
+        days = getDays(year, month);
+    return Array.from(new Array(days), (val, index) => (`${year}.${month}.${addZero(index + 1)}`));
+};
+// 获取上一月
+const getPrevMonth: GetMonthFn = (date) => {
+    const curDate = date ? new Date(date) : new Date(),
+        year = curDate.getFullYear(),
+        month = curDate.getMonth(),
+        monthDate = new Date(year, month, 0);
+    return getCurrentMonth(monthDate.toDateString());
+};
+// 获取下一月
+const getNextMonth: GetMonthFn = (date) => {
+    const curDate = date ? new Date(date) : new Date(),
+        year = curDate.getFullYear(),
+        month = curDate.getMonth() + 2,
+        monthDate = new Date(year, month, 0);
+    return getCurrentMonth(monthDate.toDateString());
+};
+
 export {
     dayOfYear,
     dayOfWeek,
     weekOfYear,
     formatDate,
     getTime,
-    getDays
+    getDays,
+    getCurrentWeek,
+    getPrevWeek,
+    getNextWeek,
+    getCurrentMonth,
+    getPrevMonth,
+    getNextMonth
 };

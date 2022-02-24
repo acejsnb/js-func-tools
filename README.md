@@ -208,6 +208,20 @@ const result = getTime('2022.01.24', 'hms');
 const result = getDays(2022, 2);
 ```
 
+- ### getCurrentWeek/getPrevWeek/getNextWeek 获取(当前/上一/下一)周
+```js
+// type GetWeekFn = (type?: 0 | 1, date?: string) => string[];
+const cur = getCurrentWeek();
+const pre = getPrevWeek();
+const nex = getNextWeek();
+```
+- ### getCurrentMonth/getPrevMonth/getNextMonth 获取(当前/上一/下一)月
+```js
+const cur = getCurrentMonth();
+const pre = getPrevMonth();
+const nex = getNextMonth();
+```
+
 - ### getYMDByYear 根据年获取当前所有年月日
 ```js
 const result = getYMDByYear();
