@@ -9,4 +9,3 @@ const scrollToTop: Fn = (id) => {
 };
 
 export default scrollToTop;
-

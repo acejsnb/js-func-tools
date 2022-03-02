@@ -365,6 +365,11 @@ const result = round(1.345);
 scrollToTop();
 ```
 
+- ### scrollToPlace 平滑滚动到指定位置
+```js
+scrollToPlace({ key: 'scrollLeft' });
+```
+
 - ### sensitiveEscape 敏感符号转义 (预防xss攻击)
 ```js
 const result = sensitiveEscape(str);
