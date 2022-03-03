@@ -49,6 +49,7 @@ declare module 'js-func-tools' {
     export function getPrevMonth(date?: string): string[]
     export function getNextMonth(date?: string): string[]
     export function getYMDByYear(options: { year?: string | number, month?: string | number }): string[] | { month: string, children: string[] }[]
+    export function hasKeyByObj(obj: any, key: string): boolean
     export function filterTreeByFunc(tree: ITree[], func: (item: ITree) => boolean): ITree[]
     export function findTarget(target: HTMLElement, tagList: string[]): HTMLElement
     export namespace formatMoney {

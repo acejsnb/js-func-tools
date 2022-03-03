@@ -227,6 +227,12 @@ const nex = getNextMonth();
 const result = getYMDByYear();
 ```
 
+- ### hasKeyByObj 判断一个对象是否包含某个属性
+```js
+// obj: any, key: string
+const result = hasKeyByObj(obj, key);
+```
+
 - ### downloadByUrl 根据url地址下载
 ```js
 // url: string

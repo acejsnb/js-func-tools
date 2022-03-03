@@ -11,6 +11,7 @@ export { default as cutRadixPoint } from './utils/cutRadixPoint';
 import { dayOfYear, dayOfWeek, weekOfYear, formatDate, getTime, getDays, getCurrentWeek, getPrevWeek, getNextWeek, getCurrentMonth, getPrevMonth, getNextMonth } from './utils/dateHandle';
 
 export { default as getYMDByYear } from './utils/getYMDByYear';
+export { default as hasKeyByObj } from './utils/hasKeyByObj';
 export { default as filterTreeByFunc } from './utils/filterTreeByFunc';
 export { default as downloadByUrl } from './utils/downloadByUrl';
 export { default as findTarget } from './utils/findTarget';
