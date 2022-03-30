@@ -9,7 +9,7 @@ interface ITree {
     children?: ITree[]
     [key: string]: any
 }
-const cloneDeep = (data: ITree[]): ITree[] => JSON.parse(JSON.stringify(data, (k, v) => v ? v : ''));
+const cloneDeep = (data: ITree[]): ITree[] => 'structuredClone' in window ? (window as any).structuredClone(data) : JSON.parse(JSON.stringify(data, (k, v) => v ? v : ''));
 
 /**
  * 复杂数据深拷贝
