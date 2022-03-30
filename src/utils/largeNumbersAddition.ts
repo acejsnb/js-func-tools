@@ -29,7 +29,7 @@ const largeNumbersAddition: LargeNumbersAddition = (a, b) => {
         // 将得到的余数（个位数）添加到result列表
         result.push(remainder);
         // 修改进位数
-        carryOver = (cur - remainder) / 10;
+        carryOver = Math.floor(cur / 10);
     });
 
     return result.reverse().join('');
