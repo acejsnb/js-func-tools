@@ -5,10 +5,14 @@
  */
 type LargeNumbersAddition = (a: string | number, b: string | number) => string;
 const largeNumbersAddition: LargeNumbersAddition = (a, b) => {
-    const aArr = String(a).split('').reverse().map(Number),
-        aLen = aArr.length,
-        bArr = String(b).split('').reverse().map(Number),
-        bLen= bArr.length,
+    const strA = String(a),
+        strB = String(b),
+        aLen = strA.length,
+        bLen= strB.length;
+    // 如果字符的长度没有超出Number.MAX_SAFE_INTEGER，则直接相加
+    if (aLen < 16 && bLen < 16) return String(Number(a) + Number(b));
+    const aArr = strA.split('').reverse().map(Number),
+        bArr = strB.split('').reverse().map(Number),
         result: number[] = [];
 
     // 循环的数据
