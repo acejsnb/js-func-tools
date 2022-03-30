@@ -75,6 +75,7 @@ declare module 'js-func-tools' {
     export function hex2Rgb(hex: string): string
     export function isNullObj(obj: AnyType): boolean
     export function isWeekday(date: string | Date): boolean
+    export function largeNumbersAddition(a: string | number, b: string | number): string
     export function matchesByValue(value: string, search: string, jointStart: string, jointEnd: string): string
     export function removeAttrByParam(tree: ITree[], param: string): ITree[]
     export function removeEmptyChildren(tree: ITree[]): ITree[]

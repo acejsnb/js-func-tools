@@ -1,6 +1,6 @@
 {
   "name": "js-func-tools",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "js常用工具函数 tools utils",
   "main": "dist/index.js",
   "author": "xiongshuang",

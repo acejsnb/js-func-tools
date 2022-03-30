@@ -329,6 +329,11 @@ const result = hex2Rgb('#f0f0f0');
 const result = isWeekday('2021.1.24');
 ```
 
+- ### largeNumbersAddition 两个大数相加
+```js
+const result = largeNumbersAddition(123456, Math.pow(2, 53) - 1);
+```
+
 - ### matchesByValue 根据value匹配字符串（搜索字符串并替换，做高亮使用）
 ```js
 const result = matchesByValue(
