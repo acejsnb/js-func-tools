@@ -22,16 +22,10 @@ const cloneDeepComplex = (target: ITree[]): ITree[] => {
 
     const clone = (data: any) => {
         if (!isObject(data)) return data;
-        if ([Date, RegExp].includes(data.constructor)) {
-            return new data.constructor(data);
-        }
-        if (typeof data === 'function') {
-            return new Function('return ' + data.toString())();
-        }
+        if ([Date, RegExp].includes(data.constructor)) return new data.constructor(data);
+        if (typeof data === 'function') return new Function('return ' + data.toString())();
         const exist = map.get(data);
-        if (exist) {
-            return exist;
-        }
+        if (exist) return exist;
         if (data instanceof Map) {
             const result = new Map();
             map.set(data, result);

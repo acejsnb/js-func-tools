@@ -319,6 +319,13 @@ const result = getUrlParam(name);
 const result = isNullObj(obj);
 ```
 
+- ### isObjValEqual 判断两个对象是否相等
+```js
+const obj1 = {a: '1', b: '2', c: [1,2,{a:1}]};
+const obj2 = {a: '1', b: '2', c: [1,2,{a:12}]};
+const result = isObjValEqual(obj1, obj2);
+```
+
 - ### hex2Rgb hex转rgb颜色
 ```js
 const result = hex2Rgb('#f0f0f0');

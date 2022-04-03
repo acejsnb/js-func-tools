@@ -1,11 +1,11 @@
 <script setup>
-// import HelloWorld from './components/HelloWorld.vue';
-import PlaceByTrigger from './components/PlaceByTrigger.vue';
+import HelloWorld from './components/HelloWorld.vue';
+// import PlaceByTrigger from './components/PlaceByTrigger.vue';
 </script>
 
 <template>
-<!--  <HelloWorld msg="Hello js-func-tools" />-->
-    <PlaceByTrigger />
+  <HelloWorld msg="Hello js-func-tools" />
+<!--    <PlaceByTrigger />-->
 </template>
 
 <style>

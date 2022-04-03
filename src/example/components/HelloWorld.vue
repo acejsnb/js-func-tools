@@ -1,5 +1,6 @@
 <script setup>
 import { addZero, getNodePath, arrayToTree, treeToArray, arrayDeWeight, cloneDeep, cloneDeepComplex, formatMoney, dayOfWeek, weekOfYear } from '../../../dist/index.js';
+import isObjValEqual from '../../utils/isObjValEqual';
 const arr = [
     {'id': 1, 'name': '一级1', 'parentId': -1},
     {'id': 121, 'name': '二级1', 'parentId': 1},
@@ -55,10 +56,10 @@ const tree2 = [
     }
 ];
 
-console.log('addZero==', addZero(2));
+// console.log('addZero==', addZero(2));
 
 const result = getNodePath(tree2, '122', true);
-console.log('getNodePath===', result);
+// console.log('getNodePath===', result);
 // 根据索引查找
 // const resultByIndex = getNodePath(tree2, '1212', true);
 // console.log(resultByIndex);
@@ -77,8 +78,12 @@ const arr2 = [
 
 // console.log('formatMoney==', formatMoney('1234567'));
 const str = '2021.12.24';
-console.log('dayOfWeek==', dayOfWeek(str));
-console.log('weekOfYear==', weekOfYear(str));
+// console.log('dayOfWeek==', dayOfWeek(str));
+// console.log('weekOfYear==', weekOfYear(str));
+
+const obj1 = {a: '1', b: '2', c: [1,2,{a:1}]};
+const obj2 = {a: '1', b: '2', c: [1,2,{a:12}]};
+console.log('isObjValEqual==', isObjValEqual(obj1, obj2));
 
 
 defineProps({
