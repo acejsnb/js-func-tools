@@ -13,6 +13,7 @@ declare module 'js-func-tools' {
     export function arrayDeWeight(arr: AnyType[], by: string): AnyType[]
     export function arrayToTree(arr: ITree[], parentId?: string | number): ITree[]
     export function average(arr: number[]): number
+    export var base64: { encode(str: string): string, decode(str: string): string };
     export function bottomVisible(): void
     export function byteSize(str: string): number
     export function capitalise(str: string): string
@@ -78,6 +79,7 @@ declare module 'js-func-tools' {
     export function isWeekday(date: string | Date): boolean
     export function largeNumbersAddition(a: string | number, b: string | number): string
     export function matchesByValue(value: string, search: string, jointStart: string, jointEnd: string): string
+    export function randomHexColor(): void
     export function removeAttrByParam(tree: ITree[], param: string): ITree[]
     export function removeEmptyChildren(tree: ITree[]): ITree[]
     export function removeHtmlTag(str: string): string

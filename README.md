@@ -67,6 +67,14 @@ const tree = arrayToTree(arr);
 const num = average([1, 2, 3, 4]);
 ```
 
+- ### base64 base64加码/解码
+```js
+// 加码
+const result1 = base64.encode('Hello base64!');
+// 解码
+const result2 = base64.decode(result1);
+```
+
 - ### bottomVisible 判断是否滚动到底部
 ```js
 const status = bottomVisible();
@@ -349,6 +357,11 @@ const result = matchesByValue(
     '--',
     '=='
 );
+```
+
+- ### randomHexColor 生成随机颜色
+```js
+const hexColor = randomHexColor();
 ```
 
 - ### removeAttrByParam 根据参数删除树的属性
