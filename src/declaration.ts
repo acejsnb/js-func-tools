@@ -35,7 +35,8 @@ declare module 'js-func-tools' {
     export function cloneDeep(arr: ITree[]): ITree[]
     export function cloneDeepComplex(arr: ITree[]): ITree[]
     export function copyToBoard(str: string): boolean
-    export function cutRadixPoint(number: string | number, length?: number): number
+    export function cutRadixPoint(fn: (options?: {[key: string]: any}) => void, delay?: number): (options?: {[key: string]: any}) => void
+    export function debounce(number: string | number, length?: number): number
     export function downloadByUrl(url: string): boolean
     export function dayOfYear(dateStr: string): number
     export function dayOfWeek(dateStr: string): number

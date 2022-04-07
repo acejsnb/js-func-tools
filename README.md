@@ -184,6 +184,15 @@ const status = copyToBoard('这是复制的内容');
 const num = cutRadixPoint(807.34691);
 ```
 
+- ### debounce 防抖函数
+```js
+// <input id="inp" type="text">
+const inp = document.getElementById('inp');
+inp.addEventListener('input', debounce((args) => {
+    console.log(11111, args.target.value)
+}, 500))
+```
+
 - ### dayOfYear 获取当前时间是当年的第多少天
 ```js
 const result = dayOfYear('2021.10.30');

@@ -8,6 +8,7 @@ export { default as byteSize } from './utils/byteSize';
 export { default as capitalise } from './utils/capitalise';
 export { default as copyToBoard } from './utils/copyToBoard';
 export { default as cutRadixPoint } from './utils/cutRadixPoint';
+export { default as debounce } from './utils/debounce';
 
 import { dayOfYear, dayOfWeek, weekOfYear, formatDate, getTime, getDays, getCurrentWeek, getPrevWeek, getNextWeek, getCurrentMonth, getPrevMonth, getNextMonth } from './utils/dateHandle';
 
