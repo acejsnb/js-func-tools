@@ -10,7 +10,7 @@ const debounce: Debounce = (fn, delay = 500) => {
     return (...args) => {
         timer && clearTimeout(timer);
         timer = setTimeout(() => {
-            fn.apply(this, args);
+            fn.apply(null, args);
             timer = null;
         }, delay);
     };

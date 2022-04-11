@@ -89,6 +89,7 @@ declare module 'js-func-tools' {
     export function scrollToTop(id: string): void
     export function scrollToPlace(params: { key?: 'scrollLeft' | 'scrollTop', tag?: HTMLElement, place?: number }): void
     export function sensitiveEscape(s: string): string
+    export function sortHandle(data: string[] | number[] | { [key: string]: string | number }[], other?: { sortord?: 'asc' | 'des', type?: 'number' | 'string' | 'date', key?: string }): string[] | number[] | { [key: string]: string | number }[]
     export function treeToArray(tree: ITree[], parentId?: number | string): ITree[]
     export function uuid(length?: number, chars?: string): string
 }

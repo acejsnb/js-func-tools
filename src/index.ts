@@ -52,6 +52,7 @@ import cloneDeep, { cloneDeepComplex } from './utils/cloneDeep';
 
 export { default as checkCreditCode } from './utils/checkCreditCode';
 export { default as sensitiveEscape } from './utils/sensitiveEscape';
+export { default as sortHandle } from './utils/sortHandle';
 export { default as getUrlParam } from './utils/getUrlParam';
 export { default as scrollToTop } from './utils/scrollToTop';
 export { default as scrollToPlace } from './utils/scrollToPlace';

@@ -415,6 +415,21 @@ scrollToPlace({ key: 'scrollLeft' });
 const result = sensitiveEscape(str);
 ```
 
+- ### sortHandle 排序
+```js
+/*
+interface Item { [key: string]: string | number }
+type Data = string[] | number[] | Item[]
+interface Other {
+    sortord?: 'asc' | 'des'
+    type?: 'number' | 'string' | 'date'
+    key?: string
+}
+type SortHandle = (data: Data, other?: Other) => Data
+*/
+const result = sortHandle(arr, { key: 'name' });
+```
+
 - ### treeToArray 数组转树形结构
 ```js
 // parentId = -1 顶级默认父级id为-1
