@@ -2,7 +2,7 @@
  * 排序
  * @param data 数组
  * @param sortord asc/des 升序/降序
- * @param type 值类型
+ * @param type 值类型 'number' | 'string' | 'date'
  * @param key 对象中的key
  */
 interface Item { [key: string]: string | number }

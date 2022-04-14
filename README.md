@@ -430,6 +430,15 @@ type SortHandle = (data: Data, other?: Other) => Data
 const result = sortHandle(arr, { key: 'name' });
 ```
 
+- ### throttle 节流函数
+```js
+// <div id="box"></div>
+const box = document.getElementById('box');
+box.addEventListener('mousemove', throttle((args) => {
+    console.log(11111, args.target.value)
+}, 500))
+```
+
 - ### treeToArray 数组转树形结构
 ```js
 // parentId = -1 顶级默认父级id为-1

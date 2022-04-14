@@ -36,7 +36,8 @@ declare module 'js-func-tools' {
     export function cloneDeepComplex(arr: ITree[]): ITree[]
     export function copyToBoard(str: string): boolean
     export function cutRadixPoint(fn: (options?: {[key: string]: any}) => void, delay?: number): (options?: {[key: string]: any}) => void
-    export function debounce(number: string | number, length?: number): number
+    type DebounceFn = (options?: {[key: string]: any}) => void
+    export function debounce(fn: DebounceFn, delay?: number): DebounceFn
     export function downloadByUrl(url: string): boolean
     export function dayOfYear(dateStr: string): number
     export function dayOfWeek(dateStr: string): number
@@ -90,6 +91,7 @@ declare module 'js-func-tools' {
     export function scrollToPlace(params: { key?: 'scrollLeft' | 'scrollTop', tag?: HTMLElement, place?: number }): void
     export function sensitiveEscape(s: string): string
     export function sortHandle(data: string[] | number[] | { [key: string]: string | number }[], other?: { sortord?: 'asc' | 'des', type?: 'number' | 'string' | 'date', key?: string }): string[] | number[] | { [key: string]: string | number }[]
+    export function throttle(fn: DebounceFn, delay?: number): DebounceFn
     export function treeToArray(tree: ITree[], parentId?: number | string): ITree[]
     export function uuid(length?: number, chars?: string): string
 }
