@@ -7,6 +7,8 @@ interface ITree extends AnyType {
     name?: string
     children?: ITree[]
 }
+// @ts-ignore
+type DebounceFn = (options?: {[key: string]: any}) => void
 
 declare module 'js-func-tools' {
     export function addZero(n: string | number, len?: number): string
@@ -33,10 +35,9 @@ declare module 'js-func-tools' {
     export function addClassName(el: HTMLElement, className: string): void
     export function removeClassName(el: HTMLElement, className: string): void
     export function cloneDeep(arr: ITree[]): ITree[]
-    export function cloneDeepComplex(arr: ITree[]): ITree[]
+    export function cloneDeepComplex(arr: ITree[], cache: any): ITree[]
     export function copyToBoard(str: string): boolean
     export function cutRadixPoint(fn: (options?: {[key: string]: any}) => void, delay?: number): (options?: {[key: string]: any}) => void
-    type DebounceFn = (options?: {[key: string]: any}) => void
     export function debounce(fn: DebounceFn, delay?: number): DebounceFn
     export function downloadByUrl(url: string): boolean
     export function dayOfYear(dateStr: string): number

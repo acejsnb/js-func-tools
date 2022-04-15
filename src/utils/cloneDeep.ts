@@ -11,61 +11,39 @@ interface ITree {
 }
 const cloneDeep = (data: ITree[]): ITree[] => 'structuredClone' in window ? (window as any).structuredClone(data) : JSON.parse(JSON.stringify(data, (k, v) => v ? v : ''));
 
+type Func = () => void
+const copyFunction = (func: Func) => {
+    const fnStr: string = func.toString();
+    if (fnStr === `function ${func.name}() { [native code] }`) return func;
+    return func.prototype ? new Function(`return (${fnStr})`)() : new Function(`return ${fnStr}`)();
+};
+
 /**
  * 复杂数据深拷贝
  * @param target 值中包含正则、函数等...
+ * @param cache
  * @returns {{}}
  */
-const cloneDeepComplex = (target: ITree[]): ITree[] => {
-    const map = new WeakMap();
-    const isObject = (target: ITree[]) => (typeof target === 'object' && target ) || typeof target === 'function';
+type CloneDeepComplex = (target: any, cache?: any) => any
+const cloneDeepComplex: CloneDeepComplex = (target, cache = []) => {
+    if (typeof target === 'function') return copyFunction(target);
+    if (target === null || typeof target !== 'object') return target;
 
-    const clone = (data: any) => {
-        if (!isObject(data)) return data;
-        if ([Date, RegExp].includes(data.constructor)) return new data.constructor(data);
-        if (typeof data === 'function') return new Function('return ' + data.toString())();
-        const exist = map.get(data);
-        if (exist) return exist;
-        if (data instanceof Map) {
-            const result = new Map();
-            map.set(data, result);
-            data.forEach((val, key) => {
-                if (isObject(val)) {
-                    result.set(key, clone(val));
-                } else {
-                    result.set(key, val);
-                }
-            });
-            return result;
-        }
-        if (data instanceof Set) {
-            const result = new Set();
-            map.set(data, result);
-            data.forEach(val => {
-                if (isObject(val)) {
-                    result.add(clone(val));
-                } else {
-                    result.add(val);
-                }
-            });
-            return result;
-        }
-        const keys = Reflect.ownKeys(data);
-        const allDesc = Object.getOwnPropertyDescriptors(data);
-        const result = Object.create(Object.getPrototypeOf(data), allDesc);
-        map.set(data, result);
-        keys.forEach(key => {
-            const val = data[key];
-            if (isObject(val)) {
-                result[key] = clone(val);
-            } else {
-                result[key] = val;
-            }
-        });
-        return result;
-    };
+    if (Object.prototype.toString.call(target) === '[object Date]') return new Date(target);
+    if (Object.prototype.toString.call(target) === '[object RegExp]') return new RegExp(target);
+    if (Object.prototype.toString.call(target) === '[object Error]') return new Error(target);
 
-    return clone(target);
+    const item = cache.filter((item: any) => item.original === target)[0];
+    if (item) return item.copy;
+
+    const copy: any = Array.isArray(target) ? [] : {};
+    cache.push({ original: target, copy });
+
+    Object.keys(target).forEach(key => {
+        copy[key] = cloneDeepComplex(target[key], cache);
+    });
+
+    return copy;
 };
 
 export default cloneDeep;
