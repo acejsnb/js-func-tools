@@ -12,7 +12,7 @@ type DebounceFn = (options?: {[key: string]: any}) => void
 
 declare module 'js-func-tools' {
     export function addZero(n: string | number, len?: number): string
-    export function arrayDeWeight(arr: AnyType[], by: string): AnyType[]
+    export function arrayDeWeight(arr: AnyType[], by?: string): AnyType[]
     export function arrayToTree(arr: ITree[], parentId?: string | number): ITree[]
     export function average(arr: number[]): number
     export var base64: { encode(str: string): string, decode(str: string): string };
