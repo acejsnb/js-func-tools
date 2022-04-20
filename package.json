@@ -9,7 +9,7 @@
   "private": false,
   "repository": "https://github.com/xiongshuang/js-func-tools.git",
   "scripts": {
-    "clean": "rimraf ./dist",
+    "clean": "rm -rf ./dist",
     "dev": "vite",
     "vite:build": "vite build",
     "serve": "vite preview",
