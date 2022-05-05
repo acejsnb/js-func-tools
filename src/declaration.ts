@@ -93,6 +93,7 @@ declare module 'js-func-tools' {
     export function sensitiveEscape(s: string): string
     export function sortHandle(data: string[] | number[] | { [key: string]: string | number }[], other?: { sortord?: 'asc' | 'des', type?: 'number' | 'string' | 'date', key?: string }): string[] | number[] | { [key: string]: string | number }[]
     export function throttle(fn: DebounceFn, delay?: number): DebounceFn
+    export function textEllipsis(e: MouseEvent, tag?: string): void
     export function treeToArray(tree: ITree[], parentId?: number | string): ITree[]
     export function uuid(length?: number, chars?: string): string
 }
