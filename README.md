@@ -439,6 +439,12 @@ box.addEventListener('mousemove', throttle((args) => {
 }, 500))
 ```
 
+- ### textEllipsis 设置html标签的title
+```js
+// type TextEllipsis = (e: MouseEvent, tag?: string) => void
+<div id="box" onmouseenter="textEllipsis">文字内容</div>
+```
+
 - ### treeToArray 数组转树形结构
 ```js
 // parentId = -1 顶级默认父级id为-1
