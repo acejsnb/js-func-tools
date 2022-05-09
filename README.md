@@ -1,5 +1,11 @@
 # js常用工具函数 tools utils
 
+## 安装
+- npm安装 `npm install js-func-tools`
+- yarn安装 `yarn add js-func-tools`
+- pnpm安装 `pnpm add js-func-tools`
+
+## 使用
 ```js
 import { cutRadixPoint } from 'js-func-tools';
 ```
