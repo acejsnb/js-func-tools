@@ -14,7 +14,7 @@ esbuild.buildSync({
     entryPoints: ['src/index.ts'],
     outfile: 'dist/browser.js',
     bundle: true,
-    globalName: 'JFU',
+    globalName: 'JSFT',
     format: 'iife',
     minify: true,
     banner: {
