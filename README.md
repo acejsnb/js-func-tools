@@ -6,8 +6,18 @@
 - pnpm安装 `pnpm add js-func-tools`
 
 ## 使用
+- browser
+```html
+<script src="https://unpkg.com/js-func-tools@1.0.5/dist/browser.js"></script>
+<script>
+    const num = JFU.cutRadixPoint(807.34691);
+</script>
+```
+
+- ESM
 ```js
 import { cutRadixPoint } from 'js-func-tools';
+const num = cutRadixPoint(807.34691);
 ```
 
 ### demo data
