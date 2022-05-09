@@ -315,8 +315,10 @@ const resultByIndex = getNodePath(tree, 12, true);
 
 - ### getObjType 获取一个对象的类型
 ```js
-// obj: any
-const result = getObjType(obj);
+// type Fn = (obj: any, type?: string) => string | boolean
+const obj = {name: 'xs'};
+const result = getObjType(obj); // string -> Object
+const result2 = getObjType(obj, 'Object'); // boolean -> true
 ```
 
 - ### getPlaceByTrigger 根据触发器获取dom定位位置
