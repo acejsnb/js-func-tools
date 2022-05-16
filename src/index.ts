@@ -1,5 +1,5 @@
-export { default as addZero } from './utils/addZero';
-export { default as arrayDeWeight } from './utils/arrayDeWeight';
+export { default as addZero } from './utils/addZero/index';
+export { default as arrayDeWeight } from './utils/arrayDeWeight/index';
 export { default as arrayToTree } from './utils/arrayToTree';
 export { default as average } from './utils/average';
 export { default as base64 } from './utils/base64';
