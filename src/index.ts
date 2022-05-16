@@ -1,7 +1,7 @@
 export { default as addZero } from './utils/addZero/index';
 export { default as arrayDeWeight } from './utils/arrayDeWeight/index';
-export { default as arrayToTree } from './utils/arrayToTree';
-export { default as average } from './utils/average';
+export { default as arrayToTree } from './utils/arrayToTree/index';
+export { default as average } from './utils/average/index';
 export { default as base64 } from './utils/base64';
 export { default as bottomVisible } from './utils/bottomVisvibile';
 export { default as byteSize } from './utils/byteSize';
