@@ -1,7 +1,11 @@
 // 平滑滚动到页面顶部
-type Fn = (id: string) => void
+type Fn = (id: string | HTMLElement) => void
 const scrollToTop: Fn = (id) => {
-    const target = id ? (document.getElementById(id) as HTMLElement) : null;
+    let target = null;
+    if (id) {
+        if (typeof id === 'string') target = document.getElementById(id) as HTMLElement;
+        else target = id;
+    }
     const c = target ? (target?.scrollTop ?? 0) : (document.documentElement.scrollTop || document.body.scrollTop);
     if (c > 0) {
         window.requestAnimationFrame(() => scrollToTop(id));
