@@ -346,6 +346,12 @@ const result2 = getObjType(obj, 'Object'); // boolean -> true
 const { left, top, isDown } = getPlaceByTrigger({ trigger: target, dom: div, isRight: false });
 ```
 
+- ### getTextWidth 获取文本宽度
+```js
+// type GetTextWidth = (text: string, options?: { size?: number, family?: string  }) => number
+const result = getTextWidth('Hello');
+```
+
 - ### getUrlParam 获取url参数
 ```js
 // type Fn = (name: string, origin: string | null) => string | null

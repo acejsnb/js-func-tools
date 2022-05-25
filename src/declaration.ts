@@ -75,6 +75,7 @@ declare module 'js-func-tools' {
     export function getNodePath(tree: ITree[], id: string | number, byIndex?: boolean): Array<string | number>
     export function getObjType(obj: any, type?: string): string | boolean
     export function getPlaceByTrigger(options: { trigger: HTMLElement, dom: HTMLElement, offset?: number, isRight?: boolean }): { left: number, top: number, isDown: boolean }
+    export function getTextWidth(text: string, options?: { size?: number, family?: string  }): number
     export function getUrlParam(name: string, origin?: string | null): string | null
     export function hex2Rgb(hex: string): string
     export function isNullObj(obj: AnyType): boolean

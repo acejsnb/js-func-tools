@@ -23,6 +23,7 @@ export { default as getFormData } from './utils/getFormData';
 export { default as getNodePath } from './utils/getNodePath';
 export { default as getObjType } from './utils/getObjType';
 export { default as getPlaceByTrigger } from './utils/getPlaceByTrigger';
+export { default as getTextWidth } from './utils/getTextWidth';
 export { default as hex2Rgb } from './utils/hex2Rgb';
 export { default as isNullObj } from './utils/isNullObj';
 export { default as isObjValEqual } from './utils/isObjValEqual';
