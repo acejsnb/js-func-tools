@@ -57,8 +57,8 @@ const formatDate = (fmt: string, dateStr?: string): string => {
  * @param date
  * @param format
  */
-type GetTimeFn = (date: string | Date, fmt: 'h' | 'hm' | 'hms') => string
-const getTime: GetTimeFn = (date, fmt = 'hm') => (date instanceof Date ? date : new Date(date)).toTimeString().slice(0, ({h: 2, hm: 5, hms: 8})[fmt]);
+type GetTimeFn = (fmt: 'h' | 'hm' | 'hms', date: string | Date | null | undefined) => string
+const getTime: GetTimeFn = (fmt = 'hm', date) => (date ? (date instanceof Date ? date : new Date(date)) : new Date()).toTimeString().slice(0, ({h: 2, hm: 5, hms: 8})[fmt]);
 /**
  * 获取当月有多少天
  * @param year

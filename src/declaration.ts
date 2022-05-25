@@ -44,7 +44,7 @@ declare module 'js-func-tools' {
     export function dayOfWeek(dateStr: string): number
     export function weekOfYear(dateStr: string): number
     export function formatDate(fmt: string, dateStr?: string): string
-    export function getTime(date: string | Date, fmt: 'h' | 'hm' | 'hms'): string
+    export function getTime(fmt: 'h' | 'hm' | 'hms', date: string | Date | null | undefined): string
     export function getDays(year?: string | number, month?: string | number): number
     export function getCurrentWeek(type?: 0 | 1, date?: string): string[]
     export function getPrevWeek(type?: 0 | 1, date?: string): string[]

@@ -233,7 +233,9 @@ const result = formatDate('yyyy-mm-dd');
 
 - ### getTime 获取当前时间的时分秒
 ```js
-const result = getTime('2022.01.24', 'hms');
+// (fmt: 'h' | 'hm' | 'hms', date: string | Date | null | undefined)
+const result = getTime('hms');
+const result2 = getTime('hms', '2022.01.24');
 ```
 
 - ### getDays 获取当月有多少天
@@ -244,6 +246,7 @@ const result = getDays(2022, 2);
 - ### getCurrentWeek/getPrevWeek/getNextWeek 获取(当前/上一/下一)周
 ```js
 // type GetWeekFn = (type?: 0 | 1, date?: string) => string[];
+// type 0从周日开始算， 1从周一开始算
 const cur = getCurrentWeek();
 const pre = getPrevWeek();
 const nex = getNextWeek();
