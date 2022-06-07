@@ -13,8 +13,9 @@
     "vite:build": "vite build",
     "serve": "vite preview",
     "declaration": "node config/copy.declaration.js",
+    "declaration:go": "go run config/declaration.go",
     "browser": "node config/esbuild.browser.js",
-    "build": "npm run clean && node config/esbuild.config.js && npm run declaration && npm run browser",
+    "build": "npm run clean && node config/esbuild.config.js && npm run declaration:go && npm run browser",
     "prod:writeHtml": "node config/prod.write.html.js",
     "prod": "node config/esbuild.prod.js && npm run prod:writeHtml",
     "test": "jest"
