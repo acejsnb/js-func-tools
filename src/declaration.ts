@@ -16,7 +16,7 @@ declare module 'js-func-tools' {
     export function arrayToTree(arr: ITree[], parentId?: string | number): ITree[]
     export function average(arr: number[]): number
     export var base64: { encode(str: string): string, decode(str: string): string };
-    export function bottomVisible(): void
+    export function bottomVisible(ele?: HTMLElement): boolean
     export function byteSize(str: string): number
     export function capitalise(str: string): string
     export function checkColor16(str: string): boolean

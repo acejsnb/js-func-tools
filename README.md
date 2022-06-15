@@ -93,6 +93,7 @@ const result2 = base64.decode(result1);
 
 - ### bottomVisible 判断是否滚动到底部
 ```js
+// bottomVisible(ele?: HTMLElement): boolean
 const status = bottomVisible();
 ```
 
