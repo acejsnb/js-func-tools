@@ -272,8 +272,8 @@ const result = hasKeyByObj(obj, key);
 
 - ### downloadByUrl 根据url地址下载
 ```js
-// url: string
-const result = downloadByUrl(url);
+// url: string | Blob, name?: string
+const result = downloadByUrl(url, name);
 ```
 
 - ### filterTreeByFunc 根据条件筛选出符合条件的树形结构数据

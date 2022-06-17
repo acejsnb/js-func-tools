@@ -39,7 +39,7 @@ declare module 'js-func-tools' {
     export function copyToBoard(str: string): boolean
     export function cutRadixPoint(fn: (options?: {[key: string]: any}) => void, delay?: number): (options?: {[key: string]: any}) => void
     export function debounce(fn: DebounceFn, delay?: number): DebounceFn
-    export function downloadByUrl(url: string): boolean
+    export function downloadByUrl(url: string | Blob, name?: string): boolean
     export function dayOfYear(dateStr: string): number
     export function dayOfWeek(dateStr: string): number
     export function weekOfYear(dateStr: string): number
