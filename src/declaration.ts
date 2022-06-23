@@ -1,14 +1,27 @@
-interface AnyType {
+export interface AnyType {
     // @ts-ignore
     [key: string]: any
 }
-interface ITree extends AnyType {
+export interface ITree extends AnyType {
     id?: string | number
     name?: string
     children?: ITree[]
 }
 // @ts-ignore
-type DebounceFn = (options?: {[key: string]: any}) => void
+export type DebounceFn = (options?: {[key: string]: any}) => void
+
+export type FormValidateRule = {
+    message: string
+    check?: 'required' | 'phone' | 'email' | 'password' | 'passwordBetter' | 'passwordBest'
+    validate?: (value: string, confirmValue?: string) => boolean
+}
+export type FormValidateOptions = {
+    rules: FormValidateRule[]
+    value: string
+    success?: (value?: string) => void
+    fail?: (value?: string, message?: string) => void
+    confirmValue?: string
+}
 
 declare module 'js-func-tools' {
     export function addZero(n: string | number, len?: number): string
@@ -56,20 +69,8 @@ declare module 'js-func-tools' {
     export function hasKeyByObj(obj: any, key: string): boolean
     export function filterTreeByFunc(tree: ITree[], func: (item: ITree) => boolean): ITree[]
     export function findTarget(target: HTMLElement, tagList: string[]): HTMLElement
-    export namespace formatMoney {
-        function formatMoney(money: string | number): string
-    }
-    export function formValidate(options: {
-        rules: Array<{
-            message: string
-            check?: 'required' | 'phone' | 'email' | 'password' | 'passwordBetter' | 'passwordBest'
-            validate?: (value: string, confirmValue?: string) => boolean
-        }> | []
-        value: string
-        success?: (value?: string) => void
-        fail?: (value?: string, message?: string) => void
-        confirmValue?: string
-    }): boolean
+    export function formatMoney(money: string | number): string
+    export function formValidate(options: FormValidateOptions): boolean
     export function getAllLeaf(tree: ITree[], first?: boolean): ITree[]
     export function getFormData(object: AnyType): FormData
     export function getNodePath(tree: ITree[], id: string | number, byIndex?: boolean): Array<string | number>
