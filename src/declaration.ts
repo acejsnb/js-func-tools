@@ -1,3 +1,5 @@
+// @ts-ignore
+
 export interface AnyType {
     // @ts-ignore
     [key: string]: any
@@ -23,6 +25,7 @@ export type FormValidateOptions = {
     confirmValue?: string
 }
 
+// @ts-ignore
 declare module 'js-func-tools' {
     export function addZero(n: string | number, len?: number): string
     export function arrayDeWeight(arr: AnyType[], by?: string): AnyType[]
@@ -56,7 +59,9 @@ declare module 'js-func-tools' {
     export function dayOfYear(dateStr: string): number
     export function dayOfWeek(dateStr: string): number
     export function weekOfYear(dateStr: string): number
-    export function formatDate(fmt: string, dateStr?: string): string
+    export function formatDate(fmt?: string, dateStr?: string | Date): string
+    export function getPrevDay(fmt?: string, dateStr?: string | Date): string
+    export function getNextDay(fmt?: string, dateStr?: string | Date): string
     export function getTime(fmt: 'h' | 'hm' | 'hms', date: string | Date | null | undefined): string
     export function getDays(year?: string | number, month?: string | number): number
     export function getCurrentWeek(type?: 0 | 1, date?: string): string[]
