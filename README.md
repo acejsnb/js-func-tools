@@ -227,9 +227,30 @@ const result = weekOfYear('2021.10.30');
 
 - ### formatDate 格式化时间
 ```js
-// fmt: string, dateStr?: string
+// fmt?: string, dateStr?: string | Date
 // fmt yyyy-mm-dd hh:MM:ss.S
 const result = formatDate('yyyy-mm-dd');
+```
+
+- ### getCurrentDay 获取当天
+```js
+// fmt?: string, dateStr?: string | Date
+// fmt yyyy-mm-dd hh:MM:ss.S
+const result = getCurrentDay('yyyy-mm-dd');
+```
+
+- ### getPrevDay 获取上一天
+```js
+// fmt?: string, dateStr?: string | Date
+// fmt yyyy-mm-dd hh:MM:ss.S
+const result = getPrevDay('yyyy-mm-dd');
+```
+
+- ### getNextDay 获取下一天
+```js
+// fmt?: string, dateStr?: string | Date
+// fmt yyyy-mm-dd hh:MM:ss.S
+const result = getNextDay('yyyy-mm-dd');
 ```
 
 - ### getTime 获取当前时间的时分秒
