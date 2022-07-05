@@ -44,4 +44,4 @@ const getPrevDay = (format?: string, date?: string | Date): string => getCurrent
 const getNextDay = (format?: string, date?: string | Date): string => getCurrentDay(format || 'yyyy.mm.dd', new Date((date ? (getObjType(date, 'Date') ? (date as Date) : new Date(date)) : new Date()).getTime() + 86400000));
 
 export default formatDate;
-export { getPrevDay, getNextDay };
+export { getCurrentDay, getPrevDay, getNextDay };

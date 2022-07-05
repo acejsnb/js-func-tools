@@ -60,6 +60,7 @@ declare module 'js-func-tools' {
     export function dayOfWeek(dateStr: string): number
     export function weekOfYear(dateStr: string): number
     export function formatDate(fmt?: string, dateStr?: string | Date): string
+    export function getCurrentDay(fmt?: string, dateStr?: string | Date): string
     export function getPrevDay(fmt?: string, dateStr?: string | Date): string
     export function getNextDay(fmt?: string, dateStr?: string | Date): string
     export function getTime(fmt: 'h' | 'hm' | 'hms', date: string | Date | null | undefined): string
