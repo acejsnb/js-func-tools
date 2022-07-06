@@ -1,5 +1,4 @@
 // @ts-ignore
-
 export interface AnyType {
     // @ts-ignore
     [key: string]: any

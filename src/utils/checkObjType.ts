@@ -5,6 +5,6 @@ import getObjType from './getObjType';
  * @param type
  */
 type Fn = (obj: any, type: string) => boolean
-const checkObjType: Fn = (obj, type) => getObjType(obj).toLowerCase() === type.toLowerCase();
+const checkObjType: Fn = (obj, type) => (getObjType(obj) as string).toLowerCase() === type.toLowerCase();
 
 export default checkObjType;

@@ -76,6 +76,8 @@ const result = arrayDeWeight(arr, 'id')
 ```js
 // parentId = -1 顶级默认父级id为-1
 const tree = arrayToTree(arr);
+// 指定顶级父级id为0
+const tree2 = arrayToTree(arr, 0);
 ```
 
 - ### average 平均数
@@ -120,7 +122,7 @@ const result = checkCreditCode('xxxxxxx');
 
 - ### checkEmail 验证邮箱
 ```js
-const result = checkEmail('xxx@163.xom')
+const result = checkEmail('xxx@163.com')
 ```
 
 - ### checkIDCard 验证身份证
@@ -131,6 +133,7 @@ const result = checkIDCard('身份证号')
 - ### checkObjType 检查数据类型
 ```js
 const result = checkObjType('abc', 'string')
+const result2 = checkObjType('abc', 'String')
 ```
 
 - ### checkPassword 验证密码
@@ -228,66 +231,74 @@ const result = weekOfYear('2021.10.30');
 - ### formatDate 格式化时间
 ```js
 // fmt?: string, dateStr?: string | Date
-// fmt yyyy-mm-dd hh:MM:ss.S
-const result = formatDate('yyyy-mm-dd');
+// fmt yyyy.mm.dd hh:MM:ss.S
+const result = formatDate('yyyy.mm.dd');
 ```
 
-- ### getCurrentDay 获取当天
+- fmt说明：此库中获取日期所使用的fmt参数格式为`yyyy.mm.dd hh:MM:ss.S`,分别对应`年.月.日 时:分:秒.毫秒`，fmt中的年月日连接符可以是`/`,`-`等
+
+- ### getCurrentDay 获取当天(与formatDate用法一样)
 ```js
 // fmt?: string, dateStr?: string | Date
-// fmt yyyy-mm-dd hh:MM:ss.S
-const result = getCurrentDay('yyyy-mm-dd');
+const result = getCurrentDay('yyyy.mm.dd');
 ```
 
 - ### getPrevDay 获取上一天
 ```js
 // fmt?: string, dateStr?: string | Date
-// fmt yyyy-mm-dd hh:MM:ss.S
-const result = getPrevDay('yyyy-mm-dd');
+const result = getPrevDay('yyyy.mm.dd');
 ```
 
 - ### getNextDay 获取下一天
 ```js
 // fmt?: string, dateStr?: string | Date
-// fmt yyyy-mm-dd hh:MM:ss.S
-const result = getNextDay('yyyy-mm-dd');
+const result = getNextDay('yyyy.mm.dd');
 ```
 
 - ### getTime 获取当前时间的时分秒
 ```js
-// (fmt: 'h' | 'hm' | 'hms', date: string | Date | null | undefined)
+// (fmt: 'h' | 'hm' | 'hms', date?: string | Date | null | undefined)
 const result = getTime('hms');
 const result2 = getTime('hms', '2022.01.24');
 ```
 
 - ### getDays 获取当月有多少天
 ```js
-const result = getDays(2022, 2);
+// year?: string | number, month?: string | number
+const result = getDays(); // 当月
+const result2 = getDays(2022, 2); // 指定年月
 ```
 
 - ### getCurrentWeek/getPrevWeek/getNextWeek 获取(当前/上一/下一)周
 ```js
 // type GetWeekFn = (type?: 0 | 1, date?: string) => string[];
 // type 0从周日开始算， 1从周一开始算
-const cur = getCurrentWeek();
+const cur = getCurrentWeek(); // 当前日期
+const cur2 = getCurrentWeek(0, '2022.02.24'); // 指定日期
 const pre = getPrevWeek();
 const nex = getNextWeek();
 ```
+
 - ### getCurrentMonth/getPrevMonth/getNextMonth 获取(当前/上一/下一)月
 ```js
-const cur = getCurrentMonth();
+// date?: string
+const cur = getCurrentMonth(); // 当前日期
+const cur2 = getCurrentMonth('2022.02.24'); // 指定日期
 const pre = getPrevMonth();
 const nex = getNextMonth();
 ```
-
 - ### getYMDByYear 根据年获取当前所有年月日
 ```js
+// type Options = { year?: string | number, month?: string | number }
+// type TObj = { month: string, children: string[] }
+// type Fn = (options: Options) => string[] | TObj[]
 const result = getYMDByYear();
 ```
 
 - ### hasKeyByObj 判断一个对象是否包含某个属性
 ```js
 // obj: any, key: string
+const obj = {name: 'eks'}, key = 'name';
 const result = hasKeyByObj(obj, key);
 ```
 
@@ -305,6 +316,7 @@ const result = filterTreeByFunc(tree, filterFunc);
 
 - ### findTarget 通过当前Element查找需要的Element
 ```js
+// target: HTMLElement, tagList: string[]
 const target = findTarget([target], [tagName]);
 ```
 
@@ -343,7 +355,7 @@ const result = getAllLeaf(tree);
 
 - ### getFormData 对象转化为FormData对象
 ```js
-const obj = {id: 1, name: 'xs'};
+const obj = {id: 1, name: 'eks'};
 const result = getFormData(obj);
 ```
 
@@ -357,7 +369,7 @@ const resultByIndex = getNodePath(tree, 12, true);
 - ### getObjType 获取一个对象的类型
 ```js
 // type Fn = (obj: any, type?: string) => string | boolean
-const obj = {name: 'xs'};
+const obj = {name: 'eks'};
 const result = getObjType(obj); // string -> Object
 const result2 = getObjType(obj, 'Object'); // boolean -> true
 ```
