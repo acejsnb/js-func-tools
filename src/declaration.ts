@@ -1,7 +1,7 @@
 // @ts-ignore
 export interface AnyType {
     // @ts-ignore
-    [key: string]: any
+    [key: string | number]: any
 }
 export interface ITree extends AnyType {
     id?: string | number
@@ -85,12 +85,13 @@ declare module 'js-func-tools' {
     export function getUrlParam(name: string, origin?: string | null): string | null
     export function hex2Rgb(hex: string): string
     export function isNullObj(obj: AnyType): boolean
-    export function isObjValEqual(obj1: AnyType, obj2: AnyType): boolean
+    export function isObjValEqual(obj1: AnyType, obj2: AnyType, empty: boolean): boolean
     export function isWeekday(date: string | Date): boolean
     export function largeNumbersAddition(a: string | number, b: string | number): string
     export function matchesByValue(value: string, search: string, jointStart: string, jointEnd: string): string
     export function randomHexColor(): void
     export function removeAttrByParam(tree: ITree[], param: string): ITree[]
+    export function removeEmpty(data: AnyType): AnyType
     export function removeEmptyChildren(tree: ITree[]): ITree[]
     export function removeHtmlTag(str: string): string
     export function rgb2Hex(str: string): string

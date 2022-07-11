@@ -85,9 +85,9 @@ const str = '2021.12.24';
 // console.log('dayOfWeek==', dayOfWeek(str));
 // console.log('weekOfYear==', weekOfYear(str));
 
-const obj1 = {a: '1', b: '2', c: [1,2,{a:1}]};
-const obj2 = {a: '1', b: '2', c: [1,2,{a:12}]};
-// console.log('isObjValEqual==', isObjValEqual(obj1, obj2));
+const obj1 = {a: '1', b: '2', c: [1,2,{a:1}], d: ''};
+const obj2 = {a: '1', b: '2', c: [1,2,{a:1}]};
+console.log('isObjValEqual==', isObjValEqual(obj1, obj2, true));
 
 // console.log(sortHandle(arr, { key: 'id' }));
 // console.log(sortHandle([2,4,6,6,7,34,43,5,35,4,35,3,46]));

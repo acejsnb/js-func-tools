@@ -41,6 +41,7 @@ export { default as largeNumbersAddition } from './utils/largeNumbersAddition';
 export { default as matchesByValue } from './utils/matchesByValue';
 export { default as randomHexColor } from './utils/randomHexColor';
 export { default as removeAttrByParam } from './utils/removeAttrByParam';
+export { default as removeEmpty } from './utils/removeEmpty';
 export { default as removeEmptyChildren } from './utils/removeEmptyChildren';
 export { default as removeHtmlTag } from './utils/removeHtmlTag';
 export { default as rgb2Hex } from './utils/rgb2Hex';

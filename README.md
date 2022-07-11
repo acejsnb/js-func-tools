@@ -399,6 +399,7 @@ const result = isNullObj(obj);
 
 - ### isObjValEqual 判断两个对象是否相等
 ```js
+// type IsObjValEqual = (a: Obj, b: Obj, empty: boolean) => boolean
 const obj1 = {a: '1', b: '2', c: [1,2,{a:1}]};
 const obj2 = {a: '1', b: '2', c: [1,2,{a:12}]};
 const result = isObjValEqual(obj1, obj2);
@@ -437,6 +438,15 @@ const hexColor = randomHexColor();
 - ### removeAttrByParam 根据参数删除树的属性
 ```js
 const result = removeAttrByParam(tree, 'id');
+```
+
+- ### removeEmpty 移除对象的空置
+```js
+// type AnyType = {
+//     [key: string | number]: any
+// }
+// type RemoveEmpty = (o: AnyType) => AnyType
+const result = removeEmpty(obj);
 ```
 
 - ### removeEmptyChildren 删除树中的空children
