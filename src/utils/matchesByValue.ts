@@ -1,5 +1,11 @@
-// 根据value匹配字符串（搜索字符串并替换，做高亮使用）
 type Fn = (value: string, search: string, jointStart: string, jointEnd: string) => string
+/**
+ * 根据value匹配字符串（搜索字符串并替换，做高亮使用）
+ * @param value 要检索的字符
+ * @param search 检索的字符
+ * @param jointStart 在检索到的字符前加入的字符
+ * @param jointEnd 在检索到的字符后加入的字符
+ */
 const matchesByValue: Fn = (value, search, jointStart, jointEnd) => {
     const reg = new RegExp(search, 'ig');
     const arr = [];

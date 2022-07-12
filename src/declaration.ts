@@ -29,7 +29,7 @@ declare module 'js-func-tools' {
     export function addZero(n: string | number, len?: number): string
     export function arrayDeWeight(arr: AnyType[], by?: string): AnyType[]
     export function arrayToTree(arr: ITree[], parentId?: string | number): ITree[]
-    export function average(arr: number[]): number
+    export function average(arr: number[], dec: number): number
     export var base64: { encode(str: string): string, decode(str: string): string };
     export function bottomVisible(ele?: HTMLElement): boolean
     export function byteSize(str: string): number
