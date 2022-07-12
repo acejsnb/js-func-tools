@@ -3,6 +3,7 @@
   "version": "1.1.2",
   "description": "js常用工具函数 tools utils",
   "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "author": "xiongshuang<https://github.com/xiongshuang>",
   "license": "MIT",
   "private": false,
