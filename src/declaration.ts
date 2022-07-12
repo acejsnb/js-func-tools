@@ -56,6 +56,7 @@ declare module 'js-func-tools' {
     export function debounce(fn: DebounceFn, delay?: number): DebounceFn
     export function downloadByUrl(url: string | Blob, name?: string): boolean
     export function dayOfYear(dateStr: string): number
+    export function daysBetween(a: string | number | Date, b: string | number | Date): number
     export function dayOfWeek(dateStr: string): number
     export function weekOfYear(dateStr: string): number
     export function formatDate(fmt?: string, dateStr?: string | Date): string

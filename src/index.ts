@@ -10,6 +10,7 @@ export { default as copyToBoard } from './utils/copyToBoard';
 export { default as cutRadixPoint } from './utils/cutRadixPoint';
 export { default as dayOfWeek } from './utils/dayOfWeek';
 export { default as dayOfYear } from './utils/dayOfYear';
+export { default as daysBetween } from './utils/daysBetween';
 export { default as debounce } from './utils/debounce';
 export { default as getYMDByYear } from './utils/getYMDByYear';
 export { default as hasKeyByObj } from './utils/hasKeyByObj';

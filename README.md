@@ -219,6 +219,12 @@ inp.addEventListener('input', debounce((args) => {
 const result = dayOfYear('2021.10.30');
 ```
 
+- ### daysBetween 获取两个日期之间的日差
+```js
+// type DaysBetween = (a: string | number | Date, b: string | number | Date) => number
+const result = daysBetween('2021.10.30', '2021.11.02');
+```
+
 - ### dayOfWeek 获取当前时间是星期几
 ```js
 const result = dayOfWeek('2021.10.30');

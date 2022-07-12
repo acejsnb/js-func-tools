@@ -1,6 +1,6 @@
 <script setup>
 import { reactive } from 'vue'
-import { addZero, getNodePath, arrayToTree, treeToArray, arrayDeWeight, cloneDeep, cloneDeepComplex, formatMoney, dayOfWeek, weekOfYear, sortHandle } from '../../../dist/index.js';
+import { addZero, getNodePath, arrayToTree, treeToArray, arrayDeWeight, cloneDeep, cloneDeepComplex, formatMoney, dayOfWeek, weekOfYear, sortHandle, daysBetween } from '../../../dist/index.js';
 import isObjValEqual from '../../utils/isObjValEqual';
 const arr = [
     {'id': 1, 'name': '一级1', 'parentId': -1},
@@ -92,6 +92,8 @@ console.log('isObjValEqual==', isObjValEqual(obj1, obj2, true));
 // console.log(sortHandle(arr, { key: 'id' }));
 // console.log(sortHandle([2,4,6,6,7,34,43,5,35,4,35,3,46]));
 // console.log(sortHandle(['c', 'v', 'b'], { type: 'string' }));
+
+console.log('daysBetween===', daysBetween('2021.10.30', '2021.11.02'));
 
 
 defineProps({
