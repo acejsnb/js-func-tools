@@ -39,9 +39,9 @@ const formatDate = (format?: string, date?: string | Date): string => {
 // 获取当天
 const getCurrentDay = formatDate;
 // 获取上一天
-const getPrevDay = (format?: string, date?: string | Date): string => getCurrentDay(format || 'yyyy.mm.dd', new Date((date ? (getObjType(date, 'Date') ? (date as Date) : new Date(date)) : new Date()).getTime() - 86400000));
+const getPrevDay = (format?: string, date?: string | Date): string => getCurrentDay(format || 'yyyy.mm.dd', new Date(+(date ? (getObjType(date, 'Date') ? (date as Date) : new Date(date)) : new Date()) - 86400000));
 // 获取下一天
-const getNextDay = (format?: string, date?: string | Date): string => getCurrentDay(format || 'yyyy.mm.dd', new Date((date ? (getObjType(date, 'Date') ? (date as Date) : new Date(date)) : new Date()).getTime() + 86400000));
+const getNextDay = (format?: string, date?: string | Date): string => getCurrentDay(format || 'yyyy.mm.dd', new Date(+(date ? (getObjType(date, 'Date') ? (date as Date) : new Date(date)) : new Date()) + 86400000));
 
 export default formatDate;
 export { getCurrentDay, getPrevDay, getNextDay };

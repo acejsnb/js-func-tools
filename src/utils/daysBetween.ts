@@ -8,13 +8,13 @@ type DaysBetween = (a: string | number | Date, b: string | number | Date) => num
 const daysBetween: DaysBetween = (a, b) => {
     let time1 = 0, time2 = 0;
     const typeA = getObjType(a), typeB = getObjType(b);
-    if (typeA === 'String') time1 = new Date(a).getTime();
+    if (typeA === 'String') time1 = +new Date(a);
     else if (typeA === 'Number') time1 = a as number;
-    else time1 = (a as Date).getTime();
+    else time1 = +a;
 
-    if (typeB === 'String') time2 = new Date(b).getTime();
+    if (typeB === 'String') time2 = +new Date(b);
     else if (typeB === 'Number') time2 = b as number;
-    else time2 = (b as Date).getTime();
+    else time2 = +b;
     return Math.ceil(Math.abs(time1 - time2) / (1000 * 60 * 60 * 24));
 };
 

@@ -25,7 +25,7 @@ const sortHandle: SortHandle = (data, other) => {
                 : (data as string[]).sort((a, b) => (isAsc ? a.localeCompare(b) : b.localeCompare(a)));
         },
         date() {
-            const timestamp = (date: string): number => new Date(date).getTime();
+            const timestamp = (date: string): number => (+new Date(date));
             return key
                 ? (data as {[key: string]: string}[]).sort((a, b) => (isAsc ? (timestamp(a[key]) - timestamp(b[key])) : (timestamp(b[key]) - timestamp(a[key]))))
                 : (data as string[]).sort((a, b) => (isAsc ? (timestamp(a) - timestamp(b)) : (timestamp(b) - timestamp(a))));
