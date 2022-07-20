@@ -3,10 +3,10 @@ export interface AnyType {
     // @ts-ignore
     [key: string | number]: any
 }
-export interface ITree extends AnyType {
+export interface TreeItem extends AnyType {
     id?: string | number
     name?: string
-    children?: ITree[]
+    children?: TreeItem[]
 }
 // @ts-ignore
 export type DebounceFn = (options?: {[key: string]: any}) => void
@@ -28,7 +28,7 @@ export type FormValidateOptions = {
 declare module 'js-func-tools' {
     export function addZero(n: string | number, len?: number): string
     export function arrayDeWeight(arr: AnyType[], by?: string): AnyType[]
-    export function arrayToTree(arr: ITree[], parentId?: string | number): ITree[]
+    export function arrayToTree(arr: TreeItem[], parentId?: string | number): TreeItem[]
     export function average(arr: number[], dec: number): number
     export var base64: { encode(str: string): string, decode(str: string): string };
     export function bottomVisible(ele?: HTMLElement): boolean
@@ -49,8 +49,8 @@ declare module 'js-func-tools' {
     export function hasClassName(el: HTMLElement, className: string): boolean
     export function addClassName(el: HTMLElement, className: string): void
     export function removeClassName(el: HTMLElement, className: string): void
-    export function cloneDeep(arr: ITree[]): ITree[]
-    export function cloneDeepComplex(arr: ITree[], cache: any): ITree[]
+    export function cloneDeep(arr: TreeItem[]): TreeItem[]
+    export function cloneDeepComplex(arr: TreeItem[], cache: any): TreeItem[]
     export function copyToBoard(str: string): boolean
     export function cutRadixPoint(fn: (options?: {[key: string]: any}) => void, delay?: number): (options?: {[key: string]: any}) => void
     export function debounce(fn: DebounceFn, delay?: number): DebounceFn
@@ -73,36 +73,39 @@ declare module 'js-func-tools' {
     export function getNextMonth(date?: string): string[]
     export function getYMDByYear(options: { year?: string | number, month?: string | number }): string[] | { month: string, children: string[] }[]
     export function hasKeyByObj(obj: any, key: string): boolean
-    export function filterTreeByFunc(tree: ITree[], func: (item: ITree) => boolean): ITree[]
+    export function filterTreeByFunc(tree: TreeItem[], func: (item: TreeItem) => boolean): TreeItem[]
     export function findTarget(target: HTMLElement, tagList: string[]): HTMLElement
     export function formatMoney(money: string | number): string
     export function formValidate(options: FormValidateOptions): boolean
-    export function getAllLeaf(tree: ITree[], first?: boolean): ITree[]
+    export function getAllLeaf(tree: TreeItem[], first?: boolean): TreeItem[]
     export function getFormData(object: AnyType): FormData
-    export function getNodePath(tree: ITree[], id: string | number, byIndex?: boolean): Array<string | number>
+    export function getNodePath(tree: TreeItem[], id: string | number, byIndex?: boolean): Array<string | number>
     export function getObjType(obj: any, type?: string): string | boolean
     export function getPlaceByTrigger(options: { trigger: HTMLElement, dom: HTMLElement, offset?: number, isRight?: boolean }): { left: number, top: number, isDown: boolean }
     export function getTextWidth(text: string, options?: { size?: number, family?: string  }): number
-    export function getUrlParam(name: string, origin?: string | null): string | null
+    export function getUrlParams(name: string, origin?: string | null): string | null
     export function hex2Rgb(hex: string): string
     export function isNullObj(obj: AnyType): boolean
     export function isObjValEqual(obj1: AnyType, obj2: AnyType, empty: boolean): boolean
     export function isWeekday(date: string | Date): boolean
     export function largeNumbersAddition(a: string | number, b: string | number): string
     export function matchesByValue(value: string, search: string, jointStart: string, jointEnd: string): string
+    export function obj2Url(obj: AnyType, url?: string): string
     export function randomHexColor(): void
-    export function removeAttrByParam(tree: ITree[], param: string): ITree[]
+    export function removeAttrByParam(tree: TreeItem[], param: string): TreeItem[]
     export function removeEmpty(data: AnyType): AnyType
-    export function removeEmptyChildren(tree: ITree[]): ITree[]
+    export function removeEmptyChildren(tree: TreeItem[]): TreeItem[]
     export function removeHtmlTag(str: string): string
     export function rgb2Hex(str: string): string
     export function round(n: string | number, dec?: number): string
     export function scrollToTop(id: string): void
     export function scrollToPlace(params: { key?: 'scrollLeft' | 'scrollTop', tag?: HTMLElement, place?: number }): void
     export function sensitiveEscape(s: string): string
+    export function setParamsByIndex(indArr: Array<string | number>, data: TreeItem[], param: string, value: any): TreeItem[]
     export function sortHandle(data: string[] | number[] | { [key: string]: string | number }[], other?: { sortord?: 'asc' | 'des', type?: 'number' | 'string' | 'date', key?: string }): string[] | number[] | { [key: string]: string | number }[]
     export function throttle(fn: DebounceFn, delay?: number): DebounceFn
     export function textEllipsis(e: MouseEvent, tag?: string): void
-    export function treeToArray(tree: ITree[], parentId?: number | string): ITree[]
+    export function treeToArray(tree: TreeItem[], parentId?: number | string): TreeItem[]
     export function uuid(length?: number, chars?: string): string
+    export function xsync(options: { url: string, method?: string, headers?: Headers, params?: AnyType }): Promise<{ status?: number, data?: AnyType } | { message?: string }>
 }

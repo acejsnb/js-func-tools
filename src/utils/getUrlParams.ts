@@ -1,6 +1,6 @@
 // 获取url参数
 type Fn = (name: string, origin?: string | null) => string | null
-const getUrlParam: Fn = (name, origin = null) => {
+const getUrlParams: Fn = (name, origin = null) => {
     let reg = new RegExp('(^|&)' + name + '=([^&]*)(&|$)');
     let r = null;
     if (origin) {
@@ -12,4 +12,4 @@ const getUrlParam: Fn = (name, origin = null) => {
     return null;
 };
 
-export default getUrlParam;
+export default getUrlParams;

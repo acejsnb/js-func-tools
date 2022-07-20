@@ -393,10 +393,10 @@ const { left, top, isDown } = getPlaceByTrigger({ trigger: target, dom: div, isR
 const result = getTextWidth('Hello');
 ```
 
-- ### getUrlParam 获取url参数
+- ### getUrlParams 获取url参数
 ```js
 // type Fn = (name: string, origin: string | null) => string | null
-const result = getUrlParam(name);
+const result = getUrlParams(name);
 ```
 
 - ### isNullObj 判断是否是空对象
@@ -436,6 +436,13 @@ const result = matchesByValue(
     '--',
     '=='
 );
+```
+
+- ### obj2Url 对象转url
+```js
+// type Obj = { [key: string]: any }
+// type Obj2Url = (obj: Obj, url?: string) => string
+const result = obj2Url({name: 'Lucy', age: 18}, 'http://www.xxx.com'); // http://www.xxx.com?name=Lucy&age=18
 ```
 
 - ### randomHexColor 生成随机颜色
@@ -494,6 +501,12 @@ scrollToPlace({ key: 'scrollLeft' });
 const result = sensitiveEscape(str);
 ```
 
+- ### setParamsByIndex 根据索引设置某个参数的值
+```js
+// type SetParamsByIndex = (data: ITree[], indArr: Array<string | number>, param: string, value: any) => ITree[]
+const result = setParamsByIndex(tree, [0, 0], 'open', true);
+```
+
 - ### sortHandle 排序
 ```js
 /*
@@ -533,4 +546,33 @@ const arr = treeToArray(tree);
 - ### uuid 随机生成n位字符串
 ```js
 const str = uuid(5);
+```
+
+
+- ### xsync fetch请求数据封装
+```js
+/*
+interface Headers {
+    'Content-Type'?: 'application/x-www-form-urlencoded' | 'multipart/form-data' | 'application/json' | 'application/xml' | 'text/xml' | string
+    token?: string
+    [key: string | number]: any
+}
+interface SendRequestOptions {
+    url: string
+    method?: string
+    headers?: Headers
+    params?: AnyType
+}
+*/
+// type Xsync = (options: SendRequestOptions) => Promise<{ status?: number, data?: AnyType } | { message?: string }>
+xsync({
+    method: 'GET',
+    url: 'url/xxx',
+    params: {id: 123},
+    token: 'token-token'
+}).then(res => {
+    console.log('then:', res);
+}).catch(err => {
+    console.log('catch:', err);
+});
 ```

@@ -30,7 +30,7 @@ export { default as getObjType } from './utils/getObjType';
 export { default as getPlaceByTrigger } from './utils/getPlaceByTrigger';
 export { default as getTextWidth } from './utils/getTextWidth';
 export { default as getTime } from './utils/getTime';
-export { default as getUrlParam } from './utils/getUrlParam';
+export { default as getUrlParams } from './utils/getUrlParams';
 
 export { getCurrentWeek, getPrevWeek, getNextWeek } from './utils/getWeek';
 
@@ -40,6 +40,7 @@ export { default as isObjValEqual } from './utils/isObjValEqual';
 export { default as isWeekday } from './utils/isWeekday';
 export { default as largeNumbersAddition } from './utils/largeNumbersAddition';
 export { default as matchesByValue } from './utils/matchesByValue';
+export { default as obj2Url } from './utils/obj2Url';
 export { default as randomHexColor } from './utils/randomHexColor';
 export { default as removeAttrByParam } from './utils/removeAttrByParam';
 export { default as removeEmpty } from './utils/removeEmpty';
@@ -64,6 +65,7 @@ export { default as cloneDeep, cloneDeepComplex } from './utils/cloneDeep';
 
 export { default as checkCreditCode } from './utils/checkCreditCode';
 export { default as sensitiveEscape } from './utils/sensitiveEscape';
+export { default as setParamsByIndex } from './utils/setParamsByIndex';
 export { default as sortHandle } from './utils/sortHandle';
 export { default as textEllipsis } from './utils/textEllipsis';
 export { default as throttle } from './utils/throttle';
@@ -71,3 +73,4 @@ export { default as scrollToTop } from './utils/scrollToTop';
 export { default as scrollToPlace } from './utils/scrollToPlace';
 export { default as formatMoney } from './utils/formatMoney';
 export { default as weekOfYear } from './utils/weekOfYear';
+export { default as xsync } from './utils/xsync';
