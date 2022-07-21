@@ -17,15 +17,17 @@ const getItemByData: GetItemByData = (data, key, value) => {
     for (let i = 0; i < ave; i++) {
         const cur = data[i];
         if (cur[key] === value) return cur;
-        const lastCur = data[len - i - 1];
-        if (lastCur[key] === value) return lastCur;
         if (cur.children?.length) {
             const item = getItemByData(cur.children, key, value);
             if (item) return item;
         }
-        if (lastCur.children?.length) {
-            const item = getItemByData(lastCur.children, key, value);
-            if (item) return item;
+        if (len > 1) {
+            const lastCur = data[len - i - 1];
+            if (lastCur[key] === value) return lastCur;
+            if (lastCur.children?.length) {
+                const item = getItemByData(lastCur.children, key, value);
+                if (item) return item;
+            }
         }
     }
     return null;
