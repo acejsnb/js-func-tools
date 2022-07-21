@@ -4,13 +4,13 @@
  * @param parentId 根父级id
  * @returns {*[]}
  */
-interface ITree {
+interface TreeItem {
     id?: string | number
     name?: string
-    children?: ITree[]
+    children?: TreeItem[]
     [key: string]: any
 }
-type Fn = (tree: ITree[], parentId?: number | string) => ITree[]
+type Fn = (tree: TreeItem[], parentId?: number | string) => TreeItem[]
 const treeToArray: Fn = (tree, parentId = -1) => {
     const queue = JSON.parse(JSON.stringify(tree)),
         result = [];

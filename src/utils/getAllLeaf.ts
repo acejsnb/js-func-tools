@@ -4,16 +4,16 @@
  * @param first 是否获取第一个子节点的叶子节点
  * @returns {*[]}
  */
-interface ITree {
+interface TreeItem {
     id?: string | number
     name?: string
-    children?: ITree[]
+    children?: TreeItem[]
     [key: string]: any
 }
-type Fn = (tree: ITree[], first?: boolean) => ITree[]
+type Fn = (tree: TreeItem[], first?: boolean) => TreeItem[]
 const getAllLeaf: Fn = (tree, first = false) => {
-    const result: ITree[] = [];
-    const getLeaf = (data: ITree[]) => {
+    const result: TreeItem[] = [];
+    const getLeaf = (data: TreeItem[]) => {
         if (first) {
             if (!data[0].children?.length) {
                 result.push(data[0]);

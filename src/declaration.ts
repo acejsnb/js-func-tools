@@ -79,6 +79,7 @@ declare module 'js-func-tools' {
     export function formValidate(options: FormValidateOptions): boolean
     export function getAllLeaf(tree: TreeItem[], first?: boolean): TreeItem[]
     export function getFormData(object: AnyType): FormData
+    export function getItemByData(data: TreeItem[], key: string | number, value: string | number): TreeItem
     export function getNodePath(tree: TreeItem[], id: string | number, byIndex?: boolean): Array<string | number>
     export function getObjType(obj: any, type?: string): string | boolean
     export function getPlaceByTrigger(options: { trigger: HTMLElement, dom: HTMLElement, offset?: number, isRight?: boolean }): { left: number, top: number, isDown: boolean }

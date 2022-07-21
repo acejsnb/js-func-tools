@@ -4,14 +4,14 @@
  * @param func 筛选条件
  * @returns {*[]|*}
  */
-interface ITree {
+interface TreeItem {
     id?: string | number
     name?: string
-    children?: ITree[]
+    children?: TreeItem[]
     [key: string]: any
 }
-type TFunc = (item: ITree) => boolean
-type Fn = (tree: ITree[], func: TFunc) => ITree[]
+type TFunc = (item: TreeItem) => boolean
+type Fn = (tree: TreeItem[], func: TFunc) => TreeItem[]
 const filterTreeByFunc: Fn = (tree, func) => {
     if (!Array.isArray(tree) || tree.length === 0) {
         return [];

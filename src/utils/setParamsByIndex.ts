@@ -4,13 +4,13 @@
  * @param arr
  * @param param
  */
-interface ITree {
+interface TreeItem {
     id?: string | number
     name?: string
-    children?: ITree[]
+    children?: TreeItem[]
     [key: string | number]: any
 }
-type SetParamsByIndex = (indArr: Array<string | number>, data: ITree[], param: string, value: any) => ITree[]
+type SetParamsByIndex = (indArr: Array<string | number>, data: TreeItem[], param: string, value: any) => TreeItem[]
 const setParamsByIndex: SetParamsByIndex = (indArr, data, param, value) => {
     const arr = JSON.parse(JSON.stringify(indArr));
     const suffix = '[param]=value';

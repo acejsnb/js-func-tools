@@ -3,13 +3,13 @@
  * @param data
  * @returns {string}
  */
-interface ITree {
+interface TreeItem {
     id?: string | number
     name?: string
-    children?: ITree[]
+    children?: TreeItem[]
     [key: string]: any
 }
-const cloneDeep = (data: ITree[]): ITree[] => 'structuredClone' in window ? (window as any).structuredClone(data) : JSON.parse(JSON.stringify(data, (k, v) => v ? v : ''));
+const cloneDeep = (data: TreeItem[]): TreeItem[] => 'structuredClone' in window ? (window as any).structuredClone(data) : JSON.parse(JSON.stringify(data, (k, v) => v ? v : ''));
 
 type Func = () => void
 const copyFunction = (func: Func) => {

@@ -3,13 +3,13 @@
  * @param tree
  * @returns {*}
  */
-interface ITree {
+interface TreeItem {
     id?: string | number
     name?: string
-    children?: ITree[]
+    children?: TreeItem[]
     [key: string]: any
 }
-const removeEmptyChildren = (tree: ITree[]): ITree[] => {
+const removeEmptyChildren = (tree: TreeItem[]): TreeItem[] => {
     tree.forEach((item) => {
         if (item.children) {
             const len = item.children.length;

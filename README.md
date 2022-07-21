@@ -8,7 +8,7 @@
 ## 使用
 - browser
 ```html
-<script src="https://unpkg.com/js-func-tools@1.0.5/dist/browser.js"></script>
+<script src="https://unpkg.com/js-func-tools@[version]/dist/browser.js"></script>
 <script>
     const num = JSFT.cutRadixPoint(807.34691);
 </script>
@@ -366,6 +366,12 @@ const obj = {id: 1, name: 'eks'};
 const result = getFormData(obj);
 ```
 
+- ### getItemByData 根据参数获取当前item
+```js
+// type GetItemByData = (data: TreeItem[], key: string | number, value: string | number) => TreeItem | null
+const result = getItemByData(tree, 'id', '122');
+```
+
 - ### getNodePath 查找某一节点在树中路径
 ```js
 const result = getNodePath(tree, 12);
@@ -503,7 +509,7 @@ const result = sensitiveEscape(str);
 
 - ### setParamsByIndex 根据索引设置某个参数的值
 ```js
-// type SetParamsByIndex = (data: ITree[], indArr: Array<string | number>, param: string, value: any) => ITree[]
+// type SetParamsByIndex = (data: TreeItem[], indArr: Array<string | number>, param: string, value: any) => TreeItem[]
 const result = setParamsByIndex(tree, [0, 0], 'open', true);
 ```
 

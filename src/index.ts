@@ -22,6 +22,7 @@ export { default as formValidate } from './utils/formValidate';
 export { default as getAllLeaf } from './utils/getAllLeaf';
 export { default as getDays } from './utils/getDays';
 export { default as getFormData } from './utils/getFormData';
+export { default as getItemByData } from './utils/getItemByData';
 
 export { getCurrentMonth, getPrevMonth, getNextMonth } from './utils/getMonth';
 

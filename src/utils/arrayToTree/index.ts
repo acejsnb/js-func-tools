@@ -4,16 +4,16 @@
  * @param parentId 根父级id
  * @returns {*[]}
  */
-interface ITree {
+interface TreeItem {
     id?: string | number
     name?: string
-    children?: ITree[]
+    children?: TreeItem[]
     [key: string]: any
 }
-type Fn = (arr: ITree[], parentId?: string | number) => ITree[]
+type Fn = (arr: TreeItem[], parentId?: string | number) => TreeItem[]
 const arrayToTree: Fn = (arr, parentId = -1) => {
-    const data: ITree[] = JSON.parse(JSON.stringify(arr));
-    const res: ITree[] = [];
+    const data: TreeItem[] = JSON.parse(JSON.stringify(arr));
+    const res: TreeItem[] = [];
     data.forEach((item) => {
         if (item.parentId === parentId) {
             const itemChildren = arrayToTree(data, item.id as string);

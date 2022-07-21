@@ -5,18 +5,18 @@
  * @param byIndex 返回索引
  * @returns {*[]|*|[]}
  */
-interface ITree {
+interface TreeItem {
     id?: string | number
     name?: string
-    children?: ITree[]
+    children?: TreeItem[]
     [key: string]: any
 }
 type TRes = Array<string | number>
-type Fn = (tree: ITree[], id: string | number, byIndex?: boolean) => TRes
+type Fn = (tree: TreeItem[], id: string | number, byIndex?: boolean) => TRes
 const getNodePath: Fn = (tree, id, byIndex = false) => {
     if (!Array.isArray(tree) || !tree?.length) return [];
     const path: TRes = [];
-    const treeFindPath = (data: ITree[], id: string | number, path: TRes): TRes => {
+    const treeFindPath = (data: TreeItem[], id: string | number, path: TRes): TRes => {
         const len = data.length;
         for (let i = 0; i < len; i++) {
             const { id: itemId, children = [] } = data[i] ?? {};

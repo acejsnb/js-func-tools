@@ -4,13 +4,13 @@
  * @param param
  * @returns {*}
  */
-interface ITree {
+interface TreeItem {
     id?: string | number
     name?: string
-    children?: ITree[]
+    children?: TreeItem[]
     [key: string]: any
 }
-type Fn = (tree: ITree[], param: string) => ITree[]
+type Fn = (tree: TreeItem[], param: string) => TreeItem[]
 const removeAttrByParam: Fn = (tree, param) => {
     tree.forEach((item) => {
         delete item[param];
