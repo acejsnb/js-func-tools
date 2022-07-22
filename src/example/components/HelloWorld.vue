@@ -1,9 +1,9 @@
 <script lang="ts" setup>
 import { reactive } from 'vue'
 import {
-    AddZero, getNodePath, arrayToTree, treeToArray, ArrayDeWeight, cloneDeep, cloneDeepComplex,
-    formatMoney, dayOfWeek, weekOfYear, sortHandle, daysBetween, isObjValEqual,
-    matchesByValue
+    AddZero, GetNodePath, ArrayToTree, TreeToArray, ArrayDeWeight, CloneDeep, CloneDeepComplex,
+    FormatMoney, DayOfWeek, WeekOfYear, SortHandle, DaysBetween, IsObjValEqual,
+    MatchesByValue
 } from '@/.';
 const arr = [
     {'id': 1, 'name': '一级1', 'parentId': -1},
@@ -64,15 +64,15 @@ const tree2 = [
 
 // console.log('AddZero==', AddZero(2));
 
-const result = getNodePath(tree2, '122', true);
-// console.log('getNodePath===', result);
+const result = GetNodePath(tree2, '122', true);
+// console.log('GetNodePath===', result);
 // 根据索引查找
-// const resultByIndex = getNodePath(tree2, '1212', true);
+// const resultByIndex = GetNodePath(tree2, '1212', true);
 // console.log(resultByIndex);
 
-// console.log(arrayToTree(arr, -1));
-// console.log(JSON.stringify(arrayToTree(arr, -1)));
-// console.log(treeToArray(tree));
+// console.log(ArrayToTree(arr, -1));
+// console.log(JSON.stringify(ArrayToTree(arr, -1)));
+// console.log(TreeToArray(tree));
 
 const arr2 = [
     {id: '1', name: '1', func: () => {console.log(123)}},
@@ -80,26 +80,26 @@ const arr2 = [
     {id: '3', name: '3'},
 ];
 // console.log(ArrayDeWeight(arr2, 'id'));
-// console.log('cloneDeep==', cloneDeepComplex(arr2));
-// console.log('cloneDeepComplex==', cloneDeepComplex(data));
+// console.log('cloneDeep==', CloneDeepComplex(arr2));
+// console.log('cloneDeepComplex==', CloneDeepComplex(data));
 
-// console.log('formatMoney==', formatMoney('1234567'));
+// console.log('formatMoney==', FormatMoney('1234567'));
 const str = '2021.12.24';
-// console.log('dayOfWeek==', dayOfWeek(str));
-// console.log('weekOfYear==', weekOfYear(str));
+// console.log('dayOfWeek==', DayOfWeek(str));
+// console.log('weekOfYear==', WeekOfYear(str));
 
 const obj1 = {a: '1', b: '2', c: [1,2,{a:1}], d: ''};
 const obj2 = {a: '1', b: '2', c: [1,2,{a:1}]};
-// console.log('isObjValEqual==', isObjValEqual(obj1, obj2, true));
+// console.log('isObjValEqual==', IsObjValEqual(obj1, obj2, true));
 
-// console.log(sortHandle(arr, { key: 'id' }));
-// console.log(sortHandle([2,4,6,6,7,34,43,5,35,4,35,3,46]));
-// console.log(sortHandle(['c', 'v', 'b'], { type: 'string' }));
+// console.log(SortHandle(arr, { key: 'id' }));
+// console.log(SortHandle([2,4,6,6,7,34,43,5,35,4,35,3,46]));
+// console.log(SortHandle(['c', 'v', 'b'], { type: 'string' }));
 
 // console.log('daysBetween===', daysBetween('2021.10.30', '2021.11.02'));
-console.log('matchesByValue===', matchesByValue('今天是一个A好日a子', 'A', '--', '--'));
-console.log('matchesByValue===', matchesByValue('今天是一个A好日a子', 'A', '--', '--', {caseEn: true}));
-console.log('matchesByValue===', matchesByValue('今天是一个A好日a子', 'A是', '--', '--', {split: true}));
+console.log('matchesByValue===', MatchesByValue('今天是一个A好日a子', 'A', '--', '--'));
+console.log('matchesByValue===', MatchesByValue('今天是一个A好日a子', 'A', '--', '--', {caseEn: true}));
+console.log('matchesByValue===', MatchesByValue('今天是一个A好日a子', 'A是', '--', '--', {split: true}));
 
 
 defineProps({
