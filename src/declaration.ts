@@ -90,7 +90,7 @@ declare module 'js-func-tools' {
     export function isObjValEqual(obj1: AnyType, obj2: AnyType, empty: boolean): boolean
     export function isWeekday(date: string | Date): boolean
     export function largeNumbersAddition(a: string | number, b: string | number): string
-    export function matchesByValue(value: string, search: string, jointStart: string, jointEnd: string): string
+    export function matchesByValue(value: string, search: string, jointStart: string, jointEnd: string, more?: { split?: boolean, caseEn?: boolean }): string
     export function obj2Url(obj: AnyType, url?: string): string
     export function randomHexColor(): void
     export function removeAttrByParam(tree: TreeItem[], param: string): TreeItem[]

@@ -435,7 +435,8 @@ const result = largeNumbersAddition(123456, Math.pow(2, 53) - 1);
 
 - ### matchesByValue 根据value匹配字符串（搜索字符串并替换，做高亮使用）
 ```js
-// type Fn = (value: string, search: string, jointStart: string, jointEnd: string) => string
+// type More = {split?: boolean, caseEn?: boolean}
+// type Fn = (value: string, search: string, jointStart: string, jointEnd: string, more?: More) => string
 const result = matchesByValue(
     '今天是一个A好日a子',
     'A',

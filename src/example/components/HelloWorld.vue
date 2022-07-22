@@ -1,7 +1,10 @@
-<script setup>
+<script lang="ts" setup>
 import { reactive } from 'vue'
-import { addZero, getNodePath, arrayToTree, treeToArray, arrayDeWeight, cloneDeep, cloneDeepComplex, formatMoney, dayOfWeek, weekOfYear, sortHandle, daysBetween } from '../../../dist/index.js';
-import isObjValEqual from '../../utils/isObjValEqual';
+import {
+    addZero, getNodePath, arrayToTree, treeToArray, arrayDeWeight, cloneDeep, cloneDeepComplex,
+    formatMoney, dayOfWeek, weekOfYear, sortHandle, daysBetween, isObjValEqual,
+    matchesByValue
+} from '@/.';
 const arr = [
     {'id': 1, 'name': '一级1', 'parentId': -1},
     {'id': 121, 'name': '二级1', 'parentId': 1},
@@ -77,8 +80,8 @@ const arr2 = [
     {id: '3', name: '3'},
 ];
 // console.log(arrayDeWeight(arr2, 'id'));
-console.log('cloneDeep==', cloneDeepComplex(arr2));
-console.log('cloneDeepComplex==', cloneDeepComplex(data));
+// console.log('cloneDeep==', cloneDeepComplex(arr2));
+// console.log('cloneDeepComplex==', cloneDeepComplex(data));
 
 // console.log('formatMoney==', formatMoney('1234567'));
 const str = '2021.12.24';
@@ -87,13 +90,16 @@ const str = '2021.12.24';
 
 const obj1 = {a: '1', b: '2', c: [1,2,{a:1}], d: ''};
 const obj2 = {a: '1', b: '2', c: [1,2,{a:1}]};
-console.log('isObjValEqual==', isObjValEqual(obj1, obj2, true));
+// console.log('isObjValEqual==', isObjValEqual(obj1, obj2, true));
 
 // console.log(sortHandle(arr, { key: 'id' }));
 // console.log(sortHandle([2,4,6,6,7,34,43,5,35,4,35,3,46]));
 // console.log(sortHandle(['c', 'v', 'b'], { type: 'string' }));
 
-console.log('daysBetween===', daysBetween('2021.10.30', '2021.11.02'));
+// console.log('daysBetween===', daysBetween('2021.10.30', '2021.11.02'));
+console.log('matchesByValue===', matchesByValue('今天是一个A好日a子', 'A', '--', '--'));
+console.log('matchesByValue===', matchesByValue('今天是一个A好日a子', 'A', '--', '--', {caseEn: true}));
+console.log('matchesByValue===', matchesByValue('今天是一个A好日a子', 'A是', '--', '--', {split: true}));
 
 
 defineProps({
