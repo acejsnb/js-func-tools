@@ -21,8 +21,9 @@ const getItemByData: GetItemByData = (data, key, value) => {
             const item = getItemByData(cur.children, key, value);
             if (item) return item;
         }
-        if (len > 1) {
-            const lastCur = data[len - i - 1];
+        const i2 = len - i - 1;
+        if (len > 1 && i2 > i) {
+            const lastCur = data[i2];
             if (lastCur[key] === value) return lastCur;
             if (lastCur.children?.length) {
                 const item = getItemByData(lastCur.children, key, value);
