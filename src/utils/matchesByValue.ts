@@ -11,6 +11,7 @@ type Fn = (value: string, search: string, jointStart: string, jointEnd: string, 
  *        caseEn 区分大小写
  */
 const matchesByValue: Fn = (value, search, jointStart, jointEnd, more) => {
+    if (!value || !search) return value;
     if (more?.split) {
         // 分词
         const valueArr = value.split(''),
