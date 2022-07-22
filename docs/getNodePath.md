@@ -1,7 +1,7 @@
 # 查找某一节点在树中路径
 
 ```js
-import { getNodePath } from 'js-func-tools';
+import { GetNodePath } from 'js-func-tools';
 
 const tree = [
     {
@@ -26,10 +26,10 @@ const tree = [
     }
 ];
 
-const result = getNodePath(tree, 12);
+const result = GetNodePath(tree, 12);
 console.log(result);
 // 根据索引查找
-const resultByIndex = getNodePath(tree, 12, true);
+const resultByIndex = GetNodePath(tree, 12, true);
 console.log(resultByIndex);
 
 ```

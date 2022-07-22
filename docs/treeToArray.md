@@ -1,7 +1,7 @@
 # 数组转树形结构
 
 ```js
-import { treeToArray } from 'js-func-tools';
+import { TreeToArray } from 'js-func-tools';
 
 const tree = [
     {
@@ -26,7 +26,7 @@ const tree = [
     }
 ];
 
-const arr = treeToArray(tree);
+const arr = TreeToArray(tree);
 console.log(arr);
 
 ```

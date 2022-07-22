@@ -1,7 +1,7 @@
 # 根据参数删除树的属性
 
 ```js
-import { removeAttrByParam } from 'js-func-tools';
+import { RemoveAttrByParam } from 'js-func-tools';
 
 const tree = [
     {
@@ -26,7 +26,7 @@ const tree = [
     }
 ];
 
-const result = removeAttrByParam(tree, 'id');
+const result = RemoveAttrByParam(tree, 'id');
 console.log(result);
 
 ```

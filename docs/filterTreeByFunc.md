@@ -1,7 +1,7 @@
 # 根据条件筛选出符合条件的树形结构数据
 
 ```js
-import { filterTreeByFunc } from 'js-func-tools';
+import { FilterTreeByFunc } from 'js-func-tools';
 
 const tree = [
     {
@@ -28,7 +28,7 @@ const tree = [
 
 // 筛选
 const filterFunc = (item) => item.id === 11;
-const result = filterTreeByFunc(tree, filterFunc);
+const result = FilterTreeByFunc(tree, filterFunc);
 console.log(result);
 
 ```

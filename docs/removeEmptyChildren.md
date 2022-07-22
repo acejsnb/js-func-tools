@@ -1,7 +1,7 @@
 # 删除树中的空children
 
 ```js
-import { removeEmptyChildren } from 'js-func-tools';
+import { RemoveEmptyChildren } from 'js-func-tools';
 
 const tree = [
     {
@@ -26,7 +26,7 @@ const tree = [
     }
 ];
 
-const result = removeEmptyChildren(tree, 'id');
+const result = RemoveEmptyChildren(tree, 'id');
 console.log(result);
 
 ```

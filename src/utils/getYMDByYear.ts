@@ -1,4 +1,4 @@
-import addZero from './addZero';
+import AddZero from './addZero';
 import getDays from './getDays';
 /**
  * 根据年获取当前所有年月日
@@ -13,7 +13,7 @@ const getYMDByYear: Fn = ({year, month} = { year: '', month: '' }) => {
     if (month) {
         const days = getDays(yyyy, month);
         for (let i = 0; i < days; i++) {
-            (result as string[]).push(addZero(i + 1));
+            (result as string[]).push(AddZero(i + 1));
         }
     } else {
         for (let i = 0; i < 12; i++) {
@@ -21,9 +21,9 @@ const getYMDByYear: Fn = ({year, month} = { year: '', month: '' }) => {
             const days = getDays(yyyy, mm);
             const children = [];
             for (let j = 0; j < days; j++) {
-                children.push(addZero(j + 1));
+                children.push(AddZero(j + 1));
             }
-            (result as TObj[]).push({ month: addZero(mm), children });
+            (result as TObj[]).push({ month: AddZero(mm), children });
         }
     }
     return result;

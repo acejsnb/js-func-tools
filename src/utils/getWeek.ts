@@ -1,4 +1,4 @@
-import addZero from './addZero';
+import AddZero from './addZero';
 
 /**
  * 获取周
@@ -10,7 +10,7 @@ type GetWeekFn = (type?: 0 | 1, date?: string) => string[];
 const getCurrentWeek: GetWeekFn = (type = 0, date) => {
     const curDate = date ? new Date(date) : new Date(),
         today = curDate.getDay() || 7,
-        format = (DATE: Date) => `${DATE.getFullYear()}.${addZero(DATE.getMonth() + 1)}.${addZero(DATE.getDate())}`;
+        format = (DATE: Date) => `${DATE.getFullYear()}.${AddZero(DATE.getMonth() + 1)}.${AddZero(DATE.getDate())}`;
     return Array.from(new Array(7), (val, index) => format(new Date(+curDate - (today - index - type) * 24 * 3600* 1000)));
 };
 // 获取上一周

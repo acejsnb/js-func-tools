@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 import { reactive } from 'vue'
 import {
-    addZero, getNodePath, arrayToTree, treeToArray, arrayDeWeight, cloneDeep, cloneDeepComplex,
+    AddZero, getNodePath, arrayToTree, treeToArray, ArrayDeWeight, cloneDeep, cloneDeepComplex,
     formatMoney, dayOfWeek, weekOfYear, sortHandle, daysBetween, isObjValEqual,
     matchesByValue
 } from '@/.';
@@ -62,7 +62,7 @@ const tree2 = [
     }
 ];
 
-// console.log('addZero==', addZero(2));
+// console.log('AddZero==', AddZero(2));
 
 const result = getNodePath(tree2, '122', true);
 // console.log('getNodePath===', result);
@@ -79,7 +79,7 @@ const arr2 = [
     {id: '1', name: '2'},
     {id: '3', name: '3'},
 ];
-// console.log(arrayDeWeight(arr2, 'id'));
+// console.log(ArrayDeWeight(arr2, 'id'));
 // console.log('cloneDeep==', cloneDeepComplex(arr2));
 // console.log('cloneDeepComplex==', cloneDeepComplex(data));
 

@@ -1,4 +1,4 @@
-import addZero from './addZero';
+import AddZero from './addZero';
 import getDays from './getDays';
 
 type GetMonthFn = (date?: string) => string[];
@@ -6,9 +6,9 @@ type GetMonthFn = (date?: string) => string[];
 const getCurrentMonth: GetMonthFn = (date) => {
     const curDate = date ? new Date(date) : new Date(),
         year = curDate.getFullYear(),
-        month = addZero(curDate.getMonth() + 1),
+        month = AddZero(curDate.getMonth() + 1),
         days = getDays(year, month);
-    return Array.from(new Array(days), (val, index) => (`${year}.${month}.${addZero(index + 1)}`));
+    return Array.from(new Array(days), (val, index) => (`${year}.${month}.${AddZero(index + 1)}`));
 };
 // 获取上一月
 const getPrevMonth: GetMonthFn = (date) => {
