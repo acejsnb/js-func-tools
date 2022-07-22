@@ -13,6 +13,7 @@ interface TreeItem {
 type GetItemByData = (data: TreeItem[], key: string | number, value: string | number) => TreeItem | null
 const getItemByData: GetItemByData = (data, key, value) => {
     const len = data.length;
+    if (!len || !key || !value) return null;
     const ave = Math.ceil(len / 2);
     for (let i = 0; i < ave; i++) {
         const cur = data[i];
