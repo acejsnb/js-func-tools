@@ -52,7 +52,7 @@ declare module 'js-func-tools' {
     export function CloneDeep(arr: TreeItem[]): TreeItem[]
     export function CloneDeepComplex(arr: TreeItem[], cache: any): TreeItem[]
     export function CopyToBoard(str: string): boolean
-    export function CutRadixPoint(fn: (options?: {[key: string]: any}) => void, delay?: number): (options?: {[key: string]: any}) => void
+    export function CutRadixPoint(value: number | string, delay?: number): (options?: { [p: string]: any }) => void
     export function Debounce(fn: DebounceFn, delay?: number): DebounceFn
     export function DownloadByUrl(url: string | Blob, name?: string): boolean
     export function DayOfYear(dateStr: string): number
