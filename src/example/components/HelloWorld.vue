@@ -3,8 +3,9 @@ import { reactive } from 'vue'
 import {
     AddZero, GetNodePath, ArrayToTree, TreeToArray, ArrayDeWeight, CloneDeep, CloneDeepComplex,
     FormatMoney, DayOfWeek, WeekOfYear, SortHandle, DaysBetween, IsObjValEqual,
-    MatchesByValue
+    MatchesByValue, GetItemByData
 } from '@/.';
+import getItemByData from "@/utils/getItemByData";
 const arr = [
     {'id': 1, 'name': '一级1', 'parentId': -1},
     {'id': 121, 'name': '二级1', 'parentId': 1},
@@ -97,9 +98,16 @@ const obj2 = {a: '1', b: '2', c: [1,2,{a:1}]};
 // console.log(SortHandle(['c', 'v', 'b'], { type: 'string' }));
 
 // console.log('daysBetween===', daysBetween('2021.10.30', '2021.11.02'));
-console.log('matchesByValue===', MatchesByValue('今天是一个A好日a子', 'A', '--', '--'));
-console.log('matchesByValue===', MatchesByValue('今天是一个A好日a子', 'A', '--', '--', {caseEn: true}));
-console.log('matchesByValue===', MatchesByValue('今天是一个A好日a子', 'A是', '--', '--', {split: true}));
+// console.log('matchesByValue===', MatchesByValue('今天是一个A好日a子', 'A', '--', '--'));
+// console.log('matchesByValue===', MatchesByValue('今天是一个A好日a子', 'A', '--', '--', {caseEn: true}));
+// console.log('matchesByValue===', MatchesByValue('今天是一个A好日a子', 'A是', '--', '--', {split: true}));
+console.time('abc')
+console.log('GetItemByData===', GetItemByData(tree, 'id', 122));
+console.timeEnd('abc')
+
+console.time('find')
+console.log('find===', tree.find(d => d.id === 122));
+console.timeEnd('find')
 
 
 defineProps({

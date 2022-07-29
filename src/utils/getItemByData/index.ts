@@ -14,8 +14,8 @@ type GetItemByData = (data: TreeItem[], key: string | number, value: string | nu
 const getItemByData: GetItemByData = (data, key, value) => {
     const len = data.length;
     if (!len || !key || !value) return null;
-    const ave = Math.ceil(len / 2);
-    for (let i = 0; i < ave; i++) {
+    const middle = Math.ceil(len / 2);
+    for (let i = 0; i < middle; i++) {
         const cur = data[i];
         if (cur[key] === value) return cur;
         if (cur.children?.length) {
