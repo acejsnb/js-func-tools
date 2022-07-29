@@ -12,27 +12,25 @@ interface TreeItem {
 }
 type GetItemByData = (data: TreeItem[], key: string | number, value: string | number) => TreeItem | null
 const getItemByData: GetItemByData = (data, key, value) => {
-    const len = data.length;
+    const len = data?.length;
     if (!len || !key || !value) return null;
-    const middle = Math.ceil(len / 2);
-    for (let i = 0; i < middle; i++) {
-        const cur = data[i];
+    type BinaryFind = (data: TreeItem[], leftIndex: number, rightIndex: number) =>  TreeItem | null
+    const binaryFind: BinaryFind = (data, leftIndex, rightIndex) => {
+        if (leftIndex > rightIndex) return null;
+        const middle = Math.ceil((leftIndex + rightIndex) / 2),
+            cur = data[middle];
         if (cur[key] === value) return cur;
         if (cur.children?.length) {
-            const item = getItemByData(cur.children, key, value);
+            const item = binaryFind(cur.children, 0, cur.children.length - 1);
             if (item) return item;
         }
-        const i2 = len - i - 1;
-        if (len > 1 && i2 > i) {
-            const lastCur = data[i2];
-            if (lastCur[key] === value) return lastCur;
-            if (lastCur.children?.length) {
-                const item = getItemByData(lastCur.children, key, value);
-                if (item) return item;
-            }
-        }
-    }
-    return null;
+        const leftItem = binaryFind(data, leftIndex, middle - 1);
+        if (leftItem) return leftItem;
+        const rightItem = binaryFind(data, middle + 1, rightIndex);
+        if (rightItem) return rightItem;
+        return null;
+    };
+    return binaryFind(data, 0, len - 1);
 };
 
 export default getItemByData;
