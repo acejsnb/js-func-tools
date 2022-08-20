@@ -33,6 +33,7 @@ interface SendRequestOptions {
     method?: string
     headers?: Headers
     params?: AnyType
+    type?: 'json' | 'text' | 'arrayBuffer' | 'blob' | 'formData'
 }
 
 type Init = {
@@ -41,12 +42,13 @@ type Init = {
     body?: string
 }
 
-type Xsync = (options: SendRequestOptions) => Promise<{ status?: number, data?: AnyType } | { message?: string }>
+type Xsync = (options: SendRequestOptions) => Promise<{ status: number, data: AnyType, message: string }>
 const xsync: Xsync = async ({
     url = '',
     method = 'GET',
     headers = { 'Content-Type': 'application/json' },
-    params = {}
+    params = {},
+    type = 'json'
 }) => {
     try {
         const init: Init = { method, headers };
@@ -57,18 +59,18 @@ const xsync: Xsync = async ({
             init.body = JSON.stringify(params);
         }
         const response = await window.fetch(reqUrl, init);
-        const { status } = response;
+        const { status, statusText } = response;
         let data;
         try {
-            data = await response.json();
+            data = await response[type]();
         } catch (e) {
-            if (status === 200) data = {};
+            if (status === 200) data = null;
             else data = e;
         }
-        return { status, data };
+        return { status, data, message: statusText };
     } catch (e) {
         console.error('request failed!', e);
-        return { message: 'request failed!' };
+        return { status: 0, data: null, message: 'request failed!' };
     }
 };
 
