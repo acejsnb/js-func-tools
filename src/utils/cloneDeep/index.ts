@@ -11,39 +11,32 @@ interface TreeItem {
 }
 const cloneDeep = (data: TreeItem[]): TreeItem[] => 'structuredClone' in window ? (window as any).structuredClone(data) : JSON.parse(JSON.stringify(data, (k, v) => v ? v : ''));
 
-type Func = () => void
-const copyFunction = (func: Func) => {
-    const fnStr: string = func.toString();
-    if (fnStr === `function ${func.name}() { [native code] }`) return func;
-    return func.prototype ? new Function(`return (${fnStr})`)() : new Function(`return ${fnStr}`)();
-};
-
 /**
  * 复杂数据深拷贝
  * @param target 值中包含正则、函数等...
- * @param cache
+ * @param map
  * @returns {{}}
  */
-type CloneDeepComplex = (target: any, cache?: any) => any
-const cloneDeepComplex: CloneDeepComplex = (target, cache = []) => {
-    if (typeof target === 'function') return copyFunction(target);
-    if (target === null || typeof target !== 'object') return target;
+type CloneDeepComplex = (target: any, map?: WeakMap<{}, any>) => any
+const cloneDeepComplex: CloneDeepComplex = (target: any, map = new WeakMap()) => {
+    if (target instanceof Date) return new Date(target);
+    if (target instanceof RegExp) return new RegExp(target);
 
-    if (Object.prototype.toString.call(target) === '[object Date]') return new Date(target);
-    if (Object.prototype.toString.call(target) === '[object RegExp]') return new RegExp(target);
-    if (Object.prototype.toString.call(target) === '[object Error]') return new Error(target);
+    if (map.has(target)) return map.get(target);
 
-    const item = cache.filter((item: any) => item.original === target)[0];
-    if (item) return item.copy;
+    const allDesc = Object.getOwnPropertyDescriptors(target);
+    const cloneObj = Object.create(Object.getPrototypeOf(target), allDesc);
 
-    const copy: any = Array.isArray(target) ? [] : {};
-    cache.push({ original: target, copy });
+    map.set(target, cloneObj);
 
-    Object.keys(target).forEach(key => {
-        copy[key] = cloneDeepComplex(target[key], cache);
-    });
-
-    return copy;
+    for (const key of Reflect.ownKeys(target)) {
+        const value = target[key];
+        cloneObj[key] =
+            value instanceof Object && typeof value !== 'function'
+                ? cloneDeepComplex(value, map)
+                : value;
+    }
+    return cloneObj;
 };
 
 export default cloneDeep;

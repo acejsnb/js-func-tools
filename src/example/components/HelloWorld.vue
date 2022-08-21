@@ -16,7 +16,10 @@ const arr = [
     {'id': 221, 'name': '二级21', 'parentId': 2},
     {'id': 222, 'name': '二级22', 'parentId': 2}
 ];
-const data = reactive([{id:"0",name:"系统类或设备类",checked:"checked",disabled:false},{id:"1",name:"空间和业态",checked:"uncheck",disabled:false, fn: () => {}}])
+const data = reactive([
+    {id:"0",name:"系统类或设备类",checked:"checked",disabled:false, reg: /\d/, err: new Error("xxx")},
+  {id:"1",name:"空间和业态",checked:"uncheck",disabled:false, fn: () => {}}
+])
 
 const tree = [
     {
