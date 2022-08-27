@@ -478,7 +478,7 @@ const result = RemoveEmpty(obj);
 
 - ### RemoveEmptyChildren 删除树中的空children
 ```js
-const result = RemoveEmptyChildren(tree, 'id');
+const result = RemoveEmptyChildren(tree);
 ```
 
 - ### RemoveHtmlTag 去除html标签
