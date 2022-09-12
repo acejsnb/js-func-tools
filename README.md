@@ -242,7 +242,7 @@ const result = WeekOfYear('2021.10.30');
 
 - ### FormatDate 格式化时间
 ```js
-// fmt?: string, dateStr?: string | Date
+// fmt?: string, dateStr?: string | number | Date
 // fmt yyyy.mm.dd hh:MM:ss.S
 const result = FormatDate('yyyy.mm.dd');
 ```

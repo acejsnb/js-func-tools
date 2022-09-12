@@ -59,7 +59,7 @@ declare module 'js-func-tools' {
     export function DaysBetween(a: string | number | Date, b: string | number | Date): number
     export function DayOfWeek(dateStr: string): number
     export function WeekOfYear(dateStr: string): number
-    export function FormatDate(fmt?: string, dateStr?: string | Date): string
+    export function FormatDate(fmt?: string, dateStr?: string | number | Date): string
     export function GetCurrentDay(fmt?: string, dateStr?: string | Date): string
     export function GetPrevDay(fmt?: string, dateStr?: string | Date): string
     export function GetNextDay(fmt?: string, dateStr?: string | Date): string
