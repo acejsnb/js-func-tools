@@ -9,7 +9,7 @@ interface Options {
     'q+': number
     'S': number
 }
-const formatDate = (format?: string, date?: string | Date): string => {
+const formatDate = (format?: string, date?: string | number | Date): string => {
     let fmt = format || 'yyyy.mm.dd';
     const de = date ? (getObjType(date, 'Date') ? (date as Date) : new Date(date)) : new Date();
     // let fmt = str;

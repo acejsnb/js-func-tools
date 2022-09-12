@@ -3,7 +3,7 @@ import { reactive } from 'vue'
 import {
     AddZero, GetNodePath, ArrayToTree, TreeToArray, ArrayDeWeight, CloneDeep, CloneDeepComplex,
     FormatMoney, DayOfWeek, WeekOfYear, SortHandle, DaysBetween, IsObjValEqual,
-    MatchesByValue, GetItemByData
+    MatchesByValue, GetItemByData, FormatDate
 } from '@/.';
 
 const arr = [
@@ -113,6 +113,8 @@ console.timeEnd('abc')
 console.time('find')
 console.log('find===', tree.find(d => d.id === 122));
 console.timeEnd('find')
+
+console.log('FormatDate', FormatDate('yyyy.mm.dd hh:MM:ss', 1662965475469))
 
 
 defineProps({
