@@ -1,9 +1,9 @@
 # js常用工具函数 tools utils
 
 > 重要提示：<br/>
-  在1.1.5版本之后，函数名将为大写字母开头 <br/>
+  在2.0.0版本之后，函数名将为大写字母开头 <br/>
   1.1.4之前: `import { cutRadixPoint } from 'js-func-tools';` <br/>
-  1.1.5之后: `import { CutRadixPoint } from 'js-func-tools';`
+  2.0.0之后: `import { CutRadixPoint } from 'js-func-tools';`
 
 ## 安装
 - npm安装 `npm install js-func-tools`
