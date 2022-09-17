@@ -63,7 +63,7 @@ declare module 'js-func-tools' {
     export function GetCurrentDay(fmt?: string, dateStr?: string | Date): string
     export function GetPrevDay(fmt?: string, dateStr?: string | Date): string
     export function GetNextDay(fmt?: string, dateStr?: string | Date): string
-    export function GetTime(fmt: 'h' | 'hm' | 'hms', date: string | Date | null | undefined): string
+    export function GetTime(fmt: 'h' | 'hm' | 'hms', date?: string | Date | null | undefined): string
     export function GetDays(year?: string | number, month?: string | number): number
     export function GetCurrentWeek(type?: 0 | 1, date?: string): string[]
     export function GetPrevWeek(type?: 0 | 1, date?: string): string[]
