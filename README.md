@@ -192,12 +192,17 @@ RemoveClassName(el, className);
 
 - ### CloneDeep 深拷贝
 ```js
-const result = CloneDeep(tree)
+const result = CloneDeep(tree);
+```
+
+- ### ConvertorTranslate 坐标转换
+```js
+ConvertorTranslate.gps84_To_Bd09(30.401247, 104.041680);
 ```
 
 - ### CloneDeepComplex 复杂数据深拷贝
 ```js
-const result = CloneDeepComplex(tree)
+const result = CloneDeepComplex(tree);
 ```
 
 - ### CopyToBoard 复制内容到剪贴板

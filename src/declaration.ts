@@ -24,6 +24,23 @@ export type FormValidateOptions = {
     confirmValue?: string
 }
 
+export interface LngLatItem {
+    lat: number
+    lng: number
+}
+export interface ConvertorTranslateParams {
+    delta: (lat: number, lng: number) => LngLatItem
+    gps84_To_Gcj02: (lat: number, lng: number) => LngLatItem
+    gcj02_To_Bd09: (lat: number, lng: number) => LngLatItem
+    bd09_To_Gcj02: (lat: number, lng: number) => LngLatItem
+    gcj02_to_gps84: (lat: number, lng: number) => LngLatItem
+    gps84_To_Bd09: (lat: number, lng: number) => LngLatItem
+    bd09_To_Gps84: (lat: number, lng: number) => LngLatItem
+    outOfChina: (lat: number, lng: number) => boolean
+    transformLat: (lat: number, lng: number) => number
+    transformLon: (lat: number, lng: number) => number
+}
+
 // @ts-ignore
 declare module 'js-func-tools' {
     export function AddZero(n: string | number, len?: number): string
@@ -50,6 +67,7 @@ declare module 'js-func-tools' {
     export function AddClassName(el: HTMLElement, className: string): void
     export function RemoveClassName(el: HTMLElement, className: string): void
     export function CloneDeep(arr: TreeItem[]): TreeItem[]
+    export var ConvertorTranslate: ConvertorTranslateParams;
     export function CloneDeepComplex(arr: TreeItem[], cache: any): TreeItem[]
     export function CopyToBoard(str: string): boolean
     export function CutRadixPoint(value: number | string, delay?: number): (options?: { [p: string]: any }) => void

@@ -63,6 +63,7 @@ export { default as CheckUrl } from './utils/checkUrl';
 
 export { hasClassName as HasClassName, addClassName as AddClassName, removeClassName as RemoveClassName } from './utils/classNameHandle';
 export { default as CloneDeep, cloneDeepComplex as CloneDeepComplex } from './utils/cloneDeep';
+export { default as ConvertorTranslate } from './utils/convertorTranslate';
 
 export { default as CheckCreditCode } from './utils/checkCreditCode';
 export { default as SensitiveEscape } from './utils/sensitiveEscape';
