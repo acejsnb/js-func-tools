@@ -42,7 +42,13 @@ type Init = {
     body?: string
 }
 
-type Xsync = (options: SendRequestOptions) => Promise<{ status: number, data: AnyType, message: string }>
+interface Response {
+    status: number
+    data: AnyType
+    message: string
+}
+
+type Xsync = (options: SendRequestOptions) => Promise<Response>
 const xsync: Xsync = async ({
     url = '',
     method = 'GET',

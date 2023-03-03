@@ -41,6 +41,20 @@ export interface ConvertorTranslateParams {
     transformLon: (lat: number, lng: number) => number
 }
 
+export interface XsyncOptions {
+    url: string
+    method?: string
+    headers?: Headers
+    params?: AnyType
+    type?: 'json' | 'text' | 'arrayBuffer' | 'blob' | 'formData'
+}
+
+export interface XsyncResponse {
+    status: number
+    data: AnyType
+    message: string
+}
+
 // @ts-ignore
 declare module 'js-func-tools' {
     export function AddZero(n: string | number, len?: number): string
