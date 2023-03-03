@@ -140,5 +140,5 @@ declare module 'js-func-tools' {
     export function TextEllipsis(e: MouseEvent, tag?: string): void
     export function TreeToArray(tree: TreeItem[], parentId?: number | string): TreeItem[]
     export function Uuid(length?: number, chars?: string): string
-    export function Xsync(options: { url: string, method?: string, headers?: Headers, params?: AnyType }): Promise<{ status?: number, data?: AnyType } | { message?: string }>
+    export function Xsync<T>(options: XsyncOptions): Promise<XsyncResponse | T | { message?: string }>
 }

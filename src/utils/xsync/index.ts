@@ -48,7 +48,7 @@ interface Response {
     message: string
 }
 
-type Xsync = (options: SendRequestOptions) => Promise<Response>
+type Xsync = <T>(options: SendRequestOptions) => Promise<Response | T>
 const xsync: Xsync = async ({
     url = '',
     method = 'GET',
