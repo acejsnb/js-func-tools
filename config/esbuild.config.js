@@ -23,3 +23,14 @@ esbuild.buildSync({
         js: banner
     }
 });
+
+esbuild.buildSync({
+    entryPoints: ['src/index.ts'],
+    outfile: 'dist/index.cjs.js',
+    bundle: true,
+    format: 'cjs',
+    minify: true,
+    banner: {
+        js: banner
+    }
+});
