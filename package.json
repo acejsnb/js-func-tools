@@ -1,8 +1,9 @@
 {
   "name": "js-func-tools",
-  "version": "2.0.6",
+  "version": "2.0.7",
   "description": "js常用工具函数 tools utils",
-  "main": "dist/index.js",
+  "main": "dist/index.cjs",
+  "module": "dist/index.mjs",
   "types": "dist/index.d.ts",
   "author": "xiongshuang<https://github.com/xiongshuang>",
   "license": "MIT",

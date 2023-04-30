@@ -12,13 +12,10 @@ const banner = `/**
 
 esbuild.buildSync({
     entryPoints: ['src/index.ts'],
-    // outdir: 'dist',
-    outfile: 'dist/index.js',
+    outfile: 'dist/index.cjs',
     bundle: true,
-    format: 'esm',
+    format: 'cjs',
     minify: true,
-    // target: ['es2020','chrome58','firefox57','safari11','edge16','node12']
-    // target: ['chrome58']
     banner: {
         js: banner
     }
@@ -26,10 +23,13 @@ esbuild.buildSync({
 
 esbuild.buildSync({
     entryPoints: ['src/index.ts'],
-    outfile: 'dist/index.cjs.js',
+    // outdir: 'dist',
+    outfile: 'dist/index.mjs',
     bundle: true,
-    format: 'cjs',
+    format: 'esm',
     minify: true,
+    // target: ['es2020','chrome58','firefox57','safari11','edge16','node12']
+    // target: ['chrome58']
     banner: {
         js: banner
     }
