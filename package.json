@@ -18,7 +18,7 @@
     "dts": "node config/generateDts.js",
     "browser": "node config/esbuild.browser.js",
     "prebuild": "npm run clean",
-    "build": "node config/esbuild.config.js && npm run browser",
+    "build": "node config/esbuild.config.js",
     "postbuild": "npm run dts",
     "prod:writeHtml": "node config/prod.write.html.js",
     "prod": "node config/esbuild.prod.js && npm run prod:writeHtml",
