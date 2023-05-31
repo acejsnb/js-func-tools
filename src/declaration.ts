@@ -124,6 +124,7 @@ declare module 'js-func-tools' {
     export function LargeNumbersAddition(a: string | number, b: string | number): string
     export function MatchesByValue(value: string, search: string, jointStart: string, jointEnd: string, more?: { split?: boolean, caseEn?: boolean }): string
     export function Obj2Url(obj: AnyType, url?: string): string
+    export function RandomColor(): string
     export function RandomHexColor(): void
     export function RemoveAttrByParam(tree: TreeItem[], param: string): TreeItem[]
     export function RemoveEmpty(data: AnyType): AnyType

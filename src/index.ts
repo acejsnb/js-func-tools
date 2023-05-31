@@ -42,6 +42,7 @@ export { default as IsWeekday } from './utils/isWeekday';
 export { default as LargeNumbersAddition } from './utils/largeNumbersAddition';
 export { default as MatchesByValue } from './utils/matchesByValue';
 export { default as Obj2Url } from './utils/obj2Url';
+export { default as RandomColor } from './utils/randomColor';
 export { default as RandomHexColor } from './utils/randomHexColor';
 export { default as RemoveAttrByParam } from './utils/removeAttrByParam';
 export { default as RemoveEmpty } from './utils/removeEmpty';
