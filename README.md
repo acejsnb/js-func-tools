@@ -1,3 +1,5 @@
+[![Security Status](https://www.murphysec.com/platform3/v31/badge/1675733613395656704.svg)](https://www.murphysec.com/console/report/1675733613244661760/1675733613395656704)
+
 # js常用工具函数 tools utils
 
 > 重要提示：<br/>
