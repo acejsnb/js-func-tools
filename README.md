@@ -66,7 +66,8 @@ const tree = [
 
 - ### AddZero 数字前面补0
 ```js
-const str = AddZero(3);
+// type Fn = (n: string | number, len?: number) => string
+const str = AddZero(3); // log --> 03
 ```
 
 - ### ArrayDeWeight 数组去重
