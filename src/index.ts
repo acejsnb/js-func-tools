@@ -1,4 +1,5 @@
 export { default as AddZero } from './utils/addZero';
+export { default as AmountThousands } from './utils/amountThousands';
 export { default as ArrayDeWeight } from './utils/arrayDeWeight';
 export { default as ArrayToTree } from './utils/arrayToTree';
 export { default as Average } from './utils/average';

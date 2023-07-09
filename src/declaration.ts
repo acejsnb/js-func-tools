@@ -58,6 +58,7 @@ export interface XsyncResponse {
 // @ts-ignore
 declare module 'js-func-tools' {
     export function AddZero(n: string | number, len?: number): string
+    export function AmountThousands(num: string | number): string
     export function ArrayDeWeight(arr: AnyType[], by?: string): AnyType[]
     export function ArrayToTree(arr: TreeItem[], parentId?: string | number): TreeItem[]
     export function Average(arr: number[], dec: number): number

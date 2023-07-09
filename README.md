@@ -70,6 +70,12 @@ const tree = [
 const str = AddZero(3); // log --> 03
 ```
 
+- ### AmountThousands 金额千分位格式化
+```js
+// type Func = (num: number | string) => string;
+const str = AddZero(1234567.8809); // log --> '1,234,567.8809'
+```
+
 - ### ArrayDeWeight 数组去重
 ```js
 const arr = [
