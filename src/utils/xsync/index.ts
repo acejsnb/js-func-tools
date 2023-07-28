@@ -40,6 +40,7 @@ type Init = {
     method?: string
     headers?: Headers
     body?: string
+    signal?: AbortSignal | null | undefined
 }
 
 interface Response {
@@ -48,16 +49,21 @@ interface Response {
     message: string
 }
 
-type Xsync = <T>(options: SendRequestOptions) => Promise<Response | T>
+type Xsync = <T>(options: SendRequestOptions, cancelLastTime?: boolean) => Promise<Response | T>
+
+let abortController : AbortController;
 const xsync: Xsync = async ({
     url = '',
     method = 'GET',
     headers = { 'Content-Type': 'application/json' },
     params = {},
     type = 'json'
-}) => {
+}, cancelLastTime = false) => {
     try {
-        const init: Init = { method, headers };
+        // 取消上一次请求
+        cancelLastTime && abortController?.abort();
+        abortController = new AbortController();
+        const init: Init = { method, headers, signal: abortController.signal };
         let reqUrl = url;
         if (method.toUpperCase() === 'GET') {
             reqUrl = obj2Url(params, url);
