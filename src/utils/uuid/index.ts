@@ -5,9 +5,10 @@
  */
 type Fn = (length?: number, chars?: string) => string
 const uuid: Fn = (length=8, chars='0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ_') => {
-    let result = '';
-    for (let i = length; i > 0; --i)
+    let i = length, result = '';
+    while (i-- > 0) {
         result += chars[Math.floor(Math.random() * chars.length)];
+    }
     return result;
 };
 

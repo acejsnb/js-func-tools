@@ -16,8 +16,8 @@ const arrayToTree: Fn = (arr, parentId = -1) => {
     const res: TreeItem[] = [];
     data.forEach((item) => {
         if (item.parentId === parentId) {
-            const itemChildren = arrayToTree(data, item.id as string);
-            if (itemChildren.length) item.children = itemChildren;
+            const children = arrayToTree(data, item.id as string);
+            if (children.length) item.children = children;
             res.push(item);
         }
     });
