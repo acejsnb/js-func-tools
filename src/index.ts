@@ -13,6 +13,7 @@ export { default as DayOfWeek } from './utils/dayOfWeek';
 export { default as DayOfYear } from './utils/dayOfYear';
 export { default as DaysBetween } from './utils/daysBetween';
 export { default as Debounce } from './utils/debounce';
+export { default as DomContainsTarget } from './utils/domContainsTarget';
 export { default as GetYMDByYear } from './utils/getYMDByYear';
 export { default as HasKeyByObj } from './utils/hasKeyByObj';
 export { default as FilterTreeByFunc } from './utils/filterTreeByFunc';

@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { reactive } from 'vue'
+import { reactive, onMounted } from 'vue'
 import {
     AddZero, GetNodePath, ArrayToTree, TreeToArray, ArrayDeWeight, CloneDeep, CloneDeepComplex,
     FormatMoney, DayOfWeek, WeekOfYear, SortHandle, DaysBetween, IsObjValEqual,
@@ -120,10 +120,30 @@ console.log('FormatDate', FormatDate('yyyy.mm.dd hh:MM:ss', 1662965475469))
 defineProps({
     msg: String
 })
+
+onMounted(() => {
+  const a = document.getElementById('a') as HTMLDivElement,
+      b = document.getElementById('b') as HTMLDivElement,
+      c = document.getElementById('c') as HTMLDivElement,
+      d = document.getElementById('d') as HTMLDivElement,
+      d2 = document.querySelector('#d') as HTMLDivElement;
+  console.log(a.contains(b));
+  console.log(a.compareDocumentPosition(b));
+  console.log(a.compareDocumentPosition(c));
+  console.log(b.compareDocumentPosition(b));
+  console.log(a.compareDocumentPosition(c));
+  console.log(b.compareDocumentPosition(a));
+  console.log(d === d2);
+})
 </script>
 
 <template>
     <h1>{{ msg }}</h1>
+  <div id="a">
+    <div id="b"></div>
+    <div id="c"></div>
+  </div>
+  <div id="d"></div>
 </template>
 
 <style scoped>
