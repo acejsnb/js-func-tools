@@ -87,6 +87,7 @@ declare module 'js-func-tools' {
     export function CopyToBoard(str: string): boolean
     export function CutRadixPoint(value: number | string, delay?: number): (options?: { [p: string]: any }) => void
     export function Debounce(fn: DebounceFn, delay?: number): DebounceFn
+    export function DomContainsTarget(dom: HTMLElement, target: HTMLElement): boolean
     export function DownloadByUrl(url: string | Blob, name?: string): boolean
     export function DayOfYear(dateStr: string): number
     export function DaysBetween(a: string | number | Date, b: string | number | Date): number
@@ -139,7 +140,6 @@ declare module 'js-func-tools' {
     export function SetParamsByIndex(indArr: Array<string | number>, data: TreeItem[], param: string, value: any): TreeItem[]
     export function SortHandle(data: string[] | number[] | { [key: string]: string | number }[], other?: { sortord?: 'asc' | 'des', type?: 'number' | 'string' | 'date', key?: string }): string[] | number[] | { [key: string]: string | number }[]
     export function Throttle(fn: DebounceFn, delay?: number): DebounceFn
-    export function DomContainsTarget(dom: HTMLElement, target: HTMLElement): boolean
     export function TextEllipsis(e: MouseEvent, tag?: string): void
     export function TreeToArray(tree: TreeItem[], parentId?: number | string): TreeItem[]
     export function Uuid(length?: number, chars?: string): string

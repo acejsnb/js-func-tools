@@ -233,6 +233,14 @@ inp.addEventListener('input', Debounce((args) => {
 }, 500))
 ```
 
+- ### DomContainsTarget dom中是否包含目标元素
+```js
+// type Fn = (dom: HTMLElement, target: HTMLElement) => boolean;
+const dom = document.getElementById('dom');
+const target = document.getElementById('target');
+DomContainsTarget(dom, target);
+```
+
 - ### DayOfYear 获取当前时间是当年的第多少天
 ```js
 const result = DayOfYear('2021.10.30');
