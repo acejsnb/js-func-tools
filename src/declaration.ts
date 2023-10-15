@@ -1,7 +1,7 @@
 // @ts-ignore
 export interface AnyType {
     // @ts-ignore
-    [key: string | number]: any
+    [key: string | number]: any | unknown
 }
 export interface TreeItem extends AnyType {
     id?: string | number
@@ -41,7 +41,7 @@ export interface ConvertorTranslateParams {
     transformLon: (lat: number, lng: number) => number
 }
 
-interface Headers {
+export interface XsyncHeaders {
     'Content-Type'?: 'application/x-www-form-urlencoded' | 'multipart/form-data' | 'application/json' | 'application/xml' | 'text/xml' | string
     token?: string
     [key: string | number]: any
@@ -50,7 +50,7 @@ interface Headers {
 export interface XsyncOptions {
     url: string
     method?: string
-    headers?: Headers
+    headers?: XsyncHeaders
     params?: AnyType
     type?: 'json' | 'text' | 'arrayBuffer' | 'blob' | 'formData'
 }
