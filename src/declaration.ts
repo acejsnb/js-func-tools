@@ -41,6 +41,12 @@ export interface ConvertorTranslateParams {
     transformLon: (lat: number, lng: number) => number
 }
 
+interface Headers {
+    'Content-Type'?: 'application/x-www-form-urlencoded' | 'multipart/form-data' | 'application/json' | 'application/xml' | 'text/xml' | string
+    token?: string
+    [key: string | number]: any
+}
+
 export interface XsyncOptions {
     url: string
     method?: string
