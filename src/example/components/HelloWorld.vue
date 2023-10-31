@@ -3,7 +3,8 @@ import { reactive, onMounted } from 'vue'
 import {
     AddZero, GetNodePath, ArrayToTree, TreeToArray, ArrayDeWeight, CloneDeep, CloneDeepComplex,
     FormatMoney, DayOfWeek, WeekOfYear, SortHandle, DaysBetween, IsObjValEqual,
-    MatchesByValue, GetItemByData, FormatDate
+    MatchesByValue, GetItemByData, FormatDate,
+    GetPrevDay, GetNextDay
 } from '@/.';
 
 const arr = [
@@ -134,6 +135,8 @@ onMounted(() => {
   console.log(a.compareDocumentPosition(c));
   console.log(b.compareDocumentPosition(a));
   console.log(d === d2);
+  console.log(GetPrevDay('', new Date(),2));
+  console.log(GetNextDay('', new Date(),2));
 })
 </script>
 

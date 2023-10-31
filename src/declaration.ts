@@ -101,8 +101,8 @@ declare module 'js-func-tools' {
     export function WeekOfYear(dateStr: string): number
     export function FormatDate(fmt?: string, dateStr?: string | number | Date): string
     export function GetCurrentDay(fmt?: string, dateStr?: string | Date): string
-    export function GetPrevDay(fmt?: string, dateStr?: string | Date): string
-    export function GetNextDay(fmt?: string, dateStr?: string | Date): string
+    export function GetPrevDay(fmt?: string, dateStr?: string | Date, num?: number): string
+    export function GetNextDay(fmt?: string, dateStr?: string | Date, num?: number): string
     export function GetTime(fmt: 'h' | 'hm' | 'hms', date?: string | Date | null | undefined): string
     export function GetDays(year?: string | number, month?: string | number): number
     export function GetCurrentWeek(type?: 0 | 1, date?: string): string[]

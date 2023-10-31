@@ -19,7 +19,7 @@ export { default as HasKeyByObj } from './utils/hasKeyByObj';
 export { default as FilterTreeByFunc } from './utils/filterTreeByFunc';
 export { default as DownloadByUrl } from './utils/downloadByUrl';
 export { default as FindTarget } from './utils/findTarget';
-export { default as FormatDate, getCurrentDay, getPrevDay, getNextDay } from './utils/formatDate';
+export { default as FormatDate, getCurrentDay as GetCurrentDay, getPrevDay as GetPrevDay, getNextDay as GetNextDay } from './utils/formatDate';
 export { default as FormValidate } from './utils/formValidate';
 export { default as GetAllLeaf } from './utils/getAllLeaf';
 export { default as GetDays } from './utils/getDays';
