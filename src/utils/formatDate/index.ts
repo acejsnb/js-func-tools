@@ -1,4 +1,8 @@
 import getObjType from '../getObjType';
+
+// 根据时区格式化时间
+const formatTimeZone = (date: string | Date, tz: string): string => new Date(date || Date.now()).toLocaleString('en-US', {timeZone: tz || 'Asia/Shanghai'});
+
 // 格式化时间 str yyyy-mm-dd hh:MM:ss.S
 interface Options {
     'm+': number
@@ -9,9 +13,10 @@ interface Options {
     'q+': number
     'S': number
 }
-const formatDate = (format?: string, date?: string | number | Date): string => {
+const formatDate = (format?: string, date?: string | number | Date, tz?: string): string => {
     let fmt = format || 'yyyy.mm.dd';
-    const de = date ? (getObjType(date, 'Date') ? (date as Date) : new Date(date)) : new Date();
+    let de= date ? (getObjType(date, 'Date') ? (date as Date) : new Date(date)) : new Date();
+    if (tz) de = new Date(de.toLocaleString('en-US', {timeZone: tz}));
     // let fmt = str;
     const options: Options = {
         'm+': de.getMonth() + 1, //月份
@@ -39,9 +44,9 @@ const formatDate = (format?: string, date?: string | number | Date): string => {
 // 获取当天
 const getCurrentDay = formatDate;
 // 获取上一天
-const getPrevDay = (format?: string, date?: string | Date, num?: number): string => getCurrentDay(format || 'yyyy.mm.dd', new Date(+(date ? (getObjType(date, 'Date') ? (date as Date) : new Date(date)) : new Date()) - ((num??1) * 86400000)));
+const getPrevDay = (format?: string, date?: string | Date, num?: number, tz?: string): string => getCurrentDay(format || 'yyyy.mm.dd', new Date(+(date ? (getObjType(date, 'Date') ? (date as Date) : new Date(date)) : new Date()) - ((num??1) * 86400000)), tz);
 // 获取下一天
-const getNextDay = (format?: string, date?: string | Date, num?: number): string => getCurrentDay(format || 'yyyy.mm.dd', new Date(+(date ? (getObjType(date, 'Date') ? (date as Date) : new Date(date)) : new Date()) + ((num??1) * 86400000)));
+const getNextDay = (format?: string, date?: string | Date, num?: number, tz?: string): string => getCurrentDay(format || 'yyyy.mm.dd', new Date(+(date ? (getObjType(date, 'Date') ? (date as Date) : new Date(date)) : new Date()) + ((num??1) * 86400000)), tz);
 
 export default formatDate;
-export { getCurrentDay, getPrevDay, getNextDay };
+export { getCurrentDay, getPrevDay, getNextDay, formatTimeZone };

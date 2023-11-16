@@ -116,6 +116,7 @@ console.log('find===', tree.find(d => d.id === 122));
 console.timeEnd('find')
 
 console.log('FormatDate', FormatDate('yyyy.mm.dd hh:MM:ss', 1662965475469))
+console.log('FormatDate', FormatDate('yyyy.mm.dd hh:MM:ss', '2023/11/16 17:03:00','Asia/Kolkata'))
 
 
 defineProps({
