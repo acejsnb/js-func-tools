@@ -7,6 +7,6 @@ interface IObj {
     [key: string]: any
 }
 type Fn = (obj: IObj) => boolean
-const isNullObj: Fn = (obj) => JSON.stringify(obj) === '{}';
+const isNullObj: Fn = (obj) => !Reflect?.ownKeys?.(obj)?.length ?? JSON.stringify(obj) === '{}';
 
 export default isNullObj;
