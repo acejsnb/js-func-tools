@@ -125,7 +125,7 @@ declare module 'js-func-tools' {
     export function GetObjType(obj: any, type?: string): string | boolean
     export function GetPlaceByTrigger(options: { trigger: HTMLElement, dom: HTMLElement, offset?: number, isRight?: boolean }): { left: number, top: number, isDown: boolean }
     export function GetTextWidth(text: string, options?: { size?: number, family?: string  }): number
-    export function GetUrlParams(name: string, origin?: string | null): string | null
+    export function GetUrlParams(name?: string, origin?: string | null): string | null | AnyType
     export function Hex2Rgb(hex: string): string
     export function IsNullObj(obj: AnyType): boolean
     export function IsObjValEqual(obj1: AnyType, obj2: AnyType, empty: boolean): boolean
