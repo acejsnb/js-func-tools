@@ -70,7 +70,7 @@ const xsync: Xsync = async ({
         } else {
             init.body = JSON.stringify(params);
         }
-        const response = await window.fetch(reqUrl, init);
+        const response = await fetch(reqUrl, init);
         const { status, statusText } = response;
         let data;
         try {
