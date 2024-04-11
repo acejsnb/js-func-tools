@@ -1,15 +1,12 @@
 <script setup>
-// import { getPlaceByTrigger, getCurrentMonth, getPrevMonth, getNextMonth } from '../../../dist/index.js';
-// import { getPlaceByTrigger } from '../../index';
-import getYMDByYear from '../../utils/getYMDByYear'
-import { formatDate, getCurrentWeek, getPrevWeek, getNextWeek, getCurrentMonth, getPrevMonth, getNextMonth } from '../../utils/dateHandle'
+import { FormatDate, GetCurrentWeek, GetPrevWeek, GetNextWeek, GetCurrentMonth, GetPrevMonth, GetNextMonth, GetPlaceByTrigger } from '@/.'
 
 // console.log(getYMDByYear());
 // console.log(formatDate('yyyy-mm-dd', '2022.01.01 08:00'));
 // console.log(getCurrentWeek(1));
 // console.log(getPrevWeek(1));
 // console.log(getNextWeek(1));
-console.log(getCurrentMonth());
+console.log(GetCurrentMonth());
 // console.log(getPrevMonth());
 // console.log(getNextMonth());
 
@@ -19,7 +16,7 @@ const click = (e) => {
     div.className = 'modal-div';
 
     div.innerHTML = `${'啊'.repeat(Math.random() * 10)}`;
-    const { left = 0, top = 0 } = getPlaceByTrigger({ trigger: target, dom: div, isRight: false });
+    const { left = 0, top = 0 } = GetPlaceByTrigger({ trigger: target, dom: div, isRight: false });
     div.style.left = `${left}px`;
     div.style.top = `${top}px`;
     document.body.appendChild(div);

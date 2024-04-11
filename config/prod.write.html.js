@@ -1,6 +1,6 @@
 // 拷贝文件
-const { resolve } = require('path');
-const fs = require('fs');
+import {resolve} from 'path'
+import fs from 'fs'
 
 let htmlTemplate = `
 <!DOCTYPE html>

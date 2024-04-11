@@ -14,4 +14,4 @@ const get_ip = () => {
     }
 };
 
-module.exports = get_ip;
+export default get_ip;

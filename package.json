@@ -1,11 +1,12 @@
 {
   "name": "js-func-tools",
-  "version": "2.1.5",
+  "version": "2.1.6",
   "description": "js常用工具函数 tools utils",
+  "type": "module",
   "main": "dist/index.cjs",
   "module": "dist/index.mjs",
   "types": "dist/index.d.ts",
-  "author": "xiongshuang<https://github.com/xiongshuang>",
+  "author": "acejsnb<https://github.com/acejsnb>",
   "license": "MIT",
   "private": false,
   "repository": "https://github.com/xiongshuang/js-func-tools.git",
@@ -36,11 +37,11 @@
     "@types/jest": "^27.5.1",
     "@typescript-eslint/eslint-plugin": "^5.7.0",
     "@typescript-eslint/parser": "^5.7.0",
-    "@vitejs/plugin-vue": "^1.9.2",
+    "@vitejs/plugin-vue": "^5.0.4",
     "@vue/compiler-sfc": "^3.3.4",
     "babel-eslint": "^10.1.0",
     "core-js": "^3.22.5",
-    "esbuild": "^0.18.11",
+    "esbuild": "^0.20.2",
     "esbuild-plugin-vue-next": "^0.1.2",
     "eslint": "^7.32.0",
     "eslint-plugin-babel": "^5.3.1",
@@ -49,8 +50,7 @@
     "jest-environment-jsdom": "^28.1.0",
     "ts-node": "^10.7.0",
     "typescript": "^5.1.6",
-    "vite": "^4.3.9",
-    "vue": "^3.3.4"
-  },
-  "dependencies": {}
+    "vite": "^5.2.8",
+    "vue": "^3.4.21"
+  }
 }
