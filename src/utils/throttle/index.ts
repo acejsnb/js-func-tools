@@ -6,11 +6,11 @@
 type Fn = (options?: {[key: string]: any}) => void
 type Throttle = (fn: Fn, delay?: number) => Fn
 const throttle: Throttle = (fn, delay = 500) => {
-    let timer: null | number, isFirst: boolean | null = true;
+    let timer: null | ReturnType<typeof setTimeout> = null, isFirst: boolean | null = true;
     return function (...args) {
-        const context = this;
+        const self = this;
         const cb = () => {
-            fn.apply(context, args);
+            fn.apply(self, args);
             timer = null;
         };
         isFirst && (isFirst = null, timer = null, cb());
