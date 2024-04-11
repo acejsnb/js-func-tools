@@ -1,6 +1,8 @@
-const esbuild = require('esbuild');
-const {name, version, author, license} = require('../package.json');
-const TimeFn = require('../get_time');
+import * as esbuild from 'esbuild';
+import pkg from '../package.json' assert { type: 'json' };
+import TimeFn from '../get_time.js';
+
+const {name, version, author, license} = pkg;
 
 // 输出文件添加注释
 const banner = `/**

@@ -1,8 +1,10 @@
-const esbuild = require('esbuild');
-const esbuildVue = require('esbuild-plugin-vue-next');
+import * as esbuild from 'esbuild';
+import esbuildVue from 'esbuild-plugin-vue-next';
 
-const {name, version, author, license} = require('../package.json');
-const TimeFn = require('../get_time');
+import pkg from '../package.json' assert { type: 'json' };
+import TimeFn from '../get_time.js';
+
+const {name, version, author, license} = pkg;
 
 // 输出文件添加注释
 const banner = `/**

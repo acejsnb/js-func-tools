@@ -1,5 +1,5 @@
-const { resolve } = require('path');
-const fs = require('fs');
+import {resolve} from 'path'
+import fs from 'fs'
 
 const copyFile = (url) => {
     fs.readFile(url, (err, data) => {

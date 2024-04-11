@@ -1,5 +1,5 @@
-const fs = require('fs');
-const { resolve } = require('path');
+import {resolve} from 'path'
+import fs from 'fs'
 
 function main() {
     const data = fs.readFileSync(resolve(process.cwd(), 'src/declaration.ts')).toString();
