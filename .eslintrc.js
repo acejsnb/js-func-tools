@@ -64,6 +64,14 @@ module.exports = {
         'no-control-regex': 0,
         'no-nested-ternary': 0,
         'no-plusplus': 0,
-        'no-param-reassign': 1
+        'no-param-reassign': 1,
+        "@typescript-eslint/no-this-alias": [
+            "error",
+            {
+                allowDestructuring: true,
+                allowedNames: ['self']
+            }
+        ]
+
     }
 };

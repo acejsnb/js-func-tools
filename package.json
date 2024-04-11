@@ -1,7 +1,7 @@
 {
   "name": "js-func-tools",
   "version": "2.1.6",
-  "description": "js常用工具函数 tools utils",
+  "description": "javascript common tool functions",
   "type": "module",
   "main": "dist/index.cjs",
   "module": "dist/index.mjs",
@@ -9,7 +9,7 @@
   "author": "acejsnb<https://github.com/acejsnb>",
   "license": "MIT",
   "private": false,
-  "repository": "https://github.com/xiongshuang/js-func-tools.git",
+  "repository": "https://github.com/acejsnb/js-func-tools.git",
   "scripts": {
     "clean": "rm -rf ./dist",
     "dev": "vite",

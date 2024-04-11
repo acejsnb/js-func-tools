@@ -17,8 +17,8 @@ interface ConvertorTranslate {
     bd09_To_Gps84: LngLatFunc
     outOfChina: LngLatBool
 }
-const PI = 3.14159265358979324;
-const X_PI = 3.14159265358979324 * 3000.0 / 180.0;
+const PI = Math.PI;
+const X_PI = Math.PI * 3000.0 / 180.0;
 
 const transformLat: LngOrLatNum = (x, y) => {
     let ret = -100.0 + 2.0 * x + 3.0 * y + 0.2 * y * y + 0.1 * x * y + 0.2 * Math.sqrt(Math.abs(x));
@@ -36,8 +36,7 @@ const transformLng: LngOrLatNum = (x, y) => {
 };
 const outOfChina: LngLatBool = (lat, lng) => {
     if (lng < 72.004 || lng > 137.8347) return true;
-    if (lat < 0.8293 || lat > 55.8271) return true;
-    return false;
+    return lat < 0.8293 || lat > 55.8271;
 };
 
 const delta: LngLatFunc = (lat, lng) => {

@@ -8,7 +8,7 @@ const getCurrentMonth: GetMonthFn = (date) => {
         year = curDate.getFullYear(),
         month = AddZero(curDate.getMonth() + 1),
         days = getDays(year, month);
-    return Array.from(new Array(days), (val, index) => (`${year}.${month}.${AddZero(index + 1)}`));
+    return Array.from({ length: days }, (_, index) => (`${year}.${month}.${AddZero(index + 1)}`));
 };
 // 获取上一月
 const getPrevMonth: GetMonthFn = (date) => {
