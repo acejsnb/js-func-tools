@@ -1,6 +1,6 @@
 {
   "name": "js-func-tools",
-  "version": "2.1.6",
+  "version": "2.1.7",
   "description": "javascript common tool functions",
   "type": "module",
   "main": "dist/index.cjs",
