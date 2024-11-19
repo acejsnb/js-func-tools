@@ -140,7 +140,7 @@ declare module 'js-func-tools' {
     export function RemoveEmptyChildren(tree: TreeItem[]): TreeItem[]
     export function RemoveHtmlTag(str: string): string
     export function Rgb2Hex(str: string): string
-    export function Round(n: string | number, dec?: number): string
+    export function Round(n: string | number, dec?: number, isCut?: boolean): string
     export function ScrollToTop(id: string): void
     export function ScrollToPlace(params: { key?: 'scrollLeft' | 'scrollTop', tag?: HTMLElement, place?: number }): void
     export function SensitiveEscape(s: string): string
