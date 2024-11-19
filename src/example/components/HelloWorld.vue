@@ -5,7 +5,8 @@ import {
     FormatMoney, DayOfWeek, WeekOfYear, SortHandle, DaysBetween, IsObjValEqual,
     MatchesByValue, GetItemByData, FormatDate,
     GetPrevDay, GetNextDay,
-    AmountThousands
+    AmountThousands,
+    Round
 } from '@/.';
 
 const arr = [
@@ -140,6 +141,9 @@ onMounted(() => {
   console.log(GetPrevDay('', new Date(),2));
   console.log(GetNextDay('', new Date(),2));
   console.log(AmountThousands('2123456.5464564564561'));
+  console.log(Round('2123456.4', 5));
+  console.log(Round('2123456.5464564564561', 5));
+  console.log(Round('2123456.5464564564561', 5, true));
 })
 </script>
 
