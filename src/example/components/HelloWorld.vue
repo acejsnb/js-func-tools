@@ -4,7 +4,8 @@ import {
     AddZero, GetNodePath, ArrayToTree, TreeToArray, ArrayDeWeight, CloneDeep, CloneDeepComplex,
     FormatMoney, DayOfWeek, WeekOfYear, SortHandle, DaysBetween, IsObjValEqual,
     MatchesByValue, GetItemByData, FormatDate,
-    GetPrevDay, GetNextDay
+    GetPrevDay, GetNextDay,
+    AmountThousands
 } from '@/.';
 
 const arr = [
@@ -138,6 +139,7 @@ onMounted(() => {
   console.log(d === d2);
   console.log(GetPrevDay('', new Date(),2));
   console.log(GetNextDay('', new Date(),2));
+  console.log(AmountThousands('2123456.5464564564561'));
 })
 </script>
 
