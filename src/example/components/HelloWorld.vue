@@ -77,7 +77,7 @@ const result = GetNodePath(tree2, '122', true);
 // const resultByIndex = GetNodePath(tree2, '1212', true);
 // console.log(resultByIndex);
 
-// console.log(ArrayToTree(arr, -1));
+console.log(ArrayToTree(arr, -1));
 // console.log(JSON.stringify(ArrayToTree(arr, -1)));
 // console.log(TreeToArray(tree));
 
@@ -108,17 +108,17 @@ const obj2 = {a: '1', b: '2', c: [1,2,{a:1}]};
 // console.log('matchesByValue===', MatchesByValue('今天是一个A好日a子', 'A', '--', '--', {caseEn: true}));
 // console.log('matchesByValue===', MatchesByValue('今天是一个A好日a子', 'A是', '--', '--', {split: true}));
 
-console.time('abc')
-console.log('GetItemByData===', GetItemByData(tree, 'id', 122));
-console.timeEnd('abc')
+// console.time('abc')
+// console.log('GetItemByData===', GetItemByData(tree, 'id', 122));
+// console.timeEnd('abc')
 
 
-console.time('find')
-console.log('find===', tree.find(d => d.id === 122));
-console.timeEnd('find')
+// console.time('find')
+// console.log('find===', tree.find(d => d.id === 122));
+// console.timeEnd('find')
 
-console.log('FormatDate', FormatDate('yyyy.mm.dd hh:MM:ss', 1662965475469))
-console.log('FormatDate', FormatDate('yyyy.mm.dd hh:MM:ss', '2023/11/16 17:03:00','Asia/Kolkata'))
+// console.log('FormatDate', FormatDate('yyyy.mm.dd hh:MM:ss', 1662965475469))
+// console.log('FormatDate', FormatDate('yyyy.mm.dd hh:MM:ss', '2023/11/16 17:03:00','Asia/Kolkata'))
 
 
 defineProps({
@@ -131,19 +131,19 @@ onMounted(() => {
       c = document.getElementById('c') as HTMLDivElement,
       d = document.getElementById('d') as HTMLDivElement,
       d2 = document.querySelector('#d') as HTMLDivElement;
-  console.log(a.contains(b));
-  console.log(a.compareDocumentPosition(b));
-  console.log(a.compareDocumentPosition(c));
-  console.log(b.compareDocumentPosition(b));
-  console.log(a.compareDocumentPosition(c));
-  console.log(b.compareDocumentPosition(a));
-  console.log(d === d2);
-  console.log(GetPrevDay('', new Date(),2));
-  console.log(GetNextDay('', new Date(),2));
-  console.log(AmountThousands('2123456.5464564564561'));
-  console.log(Round('2123456.4', 5));
-  console.log(Round('2123456.5464564564561', 5));
-  console.log(Round('2123456.5464564564561', 5, true));
+  // console.log(a.contains(b));
+  // console.log(a.compareDocumentPosition(b));
+  // console.log(a.compareDocumentPosition(c));
+  // console.log(b.compareDocumentPosition(b));
+  // console.log(a.compareDocumentPosition(c));
+  // console.log(b.compareDocumentPosition(a));
+  // console.log(d === d2);
+  // console.log(GetPrevDay('', new Date(),2));
+  // console.log(GetNextDay('', new Date(),2));
+  // console.log(AmountThousands('2123456.5464564564561'));
+  // console.log(Round('2123456.4', 5));
+  // console.log(Round('2123456.5464564564561', 5));
+  // console.log(Round('2123456.5464564564561', 5, true));
 })
 </script>
 
